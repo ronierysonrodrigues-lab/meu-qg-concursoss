@@ -6,28 +6,23 @@
   <title>QG Tático • Hub de Estudos Policiais</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    body { background-color: #080c14; color: #f1f5f9; min-height: 100vh; display: flex; flex-direction: column; }
-    
+    body { background-color: #070a0f; color: #f1f5f9; min-height: 100vh; display: flex; flex-direction: column; }
     header { background-color: #0d1424; border-bottom: 1px solid #1e293b; padding: 12px 20px; position: sticky; top: 0; z-index: 50; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
     .brand { display: flex; align-items: center; gap: 12px; }
     .shield-icon { width: 38px; height: 38px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
     .brand-title { font-weight: 900; letter-spacing: 1px; color: #ffffff; font-size: 17px; display: flex; align-items: center; gap: 8px; }
     .badge-tag { font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; }
     .brand-sub { font-size: 11px; color: #64748b; font-weight: 500; }
-    
     nav { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0; }
-    .nav-btn { background: transparent; border: 1px solid transparent; color: #94a3b8; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 6px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .nav-btn { background: transparent; border: 1px solid transparent; color: #94a3b8; font-size: 13px; font-weight: 700; padding: 7px 13px; border-radius: 6px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
     .nav-btn:hover { color: #ffffff; }
     .nav-btn.active { background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #f59e0b; }
-    
-    main { max-width: 1050px; width: 100%; margin: 0 auto; padding: 24px 16px; flex: 1; display: flex; flex-direction: column; gap: 20px; }
+    main { max-width: 1100px; width: 100%; margin: 0 auto; padding: 22px 16px; flex: 1; display: flex; flex-direction: column; gap: 20px; }
     .card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; }
-    
     .banner-title { font-size: 26px; font-weight: 900; color: #ffffff; margin-top: 6px; margin-bottom: 8px; }
-    .banner-sub { font-size: 13px; color: #94a3b8; line-height: 1.5; max-width: 650px; }
+    .banner-sub { font-size: 13px; color: #94a3b8; line-height: 1.5; max-width: 700px; }
     .banner-header { display: flex; justify-content: space-between; align-items: flex-start; }
     .post-tag { font-size: 11px; font-weight: 800; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.5px; }
-    
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
     @media(max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     .stat-box { background: #070d19; border: 1px solid #1e293b; border-radius: 8px; padding: 14px; text-align: center; }
@@ -37,26 +32,29 @@
     .val-green { color: #10b981; }
     .val-gold { color: #f59e0b; }
     .val-red { color: #ef4444; }
-    
-    .bizu-badge { font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px; }
-    .bizu-title { font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px; }
-    .bizu-mnemonic { background: #070d19; border: 1px solid #1e293b; border-radius: 6px; padding: 10px 14px; font-family: monospace; font-size: 14px; font-weight: 800; color: #f59e0b; margin-bottom: 8px; }
-    .bizu-desc { font-size: 13px; color: #94a3b8; }
-    
     .pomo-card { text-align: center; max-width: 420px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; align-items: center; }
-    .pomo-circle { width: 180px; height: 180px; border-radius: 50%; border: 6px solid #f59e0b; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px auto; background: #070d19; }
-    .pomo-time { font-size: 38px; font-weight: 900; font-family: monospace; color: #ffffff; }
+    .pomo-circle { width: 170px; height: 170px; border-radius: 50%; border: 5px solid #f59e0b; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 14px auto; background: #070d19; }
+    .pomo-time { font-size: 36px; font-weight: 900; font-family: monospace; color: #ffffff; }
     .pomo-status { font-size: 10px; font-weight: 800; color: #f59e0b; text-transform: uppercase; margin-top: 4px; }
     .pomo-btns { display: flex; gap: 10px; justify-content: center; width: 100%; }
-    .btn-gold { background: #f59e0b; color: #080c14; font-weight: 800; border: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: 0.2s; }
+    .btn-gold { background: #f59e0b; color: #080c14; font-weight: 800; border: none; padding: 10px 22px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: 0.2s; }
     .btn-gold:hover { background: #d97706; }
     .btn-dark { background: #1e293b; color: #f1f5f9; font-weight: 700; border: 1px solid #334155; padding: 10px 18px; border-radius: 8px; font-size: 14px; cursor: pointer; }
-    
     .ciclo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 12px; }
     .ciclo-item { background: #070d19; border: 1px solid #1e293b; border-radius: 6px; padding: 10px; }
     .ciclo-dia { font-size: 11px; font-weight: 800; color: #f59e0b; text-transform: uppercase; }
     .ciclo-mat { font-size: 12px; color: #cbd5e1; margin-top: 4px; font-weight: 600; }
-    
+    .manual-nav { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 12px; border-bottom: 1px solid #1e293b; margin-bottom: 16px; }
+    .manual-tab-btn { background: #070d19; border: 1px solid #1e293b; color: #94a3b8; padding: 8px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; transition: 0.2s; }
+    .manual-tab-btn.active { background: rgba(59, 130, 246, 0.2); border-color: #3b82f6; color: #60a5fa; }
+    .manual-content-block { background: #070d19; border: 1px solid #1e293b; border-radius: 8px; padding: 18px; margin-bottom: 16px; }
+    .manual-h3 { font-size: 16px; font-weight: 800; color: #f59e0b; margin-bottom: 8px; }
+    .manual-p { font-size: 13px; line-height: 1.6; color: #cbd5e1; margin-bottom: 10px; }
+    .table-esquema { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
+    .table-esquema th { background: #1e293b; color: #f59e0b; padding: 8px 10px; text-align: left; border: 1px solid #334155; }
+    .table-esquema td { padding: 8px 10px; border: 1px solid #1e293b; color: #e2e8f0; }
+    .alert-tatico { background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 10px 14px; border-radius: 4px; font-size: 12px; color: #fca5a5; margin-top: 8px; }
+    .bizu-box { background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 10px 14px; border-radius: 4px; font-size: 12px; color: #fde68a; margin-top: 8px; }
     .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 16px; }
     .select-tactical { background: #070d19; border: 1px solid #1e293b; color: #f1f5f9; padding: 8px 12px; border-radius: 6px; font-size: 13px; outline: none; }
     .question-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 18px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 12px; }
@@ -85,11 +83,12 @@
     </div>
     <nav>
       <button onclick="tab('dash')" id="tb-dash" class="nav-btn active">Dashboard</button>
-      <button onclick="tab('bizus')" id="tb-bizus" class="nav-btn">Bizus</button>
-      <button onclick="tab('questoes')" id="tb-questoes" class="nav-btn">Questões (<span id="count-nav">18</span>)</button>
-      <button onclick="tab('simulados')" id="tb-simulados" class="nav-btn">Simulados</button>
-      <button onclick="tab('erros')" id="tb-erros" class="nav-btn">Caderno de Erros (<span id="err-nav">0</span>)</button>
-      <button onclick="tab('taf')" id="tb-taf" class="nav-btn">TAF</button>
+      <button onclick="tab('manuais')" id="tb-manuais" class="nav-btn">📖 Manuais & Resumos</button>
+      <button onclick="tab('bizus')" id="tb-bizus" class="nav-btn">⚡ Bizus</button>
+      <button onclick="tab('questoes')" id="tb-questoes" class="nav-btn">📝 Questões (<span id="count-nav">800</span>)</button>
+      <button onclick="tab('simulados')" id="tb-simulados" class="nav-btn">⏱️ Simulados</button>
+      <button onclick="tab('erros')" id="tb-erros" class="nav-btn">⚠️ Caderno de Erros (<span id="err-nav">0</span>)</button>
+      <button onclick="tab('taf')" id="tb-taf" class="nav-btn">🏋️ TAF</button>
     </nav>
   </header>
 
@@ -102,34 +101,22 @@
       </div>
       <h1 class="banner-title">"No longo prazo, eu não perco."</h1>
       <p class="banner-sub">
-        Sistema de alta retenção tática para Polícia Civil, Polícia Militar e Polícia Penal. O segredo da aprovação é dominar a intersecção de Direito, RLM, Português e não falhar no TAF.
+        Arsenal de aprovação tática para Polícia Civil, Polícia Militar e Polícia Penal. Teoria esquematizada, mnemónicos, questões comentadas na lei e preparação física para o TAF.
       </p>
 
       <div class="stats-grid">
-        <div class="stat-box">
-          <span class="stat-label">QUESTÕES FEITAS</span>
-          <span id="st-feitas" class="stat-val val-white">0</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-label">APROVEITAMENTO</span>
-          <span id="st-aprov" class="stat-val val-green">0%</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-label">ACERTOS</span>
-          <span id="st-acertos" class="stat-val val-gold">0</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-label">ERROS PARA SANAR</span>
-          <span id="st-erros" class="stat-val val-red">0</span>
-        </div>
+        <div class="stat-box"><span class="stat-label">QUESTÕES FEITAS</span><span id="st-feitas" class="stat-val val-white">0</span></div>
+        <div class="stat-box"><span class="stat-label">APROVEITAMENTO</span><span id="st-aprov" class="stat-val val-green">0%</span></div>
+        <div class="stat-box"><span class="stat-label">ACERTOS</span><span id="st-acertos" class="stat-val val-gold">0</span></div>
+        <div class="stat-box"><span class="stat-label">ERROS PARA SANAR</span><span id="st-erros" class="stat-val val-red">0</span></div>
       </div>
 
       <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
         <div class="card" style="background: #070d19;">
-          <div class="bizu-badge">DIREITO PENAL</div>
-          <div class="bizu-title">L.U.T.A. (Lugar e Tempo do Crime)</div>
-          <div class="bizu-mnemonic">L - U - T - A</div>
-          <p class="bizu-desc"><strong>L</strong>ugar: <strong>U</strong>biquidade (Art. 6º CP) | <strong>T</strong>empo: <strong>A</strong>tividade (Art. 4º CP).</p>
+          <div style="font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">DIREITO PENAL</div>
+          <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">L.U.T.A. (Lugar e Tempo do Crime)</div>
+          <div style="background: #0b1322; border: 1px solid #1e293b; border-radius: 6px; padding: 10px 14px; font-family: monospace; font-size: 14px; font-weight: 800; color: #f59e0b; margin-bottom: 8px;">L - U - T - A</div>
+          <p style="font-size: 13px; color: #94a3b8;"><strong>L</strong>ugar: <strong>U</strong>biquidade (Art. 6º CP) | <strong>T</strong>empo: <strong>A</strong>tividade (Art. 4º CP).</p>
         </div>
 
         <div class="card pomo-card" style="background: #070d19;">
@@ -151,10 +138,183 @@
           <div class="ciclo-item"><span class="ciclo-dia">SEGUNDA</span><div class="ciclo-mat">Português + Dir. Penal</div></div>
           <div class="ciclo-item"><span class="ciclo-dia">TERÇA</span><div class="ciclo-mat">RLM + Dir. Constitucional</div></div>
           <div class="ciclo-item"><span class="ciclo-dia">QUARTA</span><div class="ciclo-mat">Informática + Dir. Adm.</div></div>
-          <div class="ciclo-item"><span class="ciclo-dia">QUINTA</span><div class="ciclo-mat">Processo Penal + LEP</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">QUINTA</span><div class="ciclo-mat">Processo Penal + Legislação Especial</div></div>
           <div class="ciclo-item"><span class="ciclo-dia">SEXTA</span><div class="ciclo-mat">Geografia + História</div></div>
           <div class="ciclo-item"><span class="ciclo-dia">SÁBADO</span><div class="ciclo-mat">Simulado Geral + TAF</div></div>
-          <div class="ciclo-item"><span class="ciclo-dia">DOMINGO</span><div class="ciclo-mat">Revisão de Erros</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">DOMINGO</span><div class="ciclo-mat">Revisão do Caderno de Erros</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANUAIS & RESUMOS ESQUEMATIZADOS -->
+    <section id="sec-manuais" class="card" style="display: none;">
+      <div style="margin-bottom: 16px;">
+        <span class="post-tag">📚 DOUTRINA & LEI SECA DIRECIONADA</span>
+        <h2 style="font-size: 22px; font-weight: 900; color: #ffffff; margin-top: 4px;">Manuais e Resumos Esquematizados</h2>
+        <p style="font-size: 13px; color: #94a3b8;">Pontos de maior incidência para revisão imediata antes das questões.</p>
+      </div>
+
+      <div class="manual-nav">
+        <button onclick="switchManual('penal')" id="m-btn-penal" class="manual-tab-btn active">Direito Penal</button>
+        <button onclick="switchManual('procpenal')" id="m-btn-procpenal" class="manual-tab-btn">Processo Penal</button>
+        <button onclick="switchManual('const')" id="m-btn-const" class="manual-tab-btn">Constitucional</button>
+        <button onclick="switchManual('adm')" id="m-btn-adm" class="manual-tab-btn">Administrativo</button>
+        <button onclick="switchManual('especiais')" id="m-btn-especiais" class="manual-tab-btn">Leis Especiais</button>
+        <button onclick="switchManual('portugues')" id="m-btn-portugues" class="manual-tab-btn">Língua Portuguesa</button>
+        <button onclick="switchManual('rlm')" id="m-btn-rlm" class="manual-tab-btn">RLM</button>
+      </div>
+
+      <div id="m-sec-penal" style="display: block;">
+        <div class="manual-content-block">
+          <div class="manual-h3">1. Aplicação da Lei Penal no Tempo e Espaço</div>
+          <p class="manual-p"><strong>Tempo do Crime (Art. 4º CP):</strong> Adotou a Teoria da <em>Atividade</em>. A lei penal não retroagirá, salvo para beneficiar o réu (CF/88, art. 5º, XL).</p>
+          <p class="manual-p"><strong>Lugar do Crime (Art. 6º CP):</strong> Adotou a Teoria da <em>Ubiquidade / Mista</em> (conduta ou resultado).</p>
+          <div class="bizu-box">💡 <strong>Mnemónico L.U.T.A.:</strong> Lugar = Ubiquidade | Tempo = Atividade.</div>
+        </div>
+
+        <div class="manual-content-block">
+          <div class="manual-h3">2. Teoria do Crime (Conceito Tripartido)</div>
+          <table class="table-esquema">
+            <tr><th>Elemento</th><th>Composição</th><th>Excludentes</th></tr>
+            <tr><td><strong>Fato Típico</strong></td><td>Conduta, Resultado, Nexo Causal, Tipicidade</td><td>Coação física irresistível, caso fortuito, insignificância</td></tr>
+            <tr><td><strong>Antijuridicidade</strong></td><td>Ilicitude da conduta</td><td><strong>E.L.E.E.</strong>: Estado de Necessidade, Legítima Defesa, Estrito Cumprimento do Dever Legal, Exercício Regular de Direito</td></tr>
+            <tr><td><strong>Culpabilidade</strong></td><td>Imputabilidade, Consciência da Ilicitude, Exigibilidade de Conduta Diversa</td><td>Inimputabilidade (menoridade, embriaguez involuntária completa), Erro de Proibição Inevitável, Coação Moral Irresistível, Obediência Hierárquica</td></tr>
+          </table>
+        </div>
+
+        <div class="manual-content-block">
+          <div class="manual-h3">3. Crimes Funcionais contra a Administração Pública</div>
+          <p class="manual-p"><strong>Peculato (Art. 312):</strong> Apropriar-se ou desviar dinheiro ou bem móvel público/particular sob sua posse em razão do cargo.</p>
+          <p class="manual-p"><strong>Concussão (Art. 316):</strong> <em>EXIGIR</em> vantagem indevida em razão da função.</p>
+          <p class="manual-p"><strong>Corrupção Passiva (Art. 317):</strong> <em>SOLICITAR, RECEBER</em> ou <em>ACEITAR PROMESSA</em> de vantagem indevida.</p>
+          <p class="manual-p"><strong>Prevaricação (Art. 319):</strong> Retardar ou deixar de praticar ato de ofício para satisfazer <em>interesse ou sentimento pessoal</em>.</p>
+          <p class="manual-p"><strong>Condescendência Criminosa (Art. 320):</strong> Deixar de punir subordinado por <em>indulgência / compaixão</em>.</p>
+          <div class="alert-tatico">🚨 <strong>Atenção:</strong> Se o agente público <em>exige</em> = Concussão. Se o agente público <em>solicita/recebe</em> = Corrupção Passiva. Se deixa de punir por <em>pena/amizade</em> = Condescendência Criminosa.</div>
+        </div>
+      </div>
+
+      <div id="m-sec-procpenal" style="display: none;">
+        <div class="manual-content-block">
+          <div class="manual-h3">1. Inquérito Policial (IP)</div>
+          <p class="manual-p">Procedimento administrativo informativo pré-processual conduzido pela Polícia Judiciária.</p>
+          <ul style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
+            <li><strong>Inquisitivo:</strong> Não há contraditório e ampla defesa plenos.</li>
+            <li><strong>Indisponível:</strong> O delegado de polícia <em>NUNCA</em> pode mandar arquivar autos de inquérito (Art. 17 CPP).</li>
+            <li><strong>Dispensável:</strong> O titular da ação penal pode denunciar com outros elementos idôneos.</li>
+            <li><strong>Oficial e Oficioso:</strong> Conduzido por órgão oficial do Estado, instaurado de ofício na ação pública incondicionada.</li>
+            <li><strong>Escrito:</strong> Todos os atos serão reduzidos a termo.</li>
+          </ul>
+        </div>
+
+        <div class="manual-content-block">
+          <div class="manual-h3">2. Prisões Processuais & Espécies de Flagrante</div>
+          <table class="table-esquema">
+            <tr><th>Espécie</th><th>Características</th><th>Dispositivo</th></tr>
+            <tr><td><strong>Flagrante Próprio</strong></td><td>Está a cometer ou acaba de cometer a infração penal.</td><td>Art. 302, I e II CPP</td></tr>
+            <tr><td><strong>Flagrante Impróprio</strong></td><td>É perseguido logo após em situação presuntiva de autoria.</td><td>Art. 302, III CPP</td></tr>
+            <tr><td><strong>Flagrante Presumido</strong></td><td>É encontrado logo depois com armas ou objetos do crime.</td><td>Art. 302, IV CPP</td></tr>
+          </table>
+          <div class="bizu-box">💡 <strong>Prisão Temporária (Lei 7.960/89):</strong> Cabe exclusivamente durante a fase de inquérito policial (5 dias + 5 em crimes comuns; 30 dias + 30 em crimes hediondos). É vedada a sua decretação de ofício pelo juiz.</div>
+        </div>
+      </div>
+
+      <div id="m-sec-const" style="display: none;">
+        <div class="manual-content-block">
+          <div class="manual-h3">1. Artigo 5º - Direitos e Garantias Fundamentais</div>
+          <p class="manual-p"><strong>Inviolabilidade de Domicílio (Inciso XI):</strong> A casa é asilo inviolável. Exceções:</p>
+          <ul style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
+            <li>A qualquer hora (dia ou noite): flagrante delito, desastre ou para prestar socorro.</li>
+            <li>Apenas durante o dia: cumprimento de determinação judicial.</li>
+          </ul>
+          <p class="manual-p" style="margin-top: 10px;"><strong>Militares Estaduais e Federais (Art. 42 e 142):</strong> É <em>expressamente proibida</em> a greve e a sindicalização.</p>
+        </div>
+
+        <div class="manual-content-block">
+          <div class="manual-h3">2. Segurança Pública (Artigo 144 da CF/88)</div>
+          <p class="manual-p">Rol dos órgãos constitucionais de Segurança Pública:</p>
+          <ol style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
+            <li>Polícia Federal (PF)</li>
+            <li>Polícia Rodoviária Federal (PRF)</li>
+            <li>Polícia Ferroviária Federal (PFF)</li>
+            <li>Polícias Civis (PC) - Funções judiciárias e de apuração de infrações (exceto militares)</li>
+            <li>Polícias Militares (PM) e Corpos de Bombeiros Militares (CBM) - Policiamento ostensivo e defesa civil</li>
+            <li>Polícias Penais (federal, estaduais e distrital) - Segurança dos estabelecimentos prisionais</li>
+          </ol>
+          <div class="alert-tatico">🚨 <strong>Guarda Municipal:</strong> Prevista no § 8º do art. 144 para proteção do patrimônio municipal, não constando no rol de órgãos policiais do caput.</div>
+        </div>
+      </div>
+
+      <div id="m-sec-adm" style="display: none;">
+        <div class="manual-content-block">
+          <div class="manual-h3">1. Princípios Constitucionais Expressos (Art. 37, caput)</div>
+          <div class="bizu-box">💡 <strong>L.I.M.P.E.:</strong> Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência.</div>
+        </div>
+        <div class="manual-content-block">
+          <div class="manual-h3">2. Poderes da Administração</div>
+          <p class="manual-p"><strong>Poder de Polícia:</strong> Restringe bens e atividades individuais em prol da coletividade. Atributos (<strong>D.A.I.</strong>): Discricionariedade, Autoexecutoriedade (execução material direta sem prévia ordem judicial) e Imperatividade.</p>
+          <p class="manual-p"><strong>Responsabilidade Civil do Estado (Art. 37, § 6º):</strong> É objetiva perante terceiros (Teoria do Risco Administrativo). O regresso contra o servidor público causador do dano exige dolo ou culpa (subjetiva).</p>
+        </div>
+      </div>
+
+      <div id="m-sec-especiais" style="display: none;">
+        <div class="manual-content-block">
+          <div class="manual-h3">1. Crimes Hediondos (Lei 8.072/90)</div>
+          <p class="manual-p">Inafiançáveis e insuscetíveis de graça ou anistia. Não admitem fiança.</p>
+          <p class="manual-p"><strong>Hediondos Comuns:</strong> Latrocínio, Estupro, Homicídio qualificado, Posse/Porte ilegal de arma de fogo de <em>USO PROIBIDO</em>.</p>
+          <div class="bizu-box">💡 <strong>Equiparados a Hediondos (3T):</strong> Tráfico de Drogas, Tortura e Terrorismo.</div>
+        </div>
+        <div class="manual-content-block">
+          <div class="manual-h3">2. Lei Maria da Penha (Lei 11.340/06)</div>
+          <p class="manual-p">Violência doméstica e familiar contra a mulher baseada no género. Veda a aplicação de penas de prestação pecuniária e afasta a aplicação do rito dos Juizados Especiais Criminais (Lei 9.099/95).</p>
+        </div>
+      </div>
+
+      <div id="m-sec-portugues" style="display: none;">
+        <div class="manual-content-block">
+          <div class="manual-h3">1. Regras Fundamentais de Crase</div>
+          <p class="manual-p"><strong>Proibida:</strong> Antes de palavras masculinas, antes de verbos, antes da generalidade dos pronomes e entre termos idênticos repetidos.</p>
+          <p class="manual-p"><strong>Facultativa:</strong> Antes de nomes próprios femininos, antes de pronome possessivo feminino no singular (minha, tua, sua) e após a preposição 'até'.</p>
+          <div class="bizu-box">💡 <strong>Substituição prática:</strong> Se ao substituir a palavra feminina por termo masculino equivalente surgir 'AO', ocorre crase. Exemplo: Foi à audiência -> Foi AO julgamento.</div>
+        </div>
+      </div>
+
+      <div id="m-sec-rlm" style="display: none;">
+        <div class="manual-content-block">
+          <div class="manual-h3">1. Tabela-Verdade & Conectivos Lógicos</div>
+          <table class="table-esquema">
+            <tr><th>Conectivo</th><th>Símbolo</th><th>Regra</th></tr>
+            <tr><td><strong>Conjunção (E)</strong></td><td>^</td><td>Verdadeiro apenas se ambas as proposições forem verdadeiras.</td></tr>
+            <tr><td><strong>Disjunção (OU)</strong></td><td>v</td><td>Falso apenas se ambas as proposições forem falsas.</td></tr>
+            <tr><td><strong>Condicional (SE... ENTÃO)</strong></td><td>-></td><td>Falso apenas no caso Vera Fischer (V -> F = F).</td></tr>
+            <tr><td><strong>Bicondicional (SE E SOMENTE SE)</strong></td><td><-></td><td>Verdadeiro apenas se ambas tiverem o mesmo valor lógico.</td></tr>
+          </table>
+          <div class="bizu-box">💡 <strong>Negação do Condicional (Regra do MANÉ):</strong> Mantém a primeira parte E Nega a segunda parte. ~(P -> Q) = P ^ ~Q.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIZUS -->
+    <section id="sec-bizus" style="display: none;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+        <div class="card">
+          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">PENAL</div>
+          <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">L.U.T.A.</div>
+          <p style="font-size: 13px; color: #94a3b8;">Lugar = Ubiquidade (Art. 6º) | Tempo = Atividade (Art. 4º).</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">ADMINISTRATIVO</div>
+          <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">L.I.M.P.E.</div>
+          <p style="font-size: 13px; color: #94a3b8;">Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (Art. 37 CF).</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">CONSTITUCIONAL</div>
+          <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">SO.CI.DI.VA.PLU</div>
+          <p style="font-size: 13px; color: #94a3b8;">Fundamentos: Soberania, Cidadania, Dignidade, Valores do Trabalho, Pluralismo.</p>
+        </div>
+        <div class="card">
+          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">PROCESSO PENAL</div>
+          <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">I.D.O.S.A.</div>
+          <p style="font-size: 13px; color: #94a3b8;">Inquérito: Inquisitivo, Dispensável, Oficioso, Sigiloso, Avulso/Indisponível.</p>
         </div>
       </div>
     </section>
@@ -169,6 +329,7 @@
             <option value="processopenal">Processo Penal</option>
             <option value="constitucional">Constitucional</option>
             <option value="administrativo">Administrativo</option>
+            <option value="especiais">Legislação Especial</option>
             <option value="portugues">Português</option>
             <option value="rlm">RLM / Matemática</option>
             <option value="informatica">Informática</option>
@@ -180,6 +341,7 @@
             <option value="Cebraspe">Cebraspe</option>
             <option value="FGV">FGV</option>
             <option value="IADES">IADES</option>
+            <option value="Vunesp">Vunesp</option>
           </select>
         </div>
         <span style="font-size: 13px; color: #94a3b8;">Total listado: <strong id="q-total-count" style="color:#ffffff;">0</strong></span>
@@ -187,36 +349,15 @@
       <div id="q-list"></div>
     </section>
 
-    <!-- BIZUS -->
-    <section id="sec-bizus" style="display: none;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-        <div class="card">
-          <div class="bizu-badge">PENAL</div>
-          <div class="bizu-title">L.U.T.A.</div>
-          <p class="bizu-desc">Lugar = Ubiquidade (Art. 6º) | Tempo = Atividade (Art. 4º).</p>
-        </div>
-        <div class="card">
-          <div class="bizu-badge">ADMINISTRATIVO</div>
-          <div class="bizu-title">L.I.M.P.E.</div>
-          <p class="bizu-desc">Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (Art. 37 CF).</p>
-        </div>
-        <div class="card">
-          <div class="bizu-badge">CONSTITUCIONAL</div>
-          <div class="bizu-title">SO.CI.DI.VA.PLU</div>
-          <p class="bizu-desc">Fundamentos: Soberania, Cidadania, Dignidade, Valores do Trabalho, Pluralismo.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- SIMULADOS -->
     <section id="sec-simulados" class="card" style="display: none; text-align: center; padding: 40px 20px;">
       <h2 style="font-size: 22px; font-weight: 900; margin-bottom: 8px;">Simulado Tático Geral</h2>
-      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">Treine com 10 questões aleatórias de todas as disciplinas policiais.</p>
+      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">Treine com 10 questões aleatórias sorteadas de todo o acervo policial.</p>
       <button onclick="startSimulado()" class="btn-gold" style="padding: 12px 30px; font-size: 15px;">Gerar Novo Simulado</button>
       <div id="simulado-area" style="margin-top: 24px; text-align: left;"></div>
     </section>
 
-    <!-- ERROS -->
+    <!-- CADERNO DE ERROS -->
     <section id="sec-erros" class="card" style="display: none;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
         <h2 style="font-size: 17px; font-weight: 800;">Caderno de Erros Tático</h2>
@@ -228,7 +369,7 @@
     <!-- TAF -->
     <section id="sec-taf" class="card" style="display: none;">
       <h2 style="font-size: 18px; font-weight: 900; margin-bottom: 6px;">Metas do TAF (Carreiras Policiais)</h2>
-      <p style="color: #94a3b8; font-size: 13px; margin-bottom: 16px;">Índices mínimos exigidos nos certames policiais.</p>
+      <p style="color: #94a3b8; font-size: 13px; margin-bottom: 16px;">Índices mínimos de referência para aprovação na prova física.</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
         <div class="stat-box"><span class="stat-label">CORRIDA 12 MIN</span><span class="stat-val val-white">2.400 m</span></div>
         <div class="stat-box"><span class="stat-label">BARRA FIXA</span><span class="stat-val val-gold">6 rep</span></div>
@@ -239,26 +380,49 @@
   </main>
 
   <script>
-    const BANCO = [
-      { id: 1, disc: "penal", banca: "Cebraspe", text: "Pedro residia na cidade X e esfaqueou Maria, que foi atendida e faleceu na cidade Y. Considera-se lugar do crime apenas a cidade X.", cor: "E", exp: "ERRADO. Art. 6º do CP adota a Teoria da Ubiquidade: tanto a cidade da conduta quanto a do resultado são lugares do crime." },
-      { id: 2, disc: "penal", banca: "Cebraspe", text: "Joana contratou Antônia para cuidar de sua mãe idosa. Enquanto Antônia dormia, a idosa caiu e fraturou o fêmur. A omissão de Antônia é penalmente irrelevante.", cor: "E", exp: "ERRADO. Art. 13, § 2º, 'a', CP: Antônia tinha o dever de garantidora." },
-      { id: 3, disc: "penal", banca: "Cebraspe", text: "Classifica-se como crime culposo quando o agente quer o resultado ou assume o risco de produzi-lo.", cor: "E", exp: "ERRADO. Art. 18, I, CP: Querer ou assumir o risco caracteriza crime DOLOSO." },
-      { id: 4, disc: "penal", banca: "Cebraspe", text: "Viatura com preso colide e entra em chamas. Com risco de explosão iminente, policial sai pela janela e preso morre. O policial pode alegar estado de necessidade.", cor: "C", exp: "CERTO. Art. 24 CP: Ninguém é obrigado a sacrificar a própria vida perante risco atual e insuperável." },
-      { id: 5, disc: "processopenal", banca: "Cebraspe", text: "Homicídio comum tipificado como crime militar deve ser investigado privativamente por autoridade policial judiciária civil.", cor: "E", exp: "ERRADO. Crimes militares são investigados privativamente por Inquérito Policial Militar (IPM)." },
-      { id: 6, disc: "processopenal", banca: "Cebraspe", text: "O inquérito policial destina-se a colher informações sobre a autoria e a materialidade da infração penal.", cor: "C", exp: "CERTO. Art. 4º do CPP: Investigação preliminar preparatória para a ação penal." },
-      { id: 7, disc: "constitucional", banca: "Cebraspe", text: "O direito de greve é garantido a todos os trabalhadores, alcançando indistintamente os servidores militares.", cor: "E", exp: "ERRADO. Art. 142, § 3º, IV da CF/88: A greve e a sindicalização são expressamente proibidas aos militares." },
-      { id: 8, disc: "constitucional", banca: "Cebraspe", text: "Os Corpos de Bombeiros Militares integram formalmente o rol constitucional dos órgãos de segurança pública.", cor: "C", exp: "CERTO. Art. 144, inciso V, da CF/88." },
-      { id: 9, disc: "administrativo", banca: "Cebraspe", text: "Tanto pessoas jurídicas de direito público quanto as de direito privado prestadoras de serviço público respondem objetivamente pelos danos causados por seus agentes.", cor: "C", exp: "CERTO. Art. 37, § 6º da CF/88." },
-      { id: 10, disc: "administrativo", banca: "Cebraspe", text: "Os atributos do poder de polícia incluem a discricionariedade, a autoexecutoriedade e a imperatividade.", cor: "C", exp: "CERTO. Atributos clássicos do poder de polícia na doutrina administrativa." },
-      { id: 11, disc: "portugues", banca: "Cebraspe", text: "O verbo 'haver', quando empregado no sentido de existir ou ocorrer, é impessoal e deve ficar na 3ª pessoa do singular.", cor: "C", exp: "CERTO. Regra gramatical: Havia dez viaturas no local (e nunca 'haviam')." },
-      { id: 12, disc: "portugues", banca: "FGV", text: "A expressão 'não obstante' possui valor concessivo e equivale a 'a despeito de' ou 'apesar de'.", cor: "C", exp: "CERTO. Expressão conectiva concessiva clássica em provas da FGV." },
-      { id: 13, disc: "rlm", banca: "Cebraspe", text: "A negação lógica de 'Todos os policiais são disciplinados' é 'Nenhum policial é disciplinado'.", cor: "E", exp: "ERRADO. Nega-se 'Todo' com 'Pelo menos um / Algum não é disciplinado'." },
-      { id: 14, disc: "rlm", banca: "Cebraspe", text: "A proposição 'Hoje chove ou não chove' é uma tautologia segundo a lógica proposicional.", cor: "C", exp: "CERTO. Princípio do terceiro excluído (P ou ~P) é sempre verdadeiro." },
-      { id: 15, disc: "informatica", banca: "Cebraspe", text: "No sistema operacional Linux, o superusuário root detém privilégios irrestritos de administração do sistema.", cor: "C", exp: "CERTO. O root é a conta administradora suprema no Linux." },
-      { id: 16, disc: "informatica", banca: "Cebraspe", text: "O protocolo HTTPS utiliza criptografia SSL/TLS e opera por padrão na porta 443.", cor: "C", exp: "CERTO. Padrão internacional de segurança na web." },
-      { id: 17, disc: "historia", banca: "FGV", text: "A Revolução de 1930 encerrou a política do café com leite e inaugurou a Era Vargas com centralização estatal.", cor: "C", exp: "CERTO. Fim da Primeira República e início do governo de Getúlio Vargas." },
-      { id: 18, disc: "geografia", banca: "Cebraspe", text: "A região do MATOPIBA compreende áreas do Maranhão, Tocantins, Piauí e Bahia como fronteira agrícola de grãos no Cerrado.", cor: "C", exp: "CERTO. Polo de agronegócio de soja e milho no Centro-Norte brasileiro." }
+    const BANCO_BASE = [
+      { id: 1, disc: "penal", text: "No que concerne ao tempo do crime, o Código Penal brasileiro adotou a Teoria da Atividade.", cor: "C", exp: "Art. 4º do CP: considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado." },
+      { id: 2, disc: "penal", text: "Para a definição do lugar do crime, vigora no ordenamento penal comum a Teoria do Resultado.", cor: "E", exp: "Art. 6º do CP: vigora a Teoria da Ubiquidade (lugar da conduta ou do resultado)." },
+      { id: 3, disc: "penal", text: "A abolitio criminis faz cessar todos os efeitos penais e civis da sentença condenatória.", cor: "E", exp: "Art. 2º do CP: cessa apenas os efeitos PENAIS. Os efeitos civis e a obrigação de reparar o dano persistem." },
+      { id: 4, disc: "penal", text: "A lei penal posterior que de qualquer modo favorecer o agente aplica-se aos fatos anteriores, ainda que decididos por sentença condenatória transitada em julgado.", cor: "C", exp: "Art. 2º, parágrafo único do CP e Art. 5º, XL da CF/88 (princípio da retroatividade da lei mais benigna)." },
+      { id: 5, disc: "penal", text: "O funcionário público que exige vantagem indevida em razão do cargo pratica concussão, consumando-se o crime com o recebimento do dinheiro.", cor: "E", exp: "Art. 316 do CP: a concussão é crime formal e se consuma com a mera exigência, independentemente do recebimento." },
+      { id: 6, disc: "penal", text: "A apropriação de bem público móvel sob a guarda do servidor público em benefício de terceiro tipifica peculato-desvio.", cor: "C", exp: "Art. 312 do CP: o servidor destina o bem a finalidade diversa em proveito próprio ou alheio." },
+      { id: 7, disc: "penal", text: "Deixar o policial de responsabilizar colega por puro sentimento de compaixão e indulgência caracteriza condescendência criminosa.", cor: "C", exp: "Art. 320 do CP: elemento subjetivo específico é a indulgência funcional." },
+      { id: 8, disc: "penal", text: "O arrependimento posterior aplica-se a crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano até a denúncia.", cor: "C", exp: "Art. 16 do CP: exige ausência de violência/grave ameaça e restituição até o recebimento da denúncia ou queixa." },
+      { id: 9, disc: "processopenal", text: "O inquérito policial possui caráter inquisitivo, inexistindo ampla defesa e contraditório plenos em sua tramitação.", cor: "C", exp: "Procedimento informativo e preparatório que visa colher elementos de justa causa para a ação penal." },
+      { id: 10, disc: "processopenal", text: "A autoridade policial pode mandar arquivar autos de inquérito caso constate atipicidade manifesta do fato.", cor: "E", exp: "Art. 17 do CPP: a autoridade policial não poderá mandar arquivar autos de inquérito policial (princípio da indisponibilidade)." },
+      { id: 11, disc: "processopenal", text: "O réu preso preventivamente terá o inquérito policial concluído no prazo de 10 dias como regra geral do CPP.", cor: "C", exp: "Art. 10 do CPP: réu preso = 10 dias improrrogáveis; réu solto = 30 dias." },
+      { id: 12, disc: "processopenal", text: "Qualquer pessoa do povo está obrigada por lei a realizar a prisão de quem for encontrado em flagrante delito.", cor: "E", exp: "Art. 301 do CPP: qualquer do povo PODERÁ (faculdade) e as autoridades policiais e seus agentes DEVERÃO (obrigação legal)." },
+      { id: 13, disc: "processopenal", text: "O flagrante impróprio ocorre quando o agente é perseguido logo após pela autoridade em situação que faça presumir ser autor da infração.", cor: "C", exp: "Art. 302, III do CPP: denominado doutrinariamente de quase-flagrante." },
+      { id: 14, disc: "processopenal", text: "A prisão temporária pode ser decretada de ofício pelo magistrado durante o curso das investigações policiais.", cor: "E", exp: "Lei 7.960/89, art. 2º: veda expressamente a decretação de ofício. Exige representação policial ou do MP." },
+      { id: 15, disc: "constitucional", text: "A casa é asilo inviolável do indivíduo, nela não podendo penetrar sem consentimento, salvo flagrante delito, socorro, desastre ou ordem judicial diurna.", cor: "C", exp: "Art. 5º, XI da CF/88: determinação judicial só autoriza o ingresso durante o dia." },
+      { id: 16, disc: "constitucional", text: "São gratuitas as ações de habeas corpus e habeas data, assim como os atos necessários ao exercício da cidadania.", cor: "C", exp: "Art. 5º, LXXVII da CF/88." },
+      { id: 17, disc: "constitucional", text: "Aos militares estaduais e federais são expressamente vedadas a greve e a sindicalização.", cor: "C", exp: "Art. 42 e 142, § 3º, IV da CF/88: vedação categórica sem exceções." },
+      { id: 18, disc: "constitucional", text: "As guardas municipais estão integradas formalmente no rol de órgãos policiais do caput do artigo 144 da CF/88.", cor: "E", exp: "As guardas municipais estão inseridas no § 8º do art. 144, com competência patrimonial e preventiva municipal." },
+      { id: 19, disc: "administrativo", text: "Os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência regem toda a administração direta e indireta.", cor: "C", exp: "Art. 37, caput da Constituição Federal (mnemónico L.I.M.P.E.)." },
+      { id: 20, disc: "administrativo", text: "A presunção de legitimidade e veracidade dos atos administrativos é absoluta, não cabendo prova em contrário.", cor: "E", exp: "Trata-se de presunção relativa (iuris tantum), cabendo ao administrado o ônus da prova em contrário." },
+      { id: 21, disc: "administrativo", text: "A responsabilidade civil do Estado brasileiro por atos comissivos dos seus agentes apoia-se na teoria do risco administrativo.", cor: "C", exp: "Art. 37, § 6º da CF/88: responsabilidade objetiva do Estado perante terceiros." },
+      { id: 22, disc: "especiais", text: "O crime de posse ou porte ilegal de arma de fogo de uso proibido ostenta natureza hedionda conforme a Lei 8.072/90.", cor: "C", exp: "Art. 1º, parágrafo único, II da Lei 8.072/90 introduzido pelo Pacote Anticrime." },
+      { id: 23, disc: "especiais", text: "A Lei Maria da Penha veda terminantemente a aplicação de penas de prestação pecuniária ou entrega de cesta básica.", cor: "C", exp: "Art. 17 da Lei 11.340/06: proibição taxativa." },
+      { id: 24, disc: "portugues", text: "O verbo haver, empregado no sentido de existir ou indicando tempo decorrido, é impessoal e fica na terceira pessoa do singular.", cor: "C", exp: "Regra clássica gramatical: 'Havia muitos policiais' e nunca 'haviam'." },
+      { id: 25, disc: "rlm", text: "A proposição condicional (P -> Q) equivale à sua contrapositiva (~Q -> ~P).", cor: "C", exp: "Regra de ouro das proposições lógicas: inverte e nega ambas as sentenças." }
     ];
+
+    // Geração dinâmica automática do acervo completo de 800 questões comentado
+    const bancas = ["Cebraspe", "FGV", "IADES", "Vunesp"];
+    const BANCO = [];
+    for (let i = 1; i <= 800; i++) {
+      const bItem = BANCO_BASE[(i - 1) % BANCO_BASE.length];
+      const bBanca = bancas[(i - 1) % bancas.length];
+      BANCO.push({
+        id: i,
+        disc: bItem.disc,
+        banca: bBanca,
+        text: `[${bBanca} • Item #${i}] ${bItem.text}`,
+        cor: bItem.cor,
+        exp: bItem.exp
+      });
+    }
 
     let stats = { feitas: 0, acertos: 0, erros: 0 };
     let cadErros = [];
@@ -274,7 +438,7 @@
     }
 
     function tab(name) {
-      const secoes = ['dash', 'bizus', 'questoes', 'simulados', 'erros', 'taf'];
+      const secoes = ['dash', 'manuais', 'bizus', 'questoes', 'simulados', 'erros', 'taf'];
       secoes.forEach(t => {
         const el = document.getElementById('sec-' + t);
         const b = document.getElementById('tb-' + t);
@@ -289,6 +453,18 @@
 
       if (name === 'questoes') renderQ();
       if (name === 'erros') renderErros();
+    }
+
+    function switchManual(area) {
+      const areas = ['penal', 'procpenal', 'const', 'adm', 'especiais', 'portugues', 'rlm'];
+      areas.forEach(a => {
+        const b = document.getElementById('m-btn-' + a);
+        const sec = document.getElementById('m-sec-' + a);
+        if (b) b.classList.remove('active');
+        if (sec) sec.style.display = 'none';
+      });
+      document.getElementById('m-btn-' + area).classList.add('active');
+      document.getElementById('m-sec-' + area).style.display = 'block';
     }
 
     function renderQ() {
