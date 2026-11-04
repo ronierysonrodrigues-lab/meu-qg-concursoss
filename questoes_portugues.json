@@ -1,0 +1,110 @@
+[
+  {
+    "id": 501,
+    "discipline": "portugues",
+    "banca": "Cebraspe",
+    "exam": "Polícia Militar",
+    "type": "tf",
+    "text": "Na oração 'A repressão da criminalidade organizada vicia os dados da política de segurança já que está em todo lado', a oração introduzida por 'já que' possui valor semântico explicativo ou causal.",
+    "correct": "C",
+    "exp": "CERTO. A locução conjuntiva subordinativa 'já que' expressa ideia de causa/explicação em relação à oração subordinante."
+  },
+  {
+    "id": 502,
+    "discipline": "portugues",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "No trecho 'Os agentes obedeceram às determinações da chefia', o emprego do acento grave é obrigatório em virtude da regência do verbo 'obedecer', que é transitivo indirecto e rege a preposição 'a'.",
+    "correct": "C",
+    "exp": "CERTO. Quem obedece, obedece 'a' alguém ou 'a' algo. A fusão da preposição 'a' exigida pelo verbo com o artigo definido feminino plural 'as' torna a crase obrigatória: 'obedeceram às'."
+  },
+  {
+    "id": 503,
+    "discipline": "portugues",
+    "banca": "FGV",
+    "exam": "PM - Soldado Combatente",
+    "type": "mc",
+    "text": "Em 'Não obstante alguns avanços obtidos no combate ao crime, a sensação de insegurança permanece', a expressão sublinhada pode ser substituída sem alteração de sentido e com correcção gramatical por:",
+    "options": [
+      "Conforme alguns avanços",
+      "A despeito de alguns avanços",
+      "Porquanto haja alguns avanços",
+      "Dado que ocorreram avanços",
+      "Perante alguns avanços"
+    ],
+    "correct": 1,
+    "exp": "'Não obstante' é uma locução conjuntiva/prepositiva de valor concessivo, sinónima de 'a despeito de', 'apesar de' ou 'malgrado'."
+  },
+  {
+    "id": 504,
+    "discipline": "portugues",
+    "banca": "FGV",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Assinale a opção em que a pontuação com vírgula foi empregada para assinalar a elipse (omissão) de um verbo anteriormente citado (zeugma):",
+    "options": [
+      "Se não tens determinação, não tentes a carreira policial.",
+      "Os policiais realizaram a busca no imóvel e encontraram as armas.",
+      "O criminoso cumpre a pena e o juiz, a lei.",
+      "Em geral, o inquérito policial preserva os indícios materiais.",
+      "Alagoas, terra de belezas naturais, enfrenta desafios na segurança."
+    ],
+    "correct": 2,
+    "exp": "Na frase 'O criminoso cumpre a pena e o juiz, a lei', a vírgula substitui a forma verbal 'cumpre' (zeugma), evitando a repetição desnecessária do termo."
+  },
+  {
+    "id": 505,
+    "discipline": "portugues",
+    "banca": "IADES",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Assinale a alternativa que preenche correctamente as lacunas da frase: 'A delegacia _____ os policias se dirigiram era o local _____ se encontrava detido o suspeito.'",
+    "options": [
+      "onde / aonde",
+      "aonde / onde",
+      "em que / aonde",
+      "que / cujo",
+      "a que / de onde"
+    ],
+    "correct": 1,
+    "exp": "O verbo 'dirigir-se' rege preposição 'a' indicando movimento para um destino ('aonde se dirigiram'). O verbo 'encontrar-se' exige indicação de lugar estático, preenchido pelo pronome relativo 'onde'."
+  },
+  {
+    "id": 506,
+    "discipline": "portugues",
+    "banca": "Cebraspe",
+    "exam": "Polícia Civil",
+    "type": "tf",
+    "text": "A concordância verbal está conforme a norma-padrão no período: 'Haviam muitos policiais destacados para a contenção do motim no estabelecimento penal.'",
+    "correct": "E",
+    "exp": "ERRADO. O verbo 'haver' no sentido de existir ou ocorrer é impessoal e não possui sujeito, devendo permanecer obrigatoriamente na 3ª pessoa do singular: 'Havia muitos policiais'."
+  },
+  {
+    "id": 507,
+    "discipline": "portugues",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "Na frase 'Trata-se de crimes de difícil elucidação', o pronome 'se' funciona como partícula apassivadora, admitindo a flexão do verbo no plural.",
+    "correct": "E",
+    "exp": "ERRADO. Quem se trata, trata-se DE algo (verbo transitivo indirecto regido por preposição). O 'se' é índice de indeterminação do sujeito (IIS), tornando o verbo obrigatoriamente invariável na 3ª pessoa do singular."
+  },
+  {
+    "id": 508,
+    "discipline": "portugues",
+    "banca": "FGV",
+    "exam": "Polícia Penal",
+    "type": "mc",
+    "text": "Assinale a alternativa em que a regência nominal e verbal atende rigorosamente à norma-padrão da língua:",
+    "options": [
+      "O delegado preferiu liberar o suspeito do que mantê-lo detido.",
+      "Os agentes aspiravam aos cargos de direcção superior com mérito.",
+      "A equipa policial assistiu o desenrolar dos acontecimentos à distância.",
+      "O instrutor informou aos candidatos de que a prova fora adiada.",
+      "Os detidos desobedeceram o regulamento penitenciário interno."
+    ],
+    "correct": 1,
+    "exp": "O verbo 'aspirar' no sentido de desejar ou almejar é transitivo indirecto e rege a preposição 'a' ('aspiravam aos cargos'). 'Preferir' não admite 'do que' (exige 'a'). 'Desobedecer' exige 'ao regulamento'."
+  }
+]
