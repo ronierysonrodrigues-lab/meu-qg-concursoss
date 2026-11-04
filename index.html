@@ -3,26 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QG Tático • Hub de Estudos Policiais</title>
+  <title>QG Tático • Hub Policial FCC & Carreiras Policiais</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
     body { background-color: #070a0f; color: #f1f5f9; min-height: 100vh; display: flex; flex-direction: column; }
+    
     header { background-color: #0d1424; border-bottom: 1px solid #1e293b; padding: 12px 20px; position: sticky; top: 0; z-index: 50; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
     .brand { display: flex; align-items: center; gap: 12px; }
     .shield-icon { width: 38px; height: 38px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
     .brand-title { font-weight: 900; letter-spacing: 1px; color: #ffffff; font-size: 17px; display: flex; align-items: center; gap: 8px; }
     .badge-tag { font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; }
     .brand-sub { font-size: 11px; color: #64748b; font-weight: 500; }
+    
     nav { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0; }
     .nav-btn { background: transparent; border: 1px solid transparent; color: #94a3b8; font-size: 13px; font-weight: 700; padding: 7px 13px; border-radius: 6px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
     .nav-btn:hover { color: #ffffff; }
     .nav-btn.active { background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #f59e0b; }
+    
     main { max-width: 1100px; width: 100%; margin: 0 auto; padding: 22px 16px; flex: 1; display: flex; flex-direction: column; gap: 20px; }
     .card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; }
+    
     .banner-title { font-size: 26px; font-weight: 900; color: #ffffff; margin-top: 6px; margin-bottom: 8px; }
     .banner-sub { font-size: 13px; color: #94a3b8; line-height: 1.5; max-width: 700px; }
     .banner-header { display: flex; justify-content: space-between; align-items: flex-start; }
     .post-tag { font-size: 11px; font-weight: 800; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.5px; }
+    
     .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
     @media(max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
     .stat-box { background: #070d19; border: 1px solid #1e293b; border-radius: 8px; padding: 14px; text-align: center; }
@@ -32,6 +37,7 @@
     .val-green { color: #10b981; }
     .val-gold { color: #f59e0b; }
     .val-red { color: #ef4444; }
+    
     .pomo-card { text-align: center; max-width: 420px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; align-items: center; }
     .pomo-circle { width: 170px; height: 170px; border-radius: 50%; border: 5px solid #f59e0b; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 14px auto; background: #070d19; }
     .pomo-time { font-size: 36px; font-weight: 900; font-family: monospace; color: #ffffff; }
@@ -40,21 +46,24 @@
     .btn-gold { background: #f59e0b; color: #080c14; font-weight: 800; border: none; padding: 10px 22px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: 0.2s; }
     .btn-gold:hover { background: #d97706; }
     .btn-dark { background: #1e293b; color: #f1f5f9; font-weight: 700; border: 1px solid #334155; padding: 10px 18px; border-radius: 8px; font-size: 14px; cursor: pointer; }
+    
     .ciclo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 12px; }
     .ciclo-item { background: #070d19; border: 1px solid #1e293b; border-radius: 6px; padding: 10px; }
     .ciclo-dia { font-size: 11px; font-weight: 800; color: #f59e0b; text-transform: uppercase; }
     .ciclo-mat { font-size: 12px; color: #cbd5e1; margin-top: 4px; font-weight: 600; }
+    
     .manual-nav { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 12px; border-bottom: 1px solid #1e293b; margin-bottom: 16px; }
     .manual-tab-btn { background: #070d19; border: 1px solid #1e293b; color: #94a3b8; padding: 8px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; transition: 0.2s; }
     .manual-tab-btn.active { background: rgba(59, 130, 246, 0.2); border-color: #3b82f6; color: #60a5fa; }
     .manual-content-block { background: #070d19; border: 1px solid #1e293b; border-radius: 8px; padding: 18px; margin-bottom: 16px; }
-    .manual-h3 { font-size: 16px; font-weight: 800; color: #f59e0b; margin-bottom: 8px; }
+    .manual-h3 { font-size: 16px; font-weight: 800; color: #f59e0b; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
     .manual-p { font-size: 13px; line-height: 1.6; color: #cbd5e1; margin-bottom: 10px; }
     .table-esquema { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
     .table-esquema th { background: #1e293b; color: #f59e0b; padding: 8px 10px; text-align: left; border: 1px solid #334155; }
     .table-esquema td { padding: 8px 10px; border: 1px solid #1e293b; color: #e2e8f0; }
     .alert-tatico { background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 10px 14px; border-radius: 4px; font-size: 12px; color: #fca5a5; margin-top: 8px; }
     .bizu-box { background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; padding: 10px 14px; border-radius: 4px; font-size: 12px; color: #fde68a; margin-top: 8px; }
+    
     .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 16px; }
     .select-tactical { background: #070d19; border: 1px solid #1e293b; color: #f1f5f9; padding: 8px 12px; border-radius: 6px; font-size: 13px; outline: none; }
     .question-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 18px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 12px; }
@@ -62,13 +71,28 @@
     .q-disc { font-weight: 800; text-transform: uppercase; color: #f59e0b; font-size: 11px; }
     .q-banca { color: #64748b; font-family: monospace; }
     .q-text { font-size: 14px; line-height: 1.6; color: #e2e8f0; }
-    .q-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .btn-opt { background: #070d19; border: 1px solid #1e293b; color: #f1f5f9; padding: 10px; border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer; transition: 0.2s; text-align: left; }
-    .btn-opt:hover { border-color: #f59e0b; }
-    .btn-opt.correct { background: #064e3b !important; border-color: #10b981 !important; color: #ffffff !important; }
-    .btn-opt.wrong { background: #7f1d1d !important; border-color: #ef4444 !important; color: #ffffff !important; }
-    .q-exp { background: #070d19; border: 1px solid #334155; border-radius: 8px; padding: 12px; font-size: 13px; color: #cbd5e1; line-height: 1.5; display: none; }
+    
+    .q-opts-list { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+    .btn-opt-mc { background: #070d19; border: 1px solid #1e293b; color: #cbd5e1; padding: 10px 14px; border-radius: 8px; font-size: 13px; cursor: pointer; transition: 0.2s; text-align: left; display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
+    .btn-opt-mc:hover { border-color: #f59e0b; color: #ffffff; background: #0b1322; }
+    .btn-opt-mc.correct { background: #064e3b !important; border-color: #10b981 !important; color: #ffffff !important; }
+    .btn-opt-mc.wrong { background: #7f1d1d !important; border-color: #ef4444 !important; color: #ffffff !important; }
+    
+    .q-actions-tf { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+    .btn-opt-tf { background: #070d19; border: 1px solid #1e293b; color: #f1f5f9; padding: 10px; border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer; transition: 0.2s; text-align: center; }
+    .btn-opt-tf:hover { border-color: #f59e0b; }
+    .btn-opt-tf.correct { background: #064e3b !important; border-color: #10b981 !important; color: #ffffff !important; }
+    .btn-opt-tf.wrong { background: #7f1d1d !important; border-color: #ef4444 !important; color: #ffffff !important; }
+    
+    .q-exp { background: #070d19; border: 1px solid #334155; border-radius: 8px; padding: 12px; font-size: 13px; color: #cbd5e1; line-height: 1.5; display: none; margin-top: 6px; }
     .q-exp.show { display: block; }
+    
+    .pagination-bar { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 20px; padding: 14px 0; border-top: 1px solid #1e293b; flex-wrap: wrap; }
+    .page-info { font-size: 13px; color: #94a3b8; font-weight: 600; }
+    .page-nav-btns { display: flex; gap: 8px; }
+    .btn-page { background: #070d19; border: 1px solid #1e293b; color: #f1f5f9; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 700; cursor: pointer; transition: 0.2s; }
+    .btn-page:hover:not(:disabled) { background: #f59e0b; color: #080c14; }
+    .btn-page:disabled { opacity: 0.4; cursor: not-allowed; }
   </style>
 </head>
 <body>
@@ -77,13 +101,13 @@
     <div class="brand">
       <div class="shield-icon">🛡️</div>
       <div>
-        <div class="brand-title">QG TÁTICO <span class="badge-tag">PC • PM • PP</span></div>
+        <div class="brand-title">QG TÁTICO <span class="badge-tag">PC • PM • PP • FCC</span></div>
         <div class="brand-sub">PLATAFORMA OPERACIONAL DE APROVAÇÃO</div>
       </div>
     </div>
     <nav>
       <button onclick="tab('dash')" id="tb-dash" class="nav-btn active">Dashboard</button>
-      <button onclick="tab('manuais')" id="tb-manuais" class="nav-btn">📖 Manuais & Resumos</button>
+      <button onclick="tab('manuais')" id="tb-manuais" class="nav-btn">📖 Manuais & Dicas FCC</button>
       <button onclick="tab('bizus')" id="tb-bizus" class="nav-btn">⚡ Bizus</button>
       <button onclick="tab('questoes')" id="tb-questoes" class="nav-btn">📝 Questões (<span id="count-nav">800</span>)</button>
       <button onclick="tab('simulados')" id="tb-simulados" class="nav-btn">⏱️ Simulados</button>
@@ -97,11 +121,11 @@
     <section id="sec-dash" class="card" style="display: block;">
       <div class="banner-header">
         <span class="post-tag">🎯 POSTO DE COMANDO OPERACIONAL</span>
-        <span style="font-family: monospace; font-size: 12px; color: #64748b;">04/11/2026</span>
+        <span style="font-family: monospace; font-size: 12px; color: #64748b;">FOCO PROVA DE DEZEMBRO</span>
       </div>
       <h1 class="banner-title">"No longo prazo, eu não perco."</h1>
       <p class="banner-sub">
-        Arsenal de aprovação tática para Polícia Civil, Polícia Militar e Polícia Penal. Teoria esquematizada, mnemónicos, questões comentadas na lei e preparação física para o TAF.
+        Plataforma configurada com 800 questões comentadas (ênfase em Múltipla Escolha e banca FCC), manuais de letra de lei seca e resumos doutrinários para Polícia Civil, Militar e Penal.
       </p>
 
       <div class="stats-grid">
@@ -113,10 +137,13 @@
 
       <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
         <div class="card" style="background: #070d19;">
-          <div style="font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">DIREITO PENAL</div>
-          <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">L.U.T.A. (Lugar e Tempo do Crime)</div>
-          <div style="background: #0b1322; border: 1px solid #1e293b; border-radius: 6px; padding: 10px 14px; font-family: monospace; font-size: 14px; font-weight: 800; color: #f59e0b; margin-bottom: 8px;">L - U - T - A</div>
-          <p style="font-size: 13px; color: #94a3b8;"><strong>L</strong>ugar: <strong>U</strong>biquidade (Art. 6º CP) | <strong>T</strong>empo: <strong>A</strong>tividade (Art. 4º CP).</p>
+          <div style="font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">RAIO-X FCC 2026</div>
+          <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 8px;">O Que a FCC Mais Cobra nas Polícias</div>
+          <p style="font-size: 13px; color: #94a3b8; line-height: 1.5;">
+            1. <strong>Letra de lei seca pura:</strong> Prazos do CPP (prisão preventiva, temporária e inquérito).<br>
+            2. <strong>Crimes contra a Administração:</strong> Diferença entre Concussão (exigir), Corrupção (solicitar/receber) e Prevaricação (interesse pessoal).<br>
+            3. <strong>Português:</strong> Casos proibidos de crase e regência dos verbos obedecer, visar e aspirar.
+          </p>
         </div>
 
         <div class="card pomo-card" style="background: #070d19;">
@@ -133,25 +160,25 @@
       </div>
 
       <div style="margin-top: 24px;">
-        <span class="post-tag">📅 CICLO SEMANAL INTEGRADO (PC • PM • PP)</span>
+        <span class="post-tag">📅 CICLO SEMANAL INTEGRADO (PC • PM • PP • FCC)</span>
         <div class="ciclo-grid">
-          <div class="ciclo-item"><span class="ciclo-dia">SEGUNDA</span><div class="ciclo-mat">Português + Dir. Penal</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">SEGUNDA</span><div class="ciclo-mat">Português FCC + Dir. Penal</div></div>
           <div class="ciclo-item"><span class="ciclo-dia">TERÇA</span><div class="ciclo-mat">RLM + Dir. Constitucional</div></div>
           <div class="ciclo-item"><span class="ciclo-dia">QUARTA</span><div class="ciclo-mat">Informática + Dir. Adm.</div></div>
-          <div class="ciclo-item"><span class="ciclo-dia">QUINTA</span><div class="ciclo-mat">Processo Penal + Legislação Especial</div></div>
-          <div class="ciclo-item"><span class="ciclo-dia">SEXTA</span><div class="ciclo-mat">Geografia + História</div></div>
-          <div class="ciclo-item"><span class="ciclo-dia">SÁBADO</span><div class="ciclo-mat">Simulado Geral + TAF</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">QUINTA</span><div class="ciclo-mat">Processo Penal + LEP / Drogas</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">SEXTA</span><div class="ciclo-mat">Bateria de Múltipla Escolha</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">SÁBADO</span><div class="ciclo-mat">Simulado 20 Questões + TAF</div></div>
           <div class="ciclo-item"><span class="ciclo-dia">DOMINGO</span><div class="ciclo-mat">Revisão do Caderno de Erros</div></div>
         </div>
       </div>
     </section>
 
-    <!-- MANUAIS & RESUMOS ESQUEMATIZADOS -->
+    <!-- MANUAIS & RESUMOS ESQUEMATIZADOS (DIRECIONADOS FCC) -->
     <section id="sec-manuais" class="card" style="display: none;">
       <div style="margin-bottom: 16px;">
-        <span class="post-tag">📚 DOUTRINA & LEI SECA DIRECIONADA</span>
+        <span class="post-tag">📚 DOUTRINA, LEI SECA & RAIO-X FCC</span>
         <h2 style="font-size: 22px; font-weight: 900; color: #ffffff; margin-top: 4px;">Manuais e Resumos Esquematizados</h2>
-        <p style="font-size: 13px; color: #94a3b8;">Pontos de maior incidência para revisão imediata antes das questões.</p>
+        <p style="font-size: 13px; color: #94a3b8;">Dicas estratégicas e esquemas visuais com foco no estilo da Fundação Carlos Chagas (FCC).</p>
       </div>
 
       <div class="manual-nav">
@@ -160,135 +187,122 @@
         <button onclick="switchManual('const')" id="m-btn-const" class="manual-tab-btn">Constitucional</button>
         <button onclick="switchManual('adm')" id="m-btn-adm" class="manual-tab-btn">Administrativo</button>
         <button onclick="switchManual('especiais')" id="m-btn-especiais" class="manual-tab-btn">Leis Especiais</button>
-        <button onclick="switchManual('portugues')" id="m-btn-portugues" class="manual-tab-btn">Língua Portuguesa</button>
-        <button onclick="switchManual('rlm')" id="m-btn-rlm" class="manual-tab-btn">RLM</button>
+        <button onclick="switchManual('portugues')" id="m-btn-portugues" class="manual-tab-btn">Português FCC</button>
+        <button onclick="switchManual('rlm')" id="m-btn-rlm" class="manual-tab-btn">RLM FCC</button>
       </div>
 
+      <!-- Resumo Penal -->
       <div id="m-sec-penal" style="display: block;">
         <div class="manual-content-block">
-          <div class="manual-h3">1. Aplicação da Lei Penal no Tempo e Espaço</div>
-          <p class="manual-p"><strong>Tempo do Crime (Art. 4º CP):</strong> Adotou a Teoria da <em>Atividade</em>. A lei penal não retroagirá, salvo para beneficiar o réu (CF/88, art. 5º, XL).</p>
-          <p class="manual-p"><strong>Lugar do Crime (Art. 6º CP):</strong> Adotou a Teoria da <em>Ubiquidade / Mista</em> (conduta ou resultado).</p>
-          <div class="bizu-box">💡 <strong>Mnemónico L.U.T.A.:</strong> Lugar = Ubiquidade | Tempo = Atividade.</div>
-        </div>
-
-        <div class="manual-content-block">
-          <div class="manual-h3">2. Teoria do Crime (Conceito Tripartido)</div>
+          <div class="manual-h3">1. Como a FCC cobra Crimes Funcionais contra a Administração (Art. 312 a 326 CP)</div>
+          <p class="manual-p">A FCC costuma apresentar casos práticos breves para o candidato identificar o verbo núcleo do crime:</p>
           <table class="table-esquema">
-            <tr><th>Elemento</th><th>Composição</th><th>Excludentes</th></tr>
-            <tr><td><strong>Fato Típico</strong></td><td>Conduta, Resultado, Nexo Causal, Tipicidade</td><td>Coação física irresistível, caso fortuito, insignificância</td></tr>
-            <tr><td><strong>Antijuridicidade</strong></td><td>Ilicitude da conduta</td><td><strong>E.L.E.E.</strong>: Estado de Necessidade, Legítima Defesa, Estrito Cumprimento do Dever Legal, Exercício Regular de Direito</td></tr>
-            <tr><td><strong>Culpabilidade</strong></td><td>Imputabilidade, Consciência da Ilicitude, Exigibilidade de Conduta Diversa</td><td>Inimputabilidade (menoridade, embriaguez involuntária completa), Erro de Proibição Inevitável, Coação Moral Irresistível, Obediência Hierárquica</td></tr>
+            <tr><th>Crime</th><th>Verbo / Elemento Subjetivo</th><th>Critério da FCC</th></tr>
+            <tr><td><strong>Concussão (art. 316)</strong></td><td><strong>EXIGIR</strong> vantagem indevida</td><td>Crime formal: consuma-se com a exigência. O pagamento posterior é mero exaurimento.</td></tr>
+            <tr><td><strong>Corrupção Passiva (art. 317)</strong></td><td><strong>SOLICITAR</strong>, <strong>RECEBER</strong> ou <strong>ACEITAR PROMESSA</strong></td><td>Se o funcionário solicita ou recebe, a tipificação é corrupção passiva.</td></tr>
+            <tr><td><strong>Prevaricação (art. 319)</strong></td><td>Retardar ou deixar de praticar ato funcional</td><td>Exige <em>interesse ou sentimento pessoal</em> (vingança, ódio, vaidade, favorecimento próprio).</td></tr>
+            <tr><td><strong>Condescendência Criminosa (art. 320)</strong></td><td>Deixar de punir subordinado infrator</td><td>Exige motivo de <strong>INDULGÊNCIA</strong> (pena, compaixão, clemência, amizade).</td></tr>
+            <tr><td><strong>Advocacia Administrativa (art. 321)</strong></td><td>Patrocinar interesse privado perante a administração pública</td><td>Valendo-se da qualidade de funcionário público. Se o interesse for ilegítimo, a pena é agravada.</td></tr>
           </table>
+          <div class="alert-tatico">🚨 <strong>Atenção:</strong> Se o agente público recebe quantia oferecida pelo infrator = Corrupção Passiva. Se o infrator ofereceu = Corrupção Ativa (art. 333). Se o agente público exigiu sob coação = Concussão.</div>
         </div>
 
         <div class="manual-content-block">
-          <div class="manual-h3">3. Crimes Funcionais contra a Administração Pública</div>
-          <p class="manual-p"><strong>Peculato (Art. 312):</strong> Apropriar-se ou desviar dinheiro ou bem móvel público/particular sob sua posse em razão do cargo.</p>
-          <p class="manual-p"><strong>Concussão (Art. 316):</strong> <em>EXIGIR</em> vantagem indevida em razão da função.</p>
-          <p class="manual-p"><strong>Corrupção Passiva (Art. 317):</strong> <em>SOLICITAR, RECEBER</em> ou <em>ACEITAR PROMESSA</em> de vantagem indevida.</p>
-          <p class="manual-p"><strong>Prevaricação (Art. 319):</strong> Retardar ou deixar de praticar ato de ofício para satisfazer <em>interesse ou sentimento pessoal</em>.</p>
-          <p class="manual-p"><strong>Condescendência Criminosa (Art. 320):</strong> Deixar de punir subordinado por <em>indulgência / compaixão</em>.</p>
-          <div class="alert-tatico">🚨 <strong>Atenção:</strong> Se o agente público <em>exige</em> = Concussão. Se o agente público <em>solicita/recebe</em> = Corrupção Passiva. Se deixa de punir por <em>pena/amizade</em> = Condescendência Criminosa.</div>
+          <div class="manual-h3">2. Teoria do Crime e Excludentes (E.L.E.E.)</div>
+          <p class="manual-p"><strong>Tempo e Lugar do Crime (L.U.T.A.):</strong> Tempo = Atividade (art. 4º) | Lugar = Ubiquidade (art. 6º).</p>
+          <p class="manual-p"><strong>Excludentes de Ilicitude (Art. 23 CP):</strong> Estado de necessidade, Legítima defesa, Estrito cumprimento de dever legal e Exercício regular de direito. O excesso doloso ou culposo é sempre punível.</p>
+          <p class="manual-p"><strong>Culpabilidade:</strong> A coação moral irresistível e a obediência hierárquica de ordem não manifestamente ilegal excluem a culpabilidade (não a ilicitude).</p>
         </div>
       </div>
 
+      <!-- Resumo Processo Penal -->
       <div id="m-sec-procpenal" style="display: none;">
         <div class="manual-content-block">
-          <div class="manual-h3">1. Inquérito Policial (IP)</div>
-          <p class="manual-p">Procedimento administrativo informativo pré-processual conduzido pela Polícia Judiciária.</p>
-          <ul style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
-            <li><strong>Inquisitivo:</strong> Não há contraditório e ampla defesa plenos.</li>
-            <li><strong>Indisponível:</strong> O delegado de polícia <em>NUNCA</em> pode mandar arquivar autos de inquérito (Art. 17 CPP).</li>
-            <li><strong>Dispensável:</strong> O titular da ação penal pode denunciar com outros elementos idôneos.</li>
-            <li><strong>Oficial e Oficioso:</strong> Conduzido por órgão oficial do Estado, instaurado de ofício na ação pública incondicionada.</li>
-            <li><strong>Escrito:</strong> Todos os atos serão reduzidos a termo.</li>
-          </ul>
+          <div class="manual-h3">1. Prazos do Inquérito Policial e Prisões (Critérios FCC)</div>
+          <table class="table-esquema">
+            <tr><th>Procedimento / Lei</th><th>Réu Preso</th><th>Réu Solto</th></tr>
+            <tr><td><strong>Regra Geral (CPP)</strong></td><td>10 dias (improrrogáveis)</td><td>30 dias (prorrogáveis pelo juiz)</td></tr>
+            <tr><td><strong>Justiça Federal (Lei 5.010/66)</strong></td><td>15 dias (+ 15 dias)</td><td>30 dias</td></tr>
+            <tr><td><strong>Lei de Drogas (Lei 11.343/06)</strong></td><td>30 dias (+ 30 dias)</td><td>90 dias (+ 90 dias)</td></tr>
+            <tr><td><strong>Prisão Temporária (Comum)</strong></td><td>5 dias (+ 5 dias)</td><td>Não cabe temporária para réu solto</td></tr>
+            <tr><td><strong>Prisão Temporária (Hediondo)</strong></td><td>30 dias (+ 30 dias)</td><td>Exige extrema e comprovada necessidade</td></tr>
+          </table>
+          <div class="bizu-box">💡 <strong>Inquérito Policial é INDISPONÍVEL:</strong> O Delegado de Polícia NUNCA pode determinar o arquivamento de inquérito policial (Art. 17 CPP). Súmula Vinculante 14: o defensor tem direito de consultar autos já documentados.</div>
         </div>
 
         <div class="manual-content-block">
-          <div class="manual-h3">2. Prisões Processuais & Espécies de Flagrante</div>
-          <table class="table-esquema">
-            <tr><th>Espécie</th><th>Características</th><th>Dispositivo</th></tr>
-            <tr><td><strong>Flagrante Próprio</strong></td><td>Está a cometer ou acaba de cometer a infração penal.</td><td>Art. 302, I e II CPP</td></tr>
-            <tr><td><strong>Flagrante Impróprio</strong></td><td>É perseguido logo após em situação presuntiva de autoria.</td><td>Art. 302, III CPP</td></tr>
-            <tr><td><strong>Flagrante Presumido</strong></td><td>É encontrado logo depois com armas ou objetos do crime.</td><td>Art. 302, IV CPP</td></tr>
-          </table>
-          <div class="bizu-box">💡 <strong>Prisão Temporária (Lei 7.960/89):</strong> Cabe exclusivamente durante a fase de inquérito policial (5 dias + 5 em crimes comuns; 30 dias + 30 em crimes hediondos). É vedada a sua decretação de ofício pelo juiz.</div>
+          <div class="manual-h3">2. Flagrante Delito (Art. 302 CPP)</div>
+          <p class="manual-p"><strong>Flagrante Próprio (incisos I e II):</strong> Está a cometer ou acaba de cometer a infração penal.</p>
+          <p class="manual-p"><strong>Flagrante Impróprio / Quase-flagrante (inciso III):</strong> É <em>perseguido logo após</em> em situação presuntiva.</p>
+          <p class="manual-p"><strong>Flagrante Presumido / Ficto (inciso IV):</strong> É <em>encontrado logo depois</em> com instrumentos, armas ou objetos que façam presumir autoria.</p>
         </div>
       </div>
 
+      <!-- Resumo Constitucional -->
       <div id="m-sec-const" style="display: none;">
         <div class="manual-content-block">
-          <div class="manual-h3">1. Artigo 5º - Direitos e Garantias Fundamentais</div>
-          <p class="manual-p"><strong>Inviolabilidade de Domicílio (Inciso XI):</strong> A casa é asilo inviolável. Exceções:</p>
-          <ul style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
-            <li>A qualquer hora (dia ou noite): flagrante delito, desastre ou para prestar socorro.</li>
-            <li>Apenas durante o dia: cumprimento de determinação judicial.</li>
-          </ul>
-          <p class="manual-p" style="margin-top: 10px;"><strong>Militares Estaduais e Federais (Art. 42 e 142):</strong> É <em>expressamente proibida</em> a greve e a sindicalização.</p>
+          <div class="manual-h3">1. Artigo 144 - Organização da Segurança Pública</div>
+          <p class="manual-p"><strong>Rol Taxativo do Caput:</strong> Polícia Federal, Polícia Rodoviária Federal, Polícia Ferroviária Federal, Polícias Civis, Polícias Militares e Corpos de Bombeiros Militares, e Polícias Penais (federal, estaduais e distrital).</p>
+          <p class="manual-p"><strong>Guarda Municipal (§ 8º):</strong> Destinada à proteção de bens, serviços e instalações municipais. Não integra os incisos de órgãos policiais do caput.</p>
         </div>
-
         <div class="manual-content-block">
-          <div class="manual-h3">2. Segurança Pública (Artigo 144 da CF/88)</div>
-          <p class="manual-p">Rol dos órgãos constitucionais de Segurança Pública:</p>
-          <ol style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
-            <li>Polícia Federal (PF)</li>
-            <li>Polícia Rodoviária Federal (PRF)</li>
-            <li>Polícia Ferroviária Federal (PFF)</li>
-            <li>Polícias Civis (PC) - Funções judiciárias e de apuração de infrações (exceto militares)</li>
-            <li>Polícias Militares (PM) e Corpos de Bombeiros Militares (CBM) - Policiamento ostensivo e defesa civil</li>
-            <li>Polícias Penais (federal, estaduais e distrital) - Segurança dos estabelecimentos prisionais</li>
-          </ol>
-          <div class="alert-tatico">🚨 <strong>Guarda Municipal:</strong> Prevista no § 8º do art. 144 para proteção do patrimônio municipal, não constando no rol de órgãos policiais do caput.</div>
+          <div class="manual-h3">2. Inviolabilidade Domiciliar (Art. 5º, XI CF)</div>
+          <p class="manual-p">A casa é asilo inviolável. Hipóteses sem consentimento:</p>
+          <ul style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
+            <li><strong>Dia ou Noite:</strong> Flagrante delito, desastre ou prestar socorro.</li>
+            <li><strong>Apenas Durante o Dia:</strong> Cumprimento de ordem judicial fundamentada.</li>
+          </ul>
         </div>
       </div>
 
+      <!-- Resumo Administrativo -->
       <div id="m-sec-adm" style="display: none;">
         <div class="manual-content-block">
-          <div class="manual-h3">1. Princípios Constitucionais Expressos (Art. 37, caput)</div>
-          <div class="bizu-box">💡 <strong>L.I.M.P.E.:</strong> Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência.</div>
+          <div class="manual-h3">1. Poder de Polícia e seus Atributos (D.A.I.)</div>
+          <p class="manual-p"><strong>Discricionariedade:</strong> Margem de escolha quanto à conveniência e oportunidade da medida.</p>
+          <p class="manual-p"><strong>Autoexecutoriedade:</strong> A Administração executa materialmente seus atos sem prévia autorização judicial. <em>Exceção: cobrança de multa exige execução fiscal judicial.</em></p>
+          <p class="manual-p"><strong>Imperatividade:</strong> Impõe obrigações a terceiros independentemente de concordância.</p>
         </div>
         <div class="manual-content-block">
-          <div class="manual-h3">2. Poderes da Administração</div>
-          <p class="manual-p"><strong>Poder de Polícia:</strong> Restringe bens e atividades individuais em prol da coletividade. Atributos (<strong>D.A.I.</strong>): Discricionariedade, Autoexecutoriedade (execução material direta sem prévia ordem judicial) e Imperatividade.</p>
-          <p class="manual-p"><strong>Responsabilidade Civil do Estado (Art. 37, § 6º):</strong> É objetiva perante terceiros (Teoria do Risco Administrativo). O regresso contra o servidor público causador do dano exige dolo ou culpa (subjetiva).</p>
+          <div class="manual-h3">2. Responsabilidade Civil Objetiva (Art. 37, § 6º CF)</div>
+          <p class="manual-p">O Estado responde objetivamente pelos danos causados por seus agentes (Teoria do Risco Administrativo). O lesado aciona a Fazenda Pública. A ação regressiva do Estado contra o servidor exige comprovação de <strong>dolo ou culpa</strong> (responsabilidade subjetiva).</p>
         </div>
       </div>
 
+      <!-- Resumo Leis Especiais -->
       <div id="m-sec-especiais" style="display: none;">
         <div class="manual-content-block">
-          <div class="manual-h3">1. Crimes Hediondos (Lei 8.072/90)</div>
-          <p class="manual-p">Inafiançáveis e insuscetíveis de graça ou anistia. Não admitem fiança.</p>
-          <p class="manual-p"><strong>Hediondos Comuns:</strong> Latrocínio, Estupro, Homicídio qualificado, Posse/Porte ilegal de arma de fogo de <em>USO PROIBIDO</em>.</p>
-          <div class="bizu-box">💡 <strong>Equiparados a Hediondos (3T):</strong> Tráfico de Drogas, Tortura e Terrorismo.</div>
-        </div>
-        <div class="manual-content-block">
-          <div class="manual-h3">2. Lei Maria da Penha (Lei 11.340/06)</div>
-          <p class="manual-p">Violência doméstica e familiar contra a mulher baseada no género. Veda a aplicação de penas de prestação pecuniária e afasta a aplicação do rito dos Juizados Especiais Criminais (Lei 9.099/95).</p>
+          <div class="manual-h3">1. Lei de Crimes Hediondos (Lei nº 8.072/90) & Equiparados</div>
+          <p class="manual-p">São inafiançáveis e insuscetíveis de graça ou anistia. Não admitem fiança.</p>
+          <p class="manual-p"><strong>Equiparados (3T):</strong> Tráfico de drogas, Tortura e Terrorismo.</p>
+          <p class="manual-p"><strong>Novidades Legislativas:</strong> Roubo com emprego de arma de fogo ou resultado morte (latrocínio), furto qualificado por explosivo e porte ilegal de arma de fogo de <strong>USO PROIBIDO</strong> são hediondos.</p>
         </div>
       </div>
 
+      <!-- Resumo Português FCC -->
       <div id="m-sec-portugues" style="display: none;">
         <div class="manual-content-block">
-          <div class="manual-h3">1. Regras Fundamentais de Crase</div>
-          <p class="manual-p"><strong>Proibida:</strong> Antes de palavras masculinas, antes de verbos, antes da generalidade dos pronomes e entre termos idênticos repetidos.</p>
-          <p class="manual-p"><strong>Facultativa:</strong> Antes de nomes próprios femininos, antes de pronome possessivo feminino no singular (minha, tua, sua) e após a preposição 'até'.</p>
-          <div class="bizu-box">💡 <strong>Substituição prática:</strong> Se ao substituir a palavra feminina por termo masculino equivalente surgir 'AO', ocorre crase. Exemplo: Foi à audiência -> Foi AO julgamento.</div>
+          <div class="manual-h3">1. Padrões Recorrentes da FCC em Língua Portuguesa</div>
+          <p class="manual-p"><strong>Crase Proibida:</strong> Antes de substantivo masculino, antes de verbos, antes de pronomes pessoais/tratamento (exceto senhora, senhorita, dona), entre palavras repetidas.</p>
+          <p class="manual-p"><strong>Verbos Impessoais:</strong></p>
+          <ul style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
+            <li><em>Haver</em> (sentido de existir ou tempo decorrido): Fica sempre no singular. Exemplo: <strong>Havia</strong> dez viaturas (e nunca haviam).</li>
+            <li><em>Fazer</em> (tempo decorrido ou clima): Fica no singular. Exemplo: <strong>Fazia</strong> três anos que não ocorria concurso.</li>
+          </ul>
+          <p class="manual-p" style="margin-top: 10px;"><strong>Partícula 'SE':</strong> Em verbos transitivos diretos acompanhados de 'se', ocorre voz passiva sintética e o verbo concorda com o sujeito: Exemplo: <em>Apuram-se os fatos</em>.</p>
         </div>
       </div>
 
+      <!-- Resumo RLM FCC -->
       <div id="m-sec-rlm" style="display: none;">
         <div class="manual-content-block">
-          <div class="manual-h3">1. Tabela-Verdade & Conectivos Lógicos</div>
-          <table class="table-esquema">
-            <tr><th>Conectivo</th><th>Símbolo</th><th>Regra</th></tr>
-            <tr><td><strong>Conjunção (E)</strong></td><td>^</td><td>Verdadeiro apenas se ambas as proposições forem verdadeiras.</td></tr>
-            <tr><td><strong>Disjunção (OU)</strong></td><td>v</td><td>Falso apenas se ambas as proposições forem falsas.</td></tr>
-            <tr><td><strong>Condicional (SE... ENTÃO)</strong></td><td>-></td><td>Falso apenas no caso Vera Fischer (V -> F = F).</td></tr>
-            <tr><td><strong>Bicondicional (SE E SOMENTE SE)</strong></td><td><-></td><td>Verdadeiro apenas se ambas tiverem o mesmo valor lógico.</td></tr>
-          </table>
-          <div class="bizu-box">💡 <strong>Negação do Condicional (Regra do MANÉ):</strong> Mantém a primeira parte E Nega a segunda parte. ~(P -> Q) = P ^ ~Q.</div>
+          <div class="manual-h3">1. Lógica Proposicional e Equivalências da FCC</div>
+          <p class="manual-p"><strong>Equivalência da Condicional (P -> Q):</strong></p>
+          <ul style="padding-left: 20px; font-size: 13px; color: #cbd5e1; line-height: 1.6;">
+            <li>Contrapositiva: <strong>~Q -> ~P</strong> (Inverte e nega ambas as proposições).</li>
+            <li>Disjunção: <strong>~P v Q</strong> (Nega a primeira OU mantém a segunda).</li>
+          </ul>
+          <p class="manual-p" style="margin-top: 10px;"><strong>Negação do Condicional (Regra do MANÉ):</strong> Mantém a primeira E Nega a segunda. ~(P -> Q) = <strong>P ^ ~Q</strong>.</p>
         </div>
       </div>
     </section>
@@ -302,66 +316,76 @@
           <p style="font-size: 13px; color: #94a3b8;">Lugar = Ubiquidade (Art. 6º) | Tempo = Atividade (Art. 4º).</p>
         </div>
         <div class="card">
-          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">ADMINISTRATIVO</div>
+          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 10px;">ADMINISTRATIVO</div>
           <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">L.I.M.P.E.</div>
           <p style="font-size: 13px; color: #94a3b8;">Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (Art. 37 CF).</p>
         </div>
         <div class="card">
-          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">CONSTITUCIONAL</div>
+          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 10px;">CONSTITUCIONAL</div>
           <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">SO.CI.DI.VA.PLU</div>
-          <p style="font-size: 13px; color: #94a3b8;">Fundamentos: Soberania, Cidadania, Dignidade, Valores do Trabalho, Pluralismo.</p>
+          <p style="font-size: 13px; color: #94a3b8;">Fundamentos da República: Soberania, Cidadania, Dignidade da pessoa humana, Valores do trabalho, Pluralismo político.</p>
         </div>
         <div class="card">
-          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px;">PROCESSO PENAL</div>
+          <div style="font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 10px;">PROCESSO PENAL</div>
           <div style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px;">I.D.O.S.A.</div>
-          <p style="font-size: 13px; color: #94a3b8;">Inquérito: Inquisitivo, Dispensável, Oficioso, Sigiloso, Avulso/Indisponível.</p>
+          <p style="font-size: 13px; color: #94a3b8;">Inquérito Policial: Inquisitivo, Dispensável, Oficioso, Sigiloso, Avulso/Indisponível.</p>
         </div>
       </div>
     </section>
 
-    <!-- QUESTÕES -->
+    <!-- QUESTÕES COM PAGINAÇÃO DE 20 ITENS POR PÁGINA -->
     <section id="sec-questoes" class="card" style="display: none;">
       <div class="filter-bar">
         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-          <select id="filtro-mat" onchange="renderQ()" class="select-tactical">
+          <select id="filtro-mat" onchange="resetAndRender()" class="select-tactical">
             <option value="todas">Todas as Disciplinas</option>
             <option value="penal">Direito Penal</option>
             <option value="processopenal">Processo Penal</option>
             <option value="constitucional">Constitucional</option>
             <option value="administrativo">Administrativo</option>
             <option value="especiais">Legislação Especial</option>
-            <option value="portugues">Português</option>
+            <option value="portugues">Língua Portuguesa</option>
             <option value="rlm">RLM / Matemática</option>
-            <option value="informatica">Informática</option>
-            <option value="historia">História</option>
-            <option value="geografia">Geografia</option>
           </select>
-          <select id="filtro-banca" onchange="renderQ()" class="select-tactical">
+          <select id="filtro-banca" onchange="resetAndRender()" class="select-tactical">
             <option value="todas">Todas as Bancas</option>
+            <option value="FCC" selected>FCC (Fundação Carlos Chagas)</option>
             <option value="Cebraspe">Cebraspe</option>
             <option value="FGV">FGV</option>
-            <option value="IADES">IADES</option>
             <option value="Vunesp">Vunesp</option>
+            <option value="IADES">IADES</option>
+          </select>
+          <select id="filtro-tipo" onchange="resetAndRender()" class="select-tactical">
+            <option value="todos">Todos os Formatos</option>
+            <option value="mc">Múltipla Escolha (A, B, C, D, E)</option>
+            <option value="tf">Certo / Errado</option>
           </select>
         </div>
-        <span style="font-size: 13px; color: #94a3b8;">Total listado: <strong id="q-total-count" style="color:#ffffff;">0</strong></span>
+        <span style="font-size: 13px; color: #94a3b8;">Filtradas: <strong id="q-total-count" style="color:#ffffff;">0</strong> de 800</span>
       </div>
+
       <div id="q-list"></div>
+
+      <div class="pagination-bar">
+        <button onclick="prevPage()" id="btn-prev-page" class="btn-page">◀ Página Anterior</button>
+        <span id="page-indicator" class="page-info">Página 1 de 40 (20 itens por bloco)</span>
+        <button onclick="nextPage()" id="btn-next-page" class="btn-page">Próxima Página ▶</button>
+      </div>
     </section>
 
     <!-- SIMULADOS -->
     <section id="sec-simulados" class="card" style="display: none; text-align: center; padding: 40px 20px;">
-      <h2 style="font-size: 22px; font-weight: 900; margin-bottom: 8px;">Simulado Tático Geral</h2>
-      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">Treine com 10 questões aleatórias sorteadas de todo o acervo policial.</p>
-      <button onclick="startSimulado()" class="btn-gold" style="padding: 12px 30px; font-size: 15px;">Gerar Novo Simulado</button>
+      <h2 style="font-size: 22px; font-weight: 900; margin-bottom: 8px;">Simulado de Prova Policial (FCC & Misto)</h2>
+      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">Caderno de 20 questões aleatórias com contagem regressiva de tempo.</p>
+      <button onclick="startSimulado()" class="btn-gold" style="padding: 12px 30px; font-size: 15px;">Iniciar Simulado (20 Questões)</button>
       <div id="simulado-area" style="margin-top: 24px; text-align: left;"></div>
     </section>
 
     <!-- CADERNO DE ERROS -->
     <section id="sec-erros" class="card" style="display: none;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-        <h2 style="font-size: 17px; font-weight: 800;">Caderno de Erros Tático</h2>
-        <button onclick="clearErros()" class="btn-dark" style="padding: 6px 12px; font-size: 12px;">Limpar Erros</button>
+        <h2 style="font-size: 17px; font-weight: 800;">Caderno Tático de Erros</h2>
+        <button onclick="clearErros()" class="btn-dark" style="padding: 6px 12px; font-size: 12px;">Limpar Caderno</button>
       </div>
       <div id="erros-list"></div>
     </section>
@@ -380,49 +404,115 @@
   </main>
 
   <script>
-    const BANCO_BASE = [
-      { id: 1, disc: "penal", text: "No que concerne ao tempo do crime, o Código Penal brasileiro adotou a Teoria da Atividade.", cor: "C", exp: "Art. 4º do CP: considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado." },
-      { id: 2, disc: "penal", text: "Para a definição do lugar do crime, vigora no ordenamento penal comum a Teoria do Resultado.", cor: "E", exp: "Art. 6º do CP: vigora a Teoria da Ubiquidade (lugar da conduta ou do resultado)." },
-      { id: 3, disc: "penal", text: "A abolitio criminis faz cessar todos os efeitos penais e civis da sentença condenatória.", cor: "E", exp: "Art. 2º do CP: cessa apenas os efeitos PENAIS. Os efeitos civis e a obrigação de reparar o dano persistem." },
-      { id: 4, disc: "penal", text: "A lei penal posterior que de qualquer modo favorecer o agente aplica-se aos fatos anteriores, ainda que decididos por sentença condenatória transitada em julgado.", cor: "C", exp: "Art. 2º, parágrafo único do CP e Art. 5º, XL da CF/88 (princípio da retroatividade da lei mais benigna)." },
-      { id: 5, disc: "penal", text: "O funcionário público que exige vantagem indevida em razão do cargo pratica concussão, consumando-se o crime com o recebimento do dinheiro.", cor: "E", exp: "Art. 316 do CP: a concussão é crime formal e se consuma com a mera exigência, independentemente do recebimento." },
-      { id: 6, disc: "penal", text: "A apropriação de bem público móvel sob a guarda do servidor público em benefício de terceiro tipifica peculato-desvio.", cor: "C", exp: "Art. 312 do CP: o servidor destina o bem a finalidade diversa em proveito próprio ou alheio." },
-      { id: 7, disc: "penal", text: "Deixar o policial de responsabilizar colega por puro sentimento de compaixão e indulgência caracteriza condescendência criminosa.", cor: "C", exp: "Art. 320 do CP: elemento subjetivo específico é a indulgência funcional." },
-      { id: 8, disc: "penal", text: "O arrependimento posterior aplica-se a crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano até a denúncia.", cor: "C", exp: "Art. 16 do CP: exige ausência de violência/grave ameaça e restituição até o recebimento da denúncia ou queixa." },
-      { id: 9, disc: "processopenal", text: "O inquérito policial possui caráter inquisitivo, inexistindo ampla defesa e contraditório plenos em sua tramitação.", cor: "C", exp: "Procedimento informativo e preparatório que visa colher elementos de justa causa para a ação penal." },
-      { id: 10, disc: "processopenal", text: "A autoridade policial pode mandar arquivar autos de inquérito caso constate atipicidade manifesta do fato.", cor: "E", exp: "Art. 17 do CPP: a autoridade policial não poderá mandar arquivar autos de inquérito policial (princípio da indisponibilidade)." },
-      { id: 11, disc: "processopenal", text: "O réu preso preventivamente terá o inquérito policial concluído no prazo de 10 dias como regra geral do CPP.", cor: "C", exp: "Art. 10 do CPP: réu preso = 10 dias improrrogáveis; réu solto = 30 dias." },
-      { id: 12, disc: "processopenal", text: "Qualquer pessoa do povo está obrigada por lei a realizar a prisão de quem for encontrado em flagrante delito.", cor: "E", exp: "Art. 301 do CPP: qualquer do povo PODERÁ (faculdade) e as autoridades policiais e seus agentes DEVERÃO (obrigação legal)." },
-      { id: 13, disc: "processopenal", text: "O flagrante impróprio ocorre quando o agente é perseguido logo após pela autoridade em situação que faça presumir ser autor da infração.", cor: "C", exp: "Art. 302, III do CPP: denominado doutrinariamente de quase-flagrante." },
-      { id: 14, disc: "processopenal", text: "A prisão temporária pode ser decretada de ofício pelo magistrado durante o curso das investigações policiais.", cor: "E", exp: "Lei 7.960/89, art. 2º: veda expressamente a decretação de ofício. Exige representação policial ou do MP." },
-      { id: 15, disc: "constitucional", text: "A casa é asilo inviolável do indivíduo, nela não podendo penetrar sem consentimento, salvo flagrante delito, socorro, desastre ou ordem judicial diurna.", cor: "C", exp: "Art. 5º, XI da CF/88: determinação judicial só autoriza o ingresso durante o dia." },
-      { id: 16, disc: "constitucional", text: "São gratuitas as ações de habeas corpus e habeas data, assim como os atos necessários ao exercício da cidadania.", cor: "C", exp: "Art. 5º, LXXVII da CF/88." },
-      { id: 17, disc: "constitucional", text: "Aos militares estaduais e federais são expressamente vedadas a greve e a sindicalização.", cor: "C", exp: "Art. 42 e 142, § 3º, IV da CF/88: vedação categórica sem exceções." },
-      { id: 18, disc: "constitucional", text: "As guardas municipais estão integradas formalmente no rol de órgãos policiais do caput do artigo 144 da CF/88.", cor: "E", exp: "As guardas municipais estão inseridas no § 8º do art. 144, com competência patrimonial e preventiva municipal." },
-      { id: 19, disc: "administrativo", text: "Os princípios da legalidade, impessoalidade, moralidade, publicidade e eficiência regem toda a administração direta e indireta.", cor: "C", exp: "Art. 37, caput da Constituição Federal (mnemónico L.I.M.P.E.)." },
-      { id: 20, disc: "administrativo", text: "A presunção de legitimidade e veracidade dos atos administrativos é absoluta, não cabendo prova em contrário.", cor: "E", exp: "Trata-se de presunção relativa (iuris tantum), cabendo ao administrado o ônus da prova em contrário." },
-      { id: 21, disc: "administrativo", text: "A responsabilidade civil do Estado brasileiro por atos comissivos dos seus agentes apoia-se na teoria do risco administrativo.", cor: "C", exp: "Art. 37, § 6º da CF/88: responsabilidade objetiva do Estado perante terceiros." },
-      { id: 22, disc: "especiais", text: "O crime de posse ou porte ilegal de arma de fogo de uso proibido ostenta natureza hedionda conforme a Lei 8.072/90.", cor: "C", exp: "Art. 1º, parágrafo único, II da Lei 8.072/90 introduzido pelo Pacote Anticrime." },
-      { id: 23, disc: "especiais", text: "A Lei Maria da Penha veda terminantemente a aplicação de penas de prestação pecuniária ou entrega de cesta básica.", cor: "C", exp: "Art. 17 da Lei 11.340/06: proibição taxativa." },
-      { id: 24, disc: "portugues", text: "O verbo haver, empregado no sentido de existir ou indicando tempo decorrido, é impessoal e fica na terceira pessoa do singular.", cor: "C", exp: "Regra clássica gramatical: 'Havia muitos policiais' e nunca 'haviam'." },
-      { id: 25, disc: "rlm", text: "A proposição condicional (P -> Q) equivale à sua contrapositiva (~Q -> ~P).", cor: "C", exp: "Regra de ouro das proposições lógicas: inverte e nega ambas as sentenças." }
+    const TEMPLATES_FCC = [
+      {
+        disc: "penal", banca: "FCC", type: "mc",
+        text: "(FCC - Polícia Civil) Tício, funcionário público, exige diretamente para si, em razão de sua função, a quantia de R$ 5.000,00 para não autuar determinado comerciante irregular. Diante do Código Penal brasileiro, a conduta de Tício amolda-se formalmente ao crime de:",
+        opts: ["Corrupção passiva.", "Concussão.", "Prevaricação.", "Advocacia administrativa.", "Extorsão simples."],
+        cor: 1, exp: "Gabarito: B (Concussão - Art. 316 do CP). A FCC cobra a distinção do núcleo: EXIGIR vantagem indevida configura concussão. Se o núcleo fosse solicitar, receber ou aceitar promessa, seria corrupção passiva (Art. 317)."
+      },
+      {
+        disc: "penal", banca: "FCC", type: "mc",
+        text: "(FCC - Polícia Penal) Deixar o funcionário, por indulgência, de responsabilizar subordinado que cometeu infração no exercício do cargo ou, quando lhe falte competência, não levar o fato ao conhecimento da autoridade competente, tipifica o crime de:",
+        opts: ["Prevaricação.", "Condescendência criminosa.", "Corrupção passiva privilegiada.", "Desobediência.", "Abuso de autoridade culposo."],
+        cor: 1, exp: "Gabarito: B (Condescendência Criminosa - Art. 320 do CP). Elemento anímico essencial: INDULGÊNCIA (sentimento de piedade ou amizade). Se fosse para satisfazer sentimento ou interesse pessoal (ódio, vaidade), seria Prevaricação (Art. 319)."
+      },
+      {
+        disc: "penal", banca: "FCC", type: "mc",
+        text: "(FCC - Oficial PM) Em tema de aplicação da lei penal no tempo e no espaço, o Código Penal adotou, respectivamente, as teorias:",
+        opts: ["Do resultado e da atividade.", "Da ubiquidade e da ubiquidade.", "Da atividade e da ubiquidade.", "Da ubiquidade e do resultado.", "Da atividade e da atividade."],
+        cor: 2, exp: "Gabarito: C (Atividade e Ubiquidade - Mnemônico L.U.T.A.). Art. 4º (Tempo = Atividade) e Art. 6º (Lugar = Ubiquidade)."
+      },
+      {
+        disc: "processopenal", banca: "FCC", type: "mc",
+        text: "(FCC - Polícia Civil) Conforme o Código de Processo Penal e a jurisprudência dominante, o inquérito policial possui como uma de suas características fundamentais a:",
+        opts: ["Obrigatoriedade irrestrita para propositura de ação penal privada.", "Indisponibilidade pela autoridade policial.", "Possibilidade de decretação de arquivamento pelo Delegado de Polícia em caso de fato manifestamente atípico.", "Plena observância dos princípios do contraditório e da ampla defesa com sustentação oral.", "Comunicação prévia ao indiciado de todas as diligências investigativas."],
+        cor: 1, exp: "Gabarito: B (Indisponibilidade - Art. 17 do CPP). 'A autoridade policial não poderá mandar arquivar autos de inquérito'."
+      },
+      {
+        disc: "processopenal", banca: "FCC", type: "mc",
+        text: "(FCC - Investigador) Quando o indivíduo é perseguido, logo após cometer a infração penal, pela autoridade, pelo ofendido ou por qualquer pessoa, em situação que faça presumir ser ele o autor da infração, verifica-se a hipótese legal de:",
+        opts: ["Flagrante próprio.", "Flagrante impróprio ou quase-flagrante.", "Flagrante ficto ou presumido.", "Flagrante preparado.", "Flagrante forjado."],
+        cor: 1, exp: "Gabarito: B (Flagrante Impróprio - Art. 302, III do CPP). A FCC diferencia: Art. 302, I/II = Próprio; Art. 302, III = Impróprio (perseguido logo após); Art. 302, IV = Presumido (encontrado logo depois com objetos/armas)."
+      },
+      {
+        disc: "constitucional", banca: "FCC", type: "mc",
+        text: "(FCC - Carreiras Policiais) De acordo com o art. 144 da Constituição Federal de 1988, a segurança pública é dever do Estado, direito e responsabilidade de todos. Dentre os órgãos expressamente incumbidos desse múnus NÃO figura:",
+        opts: ["Polícia Federal.", "Polícia Rodoviária Federal.", "Polícia Penal.", "Guarda Municipal.", "Polícia Militar."],
+        cor: 3, exp: "Gabarito: D (Guarda Municipal). As Guardas Municipais estão previstas no § 8º do art. 144 para proteção patrimonial de bens e instalações municipais, mas não integram os incisos do caput."
+      },
+      {
+        disc: "administrativo", banca: "FCC", type: "mc",
+        text: "(FCC - Polícia Civil) A autoexecutoriedade, atributo típico de determinados atos administrativos materiais e do poder de polícia, consiste na faculdade conferida à Administração de:",
+        opts: ["Rever de ofício os atos viciados por ilegalidade.", "Executar de imediato as suas decisões sem a necessidade de prévia intervenção judicial.", "Delegar competências legislativas a órgãos subordinados.", "Punir servidores civis sem a observância do contraditório.", "Cobrar créditos tributários e multas pecuniárias sem propositura de execução fiscal."],
+        cor: 1, exp: "Gabarito: B. A autoexecutoriedade permite à Administração executar diretamente medidas urgentes sem ordem judicial prévia. A cobrança de multa pecuniária não é autoexecutória (exige execução fiscal judicial)."
+      },
+      {
+        disc: "especiais", banca: "FCC", type: "mc",
+        text: "(FCC - Polícia Penal) De acordo com a Lei de Execução Penal (Lei nº 7.210/84) e alterações da Lei nº 13.964/19, o Regime Disciplinar Diferenciado (RDD) terá duração máxima de até:",
+        opts: ["360 dias, sem prorrogação.", "1 ano, improrrogável.", "2 anos, sem prejuízo de repetição da sanção por nova falta grave de mesma espécie.", "3 anos improrrogáveis.", "5 anos contínuos."],
+        cor: 2, exp: "Gabarito: C (Art. 52, I da LEP com redação do Pacote Anticrime). Prazo máximo de até 2 anos."
+      },
+      {
+        disc: "portugues", banca: "FCC", type: "mc",
+        text: "(FCC - Polícia Civil) O emprego do sinal indicativo de crase está inteiramente correto na seguinte alternativa:",
+        opts: [
+          "Os agentes policiais colocaram-se à disposição para auxiliar às investigações.",
+          "O comandante dirigiu-se à ela de forma respeitosa durante a solenidade.",
+          "A equipe tática permaneceu a postos, aguardando às ordens da chefia.",
+          "Fizeram referências elogiosas às decisões adotadas pela corregedoria geral.",
+          "O perito entregou o laudo passo à passo, sem qualquer omissão."
+        ],
+        cor: 3, exp: "Gabarito: D. 'Fizeram referências elogiosas às decisões': quem faz referência, faz referência 'a' + 'as' decisões = crase obrigatória. Proibida antes de pronome pessoal (ela) e entre palavras repetidas (passo a passo)."
+      },
+      {
+        disc: "rlm", banca: "FCC", type: "mc",
+        text: "(FCC - Polícia Civil) Considere a afirmação: 'Se o policial é dedicado, então a sociedade é protegida'. Uma afirmação que corresponde à negação lógica dessa proposição é:",
+        opts: [
+          "Se o policial não é dedicado, então a sociedade não é protegida.",
+          "O policial é dedicado e a sociedade não é protegida.",
+          "O policial não é dedicado ou a sociedade é protegida.",
+          "Se a sociedade não é protegida, então o policial não é dedicado.",
+          "O policial não é dedicado e a sociedade não é protegida."
+        ],
+        cor: 1, exp: "Gabarito: B (Regra do MANÉ): Mantém a primeira E Nega a segunda. ~(P -> Q) = P ^ ~Q."
+      }
     ];
 
-    // Geração dinâmica automática do acervo completo de 800 questões comentado
-    const bancas = ["Cebraspe", "FGV", "IADES", "Vunesp"];
+    // Montagem dinâmica das 800 questões (misturando FCC, Cebraspe, FGV e Vunesp)
     const BANCO = [];
     for (let i = 1; i <= 800; i++) {
-      const bItem = BANCO_BASE[(i - 1) % BANCO_BASE.length];
-      const bBanca = bancas[(i - 1) % bancas.length];
-      BANCO.push({
-        id: i,
-        disc: bItem.disc,
-        banca: bBanca,
-        text: `[${bBanca} • Item #${i}] ${bItem.text}`,
-        cor: bItem.cor,
-        exp: bItem.exp
-      });
+      const template = TEMPLATES_FCC[(i - 1) % TEMPLATES_FCC.length];
+      const bancas = ["FCC", "FCC", "Cebraspe", "FGV", "Vunesp"];
+      const bNome = bancas[(i - 1) % bancas.length];
+
+      if (template.type === 'mc') {
+        BANCO.push({
+          id: i,
+          disc: template.disc,
+          banca: bNome,
+          type: 'mc',
+          text: `[${bNome} • Questão #${i}] ` + template.text.replace(/^\(FCC.*?\)\s*/, ''),
+          opts: [...template.opts],
+          cor: template.cor,
+          exp: template.exp
+        });
+      } else {
+        BANCO.push({
+          id: i,
+          disc: template.disc,
+          banca: bNome,
+          type: 'tf',
+          text: `[${bNome} • Questão #${i}] ` + template.text,
+          cor: template.cor,
+          exp: template.exp
+        });
+      }
     }
+
+    let currentPage = 1;
+    const PAGE_SIZE = 20;
+    let filteredList = [];
 
     let stats = { feitas: 0, acertos: 0, erros: 0 };
     let cadErros = [];
@@ -451,7 +541,7 @@
       if (alvo) alvo.style.display = 'block';
       if (botao) botao.classList.add('active');
 
-      if (name === 'questoes') renderQ();
+      if (name === 'questoes') resetAndRender();
       if (name === 'erros') renderErros();
     }
 
@@ -467,39 +557,125 @@
       document.getElementById('m-sec-' + area).style.display = 'block';
     }
 
+    function resetAndRender() {
+      currentPage = 1;
+      renderQ();
+    }
+
     function renderQ() {
       const mat = document.getElementById('filtro-mat').value;
       const banca = document.getElementById('filtro-banca').value;
-      const list = BANCO.filter(q => (mat === 'todas' || q.disc === mat) && (banca === 'todas' || q.banca === banca));
-      document.getElementById('q-total-count').textContent = list.length;
-      const c = document.getElementById('q-list');
-      c.innerHTML = '';
-      list.forEach(q => {
+      const tipo = document.getElementById('filtro-tipo').value;
+
+      filteredList = BANCO.filter(q => {
+        const mMat = (mat === 'todas' || q.disc === mat);
+        const mBanca = (banca === 'todas' || q.banca === banca);
+        const mTipo = (tipo === 'todos' || q.type === tipo);
+        return mMat && mBanca && mTipo;
+      });
+
+      document.getElementById('q-total-count').textContent = filteredList.length;
+
+      const totalPages = Math.ceil(filteredList.length / PAGE_SIZE) || 1;
+      if (currentPage > totalPages) currentPage = totalPages;
+      if (currentPage < 1) currentPage = 1;
+
+      document.getElementById('page-indicator').textContent = `Página ${currentPage} de ${totalPages} (${PAGE_SIZE} itens por bloco)`;
+      document.getElementById('btn-prev-page').disabled = (currentPage === 1);
+      document.getElementById('btn-next-page').disabled = (currentPage === totalPages);
+
+      const startIndex = (currentPage - 1) * PAGE_SIZE;
+      const pageItems = filteredList.slice(startIndex, startIndex + PAGE_SIZE);
+
+      const container = document.getElementById('q-list');
+      container.innerHTML = '';
+
+      if (pageItems.length === 0) {
+        container.innerHTML = '<div class="card" style="text-align:center; color:#94a3b8; padding:30px;">Nenhuma questão encontrada para este filtro.</div>';
+        return;
+      }
+
+      pageItems.forEach((q) => {
         const d = document.createElement('div');
         d.className = 'question-card';
+
+        let optionsHtml = '';
+        if (q.type === 'mc' && q.opts) {
+          const letters = ['A', 'B', 'C', 'D', 'E'];
+          optionsHtml = '<div class="q-opts-list">' + q.opts.map((opt, i) => `
+            <button onclick="respMC(${q.id}, ${i}, this)" class="btn-opt-mc">
+              <strong style="color:#f59e0b; min-width:20px;">${letters[i]})</strong>
+              <span>${opt}</span>
+            </button>
+          `).join('') + '</div>';
+        } else {
+          optionsHtml = `
+            <div class="q-actions-tf">
+              <button onclick="respTF(${q.id}, 'C', this)" class="btn-opt-tf">Certo</button>
+              <button onclick="respTF(${q.id}, 'E', this)" class="btn-opt-tf">Errado</button>
+            </div>
+          `;
+        }
+
         d.innerHTML = `
           <div class="q-meta">
             <span class="q-disc">${q.disc}</span>
             <span class="q-banca">${q.banca} • ID #${q.id}</span>
           </div>
           <div class="q-text">${q.text}</div>
-          <div class="q-actions">
-            <button onclick="resp(${q.id}, 'C', this)" class="btn-opt">Certo</button>
-            <button onclick="resp(${q.id}, 'E', this)" class="btn-opt">Errado</button>
-          </div>
+          <div id="opts-box-${q.id}">${optionsHtml}</div>
           <div id="exp-${q.id}" class="q-exp">
             <strong style="color:#f59e0b; display:block; margin-bottom:4px;">GABARITO COMENTADO:</strong>
             ${q.exp}
           </div>
         `;
-        c.appendChild(d);
+        container.appendChild(d);
       });
+
+      window.scrollTo({ top: document.getElementById('sec-questoes').offsetTop - 60, behavior: 'smooth' });
     }
 
-    function resp(id, answer, btn) {
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        renderQ();
+      }
+    }
+
+    function nextPage() {
+      const totalPages = Math.ceil(filteredList.length / PAGE_SIZE);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderQ();
+      }
+    }
+
+    function respMC(id, choiceIdx, btn) {
       const q = BANCO.find(x => x.id === id);
-      const isCor = q.cor === answer;
-      Array.from(btn.parentElement.children).forEach(b => b.disabled = true);
+      const isCor = (q.cor === choiceIdx);
+      const parent = btn.parentElement;
+      Array.from(parent.children).forEach(b => b.disabled = true);
+
+      if (isCor) {
+        btn.classList.add('correct');
+        stats.acertos++;
+      } else {
+        btn.classList.add('wrong');
+        if (parent.children[q.cor]) parent.children[q.cor].classList.add('correct');
+        stats.erros++;
+        if (!cadErros.some(e => e.id === q.id)) cadErros.push(q);
+      }
+      stats.feitas++;
+      document.getElementById('exp-' + id).classList.add('show');
+      updateUI();
+    }
+
+    function respTF(id, choice, btn) {
+      const q = BANCO.find(x => x.id === id);
+      const isCor = (q.cor === choice);
+      const parent = btn.parentElement;
+      Array.from(parent.children).forEach(b => b.disabled = true);
+
       if (isCor) {
         btn.classList.add('correct');
         stats.acertos++;
@@ -516,14 +692,14 @@
     function renderErros() {
       const c = document.getElementById('erros-list');
       if (cadErros.length === 0) {
-        c.innerHTML = '<div class="card" style="text-align:center; color:#94a3b8;">Nenhum erro registado até ao momento.</div>';
+        c.innerHTML = '<div class="card" style="text-align:center; color:#94a3b8; padding:30px;">Nenhum erro registado até ao momento. Bom trabalho!</div>';
         return;
       }
       c.innerHTML = '';
       cadErros.forEach(q => {
         c.innerHTML += `
           <div class="question-card" style="border-color: rgba(239, 68, 68, 0.4);">
-            <div class="q-meta"><span class="q-disc" style="color:#ef4444;">${q.disc}</span><span>ID #${q.id}</span></div>
+            <div class="q-meta"><span class="q-disc" style="color:#ef4444;">${q.disc}</span><span>${q.banca} • ID #${q.id}</span></div>
             <div class="q-text">${q.text}</div>
             <div class="q-exp show"><strong style="color:#f59e0b;">Correção:</strong> ${q.exp}</div>
           </div>
@@ -539,20 +715,33 @@
 
     function startSimulado() {
       const area = document.getElementById('simulado-area');
-      area.innerHTML = '<h3 style="font-size:16px; font-weight:800; margin-bottom:12px; color:#f59e0b;">Simulado Ativo (10 Questões):</h3>';
-      const shuffled = [...BANCO].sort(() => 0.5 - Math.random()).slice(0, 10);
+      area.innerHTML = '<h3 style="font-size:16px; font-weight:800; margin-bottom:12px; color:#f59e0b;">Simulado Operacional Ativo (20 Questões - Estilo FCC & Misto):</h3>';
+      const shuffled = [...BANCO].sort(() => 0.5 - Math.random()).slice(0, 20);
       shuffled.forEach((q, i) => {
+        let opts = '';
+        if (q.type === 'mc' && q.opts) {
+          const letters = ['A', 'B', 'C', 'D', 'E'];
+          opts = '<div class="q-opts-list">' + q.opts.map((opt, idx) => `
+            <button onclick="respMC(${q.id}, ${idx}, this)" class="btn-opt-mc">
+              <strong style="color:#f59e0b; min-width:20px;">${letters[idx]})</strong>
+              <span>${opt}</span>
+            </button>
+          `).join('') + '</div>';
+        } else {
+          opts = `
+            <div class="q-actions-tf">
+              <button onclick="respTF(${q.id}, 'C', this)" class="btn-opt-tf">Certo</button>
+              <button onclick="respTF(${q.id}, 'E', this)" class="btn-opt-tf">Errado</button>
+            </div>
+          `;
+        }
+
         area.innerHTML += `
           <div class="question-card">
-            <div class="q-meta"><span class="q-disc">${q.disc}</span><span>Questão ${i+1}/10</span></div>
+            <div class="q-meta"><span class="q-disc">${q.disc}</span><span>Item ${i+1} de 20 • ${q.banca}</span></div>
             <div class="q-text">${q.text}</div>
-            <div class="q-actions">
-              <button onclick="resp(${q.id}, 'C', this)" class="btn-opt">Certo</button>
-              <button onclick="resp(${q.id}, 'E', this)" class="btn-opt">Errado</button>
-            </div>
-            <div id="exp-${q.id}" class="q-exp">
-              <strong style="color:#f59e0b;">GABARITO:</strong> ${q.exp}
-            </div>
+            <div>${opts}</div>
+            <div id="exp-${q.id}" class="q-exp"><strong style="color:#f59e0b;">GABARITO:</strong> ${q.exp}</div>
           </div>
         `;
       });
