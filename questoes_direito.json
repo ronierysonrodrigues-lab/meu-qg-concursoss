@@ -1,0 +1,292 @@
+[
+  {
+    "id": 301,
+    "discipline": "penal",
+    "banca": "Cebraspe",
+    "exam": "Polícia Civil - Agente",
+    "type": "tf",
+    "text": "O princípio da insignificância, segundo a jurisprudência consolidada do STF e do STJ, é inaplicável aos crimes contra a administração pública, mesmo que o prejuízo patrimonial seja de valor irrisório.",
+    "correct": "C",
+    "exp": "CERTO. Súmula 599 do STJ: 'O princípio da insignificância é inaplicável aos crimes contra a administração pública.' O bem jurídico tutelado primário é a moralidade e a probidade administrativa, não apenas o aspecto patrimonial."
+  },
+  {
+    "id": 302,
+    "discipline": "penal",
+    "banca": "Cebraspe",
+    "exam": "Polícia Penal",
+    "type": "tf",
+    "text": "O arrependimento eficaz e a desistência voluntária configuram causas de exclusão da tipicidade penal da conduta inicialmente pretendida pelo agente.",
+    "correct": "C",
+    "exp": "CERTO. Na desistência voluntária e no arrependimento eficaz (art. 15 do Código Penal - 'ponte de ouro'), o agente responde apenas pelos atos já praticados, havendo exclusão da tipicidade em relação à tentativa do crime que pretendia cometer."
+  },
+  {
+    "id": 303,
+    "discipline": "penal",
+    "banca": "FGV",
+    "exam": "Polícia Civil - Escrivão",
+    "type": "mc",
+    "text": "Determinado funcionário público recebe dinheiro de particular para praticar ato funcional que já era de sua obrigação realizar no expediente regular. A conduta praticada amolda-se formalmente ao crime de:",
+    "options": [
+      "Concussão.",
+      "Prevaricação.",
+      "Corrupção passiva.",
+      "Advocacia administrativa.",
+      "Condescendência criminosa."
+    ],
+    "correct": 2,
+    "exp": "Art. 317 do Código Penal: Comete corrupção passiva o funcionário que 'solicitar ou receber, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, ou aceitar promessa de tal vantagem'."
+  },
+  {
+    "id": 304,
+    "discipline": "penal",
+    "banca": "Vunesp",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "O policial que deixa de responsabilizar subordinado que cometeu infração no exercício do cargo, por pura indulgência, pratica o crime contra a administração de:",
+    "options": [
+      "Prevaricação.",
+      "Condescendência criminosa.",
+      "Desobediência.",
+      "Corrupção passiva privilegiada.",
+      "Violação de sigilo funcional."
+    ],
+    "correct": 1,
+    "exp": "Art. 320 do Código Penal: 'Deixar o funcionário, por indulgência, de responsabilizar subordinado que cometeu infração no exercício do cargo ou, quando lhe falte competência, não levar o fato ao conhecimento da autoridade competente.' Bizu: indulgência = condescendência."
+  },
+  {
+    "id": 305,
+    "discipline": "processopenal",
+    "banca": "Cebraspe",
+    "exam": "Polícia Federal",
+    "type": "tf",
+    "text": "O inquérito policial possui natureza inquisitiva, razão pela qual a autoridade policial não é obrigada a assegurar o contraditório e a ampla defesa no curso da investigação preliminar, sem prejuízo da atuação do defensor nos termos da lei.",
+    "correct": "C",
+    "exp": "CERTO. O inquérito policial é procedimento administrativo de caráter informativo e eminentemente inquisitivo, não vigorando de forma plena as garantias do contraditório e da ampla defesa, aplicáveis na fase processual judicial (art. 5º, LV, CF/88)."
+  },
+  {
+    "id": 306,
+    "discipline": "processopenal",
+    "banca": "FGV",
+    "exam": "Polícia Civil",
+    "type": "mc",
+    "text": "Nos termos do Código de Processo Penal, em relação ao arquivamento do inquérito policial pela autoridade judicial competente, o delegado de polícia:",
+    "options": [
+      "Pode mandar arquivar os autos caso constate atipicidade evidente do fato.",
+      "Nunca poderá mandar arquivar autos de inquérito policial.",
+      "Pode arquivar apenas nos crimes de ação penal privada mediante petição das partes.",
+      "Pode determinar o arquivamento com anuência prévia da vítima.",
+      "Deve arquivar sumariamente os inquéritos sem autoria conhecida em 30 dias."
+    ],
+    "correct": 1,
+    "exp": "Art. 17 do Código de Processo Penal: 'A autoridade policial não poderá mandar arquivar autos de inquérito.' Trata-se do princípio da indisponibilidade do inquérito para o delegado."
+  },
+  {
+    "id": 307,
+    "discipline": "processopenal",
+    "banca": "Cebraspe",
+    "exam": "Polícia Penal",
+    "type": "tf",
+    "text": "Considera-se em flagrante delito impróprio (ou quase-flagrante) aquele que é perseguido, logo após a prática da infração, pela autoridade, pelo ofendido ou por qualquer pessoa, em situação que faça presumir ser ele o autor da infração.",
+    "correct": "C",
+    "exp": "CERTO. Art. 302, III, do CPP: Considera-se em flagrante impróprio quem 'é perseguido, logo após, pela autoridade, pelo ofendido ou por qualquer pessoa, em situação que faça presumir ser autor da infração'."
+  },
+  {
+    "id": 308,
+    "discipline": "constitucional",
+    "banca": "Cebraspe",
+    "exam": "Polícia Militar",
+    "type": "tf",
+    "text": "As polícias penais, vinculadas ao órgão administrador do sistema penal da unidade federativa a que pertencem, cabem a segurança dos estabelecimentos penais, estando expressamente inseridas no rol de órgãos da segurança pública.",
+    "correct": "C",
+    "exp": "CERTO. Art. 144, inciso VI e § 5º-A da CF/88 (introduzidos pela Emenda Constitucional nº 104/2019): As polícias penais federal, estaduais e distrital compõem o rol constitucional da segurança pública com a função de segurança dos estabelecimentos penais."
+  },
+  {
+    "id": 309,
+    "discipline": "constitucional",
+    "banca": "FGV",
+    "exam": "Carreiras Policiais",
+    "type": "mc",
+    "text": "Segundo a Constituição Federal de 1988, a entrada forçada em domicílio sem o consentimento do morador, durante o período diurno, é permitida por determinação judicial e também em caso de:",
+    "options": [
+      "Suspeita de porte ilegal de arma nas imediações.",
+      "Flagrante delito, desastre ou para prestar socorro.",
+      "Notificação administrativa de execução fiscal.",
+      "Averiguação de ruído ou perturbação do sossego.",
+      "Mandado de condução coercitiva de testemunha expedido por autoridade policial."
+    ],
+    "correct": 1,
+    "exp": "Art. 5º, XI, da CF/88: 'A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial.' Durante a noite, somente flagrante, desastre ou socorro."
+  },
+  {
+    "id": 310,
+    "discipline": "administrativo",
+    "banca": "Cebraspe",
+    "exam": "Polícia Civil",
+    "type": "tf",
+    "text": "O atributo do ato administrativo que impõe a obrigação de seu cumprimento a terceiros independentemente de concordância prévia ou intervenção judicial denomina-se imperatividade.",
+    "correct": "C",
+    "exp": "CERTO. A imperatividade (decorrente do poder extroverso do Estado) permite à Administração criar obrigações unilaterais para os administrados. Bizu dos atributos: P.A.T.I. (Presunção de legitimidade, Autoexecutoriedade, Tipicidade e Imperatividade)."
+  },
+  {
+    "id": 311,
+    "discipline": "administrativo",
+    "banca": "IADES",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Quando um ato administrativo apresenta vício formal sanável que não acarrete lesão ao interesse público nem prejuízo a terceiros, a Administração Pública poderá realizar a sua:",
+    "options": [
+      "Revogação com efeitos ex tunc.",
+      "Anulação com efeitos ex nunc.",
+      "Convalidação.",
+      "Caducidade expressa.",
+      "Cassação punitiva."
+    ],
+    "correct": 2,
+    "exp": "Art. 55 da Lei 9.784/1999: 'Em decisão na qual se evidencie não acarretarem lesão ao interesse público nem prejuízo a tercePara avançar na expansão do acervo da sua plataforma até às 1.000 questões, este próximo lote foi estruturado para ser adicionado num novo ficheiro modular chamado **`questoes_direito.json`** no seu repositório do GitHub.
+
+Este bloco concentra os temas com maior incidência em certames para a Polícia Civil, Militar e Penal: **Teoria do Crime, Crimes contra a Administração, Inquérito, Prisões, Direitos Fundamentais, Poderes Administrativos e Legislação Especial**.
+
+---
+
+### Conteúdo para o ficheiro `questoes_direito.json`
+
+Crie um novo ficheiro com esse nome na raiz do seu repositório no GitHub e cole o seguinte bloco JSON:
+
+```json
+[
+  {
+    "id": 301,
+    "discipline": "penal",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "O funcionário público que se apropria de verbas públicas sob sua posse funcional pratica peculato-apropriação, consumando-se o delito no momento da inversão da posse do numerário.",
+    "correct": "C",
+    "exp": "CERTO. Artigo 312, caput, do Código Penal. O crime aperfeiçoa-se com a inversão da posse do bem ou dinheiro de que tem detenção em virtude do cargo público."
+  },
+  {
+    "id": 302,
+    "discipline": "penal",
+    "banca": "FGV",
+    "exam": "Polícia Civil",
+    "type": "mc",
+    "text": "O elemento subjectivo essencial que distingue a concussão da corrupção passiva própria reside no facto de que, na concussão, o agente público:",
+    "options": [
+      "Solicita para outrem a promessa de compensação económica.",
+      "Exige directamente a vantagem ilegítima recorrendo à autoridade funcional.",
+      "Recebe passivamente a dádiva sem prévia provocação.",
+      "Retarda o procedimento por sentimento pessoal de complacência.",
+      "Aceita vantagem pecuniária mediante intermediário particular."
+    ],
+    "correct": 1,
+    "exp": "Na concussão (artigo 316 do Código Penal) o verbo nuclear é 'exigir', denotando imposição com intimidação do cargo, enquanto na corrupção passiva (artigo 317) os núcleos são 'solicitar', 'receber' ou 'aceitar promessa'."
+  },
+  {
+    "id": 303,
+    "discipline": "processopenal",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "Por se tratar de um procedimento inquisitorial, os vícios processuais eventualmente constatados na fase do inquérito policial não anulam de forma irremediável a subsequente acção penal.",
+    "correct": "C",
+    "exp": "CERTO. Jurisprudência consolidada do STJ e STF estabelece que irregularidades materiais na fase informativa preliminar não contaminam de pleno direito a futura acção penal condenatória."
+  },
+  {
+    "id": 304,
+    "discipline": "processopenal",
+    "banca": "IADES",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "De acordo com as normas procedimentais do Código de Processo Penal relativas ao auto de flagrante delito, inexistindo testemunhas presenciais do facto delituoso:",
+    "options": [
+      "Fica expressamente vedada a lavratura da peça de prisão.",
+      "Pode o auto ser convalidado com a assinatura de duas testemunhas que assistiram à apresentação do detido.",
+      "O arguido tem obrigatoriamente de prestar juramento sobre a ocorrência.",
+      "Deverá a autoridade relaxar imediatamente a detenção sem diligências.",
+      "O auto só adquire eficácia após audição em audiência admonitória."
+    ],
+    "correct": 1,
+    "exp": "Artigo 304, § 2º, do CPP. Na ausência de testemunhas visuais do evento penal, assinam o auto, com o condutor, duas testemunhas instrumentárias que tenham presenciado a apresentação do preso à autoridade."
+  },
+  {
+    "id": 305,
+    "discipline": "constitucional",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "A inviolabilidade do domicílio admite o ingresso coercivo durante o período nocturno, independentemente de autorização judicial, caso se verifique flagrante delito ou situação de emergência para socorro.",
+    "correct": "C",
+    "exp": "CERTO. Artigo 5º, inciso XI, da Constituição Federal. O mandado judicial restringe-se ao período diurno, mas flagrante delito e desastre/prestação de socorro autorizam o ingresso inclusive durante a noite."
+  },
+  {
+    "id": 306,
+    "discipline": "constitucional",
+    "banca": "FGV",
+    "exam": "Polícia Penal",
+    "type": "mc",
+    "text": "No catálogo das garantias fundamentais estabelecidas pela ordem constitucional, o mandado de segurança colectivo pode ser legitimamente impetrado por:",
+    "options": [
+      "Qualquer cidadão em gozo dos direitos de voto.",
+      "Partido político com representação activa no Congresso Nacional.",
+      "Autarquias profissionais de base municipal exclusiva.",
+      "Sindicatos com pelo menos cinco anos de registo civil contínuo.",
+      "Associações constituídas há menos de seis meses sem autorização estatutária."
+    ],
+    "correct": 1,
+    "exp": "Artigo 5º, inciso LXX, alínea 'a', da Constituição Federal: o mandado de segurança colectivo pode ser impetrado por organização partidária com assento no parlamento federal."
+  },
+  {
+    "id": 307,
+    "discipline": "administrativo",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "O atributo da autoexecutoriedade do poder de polícia habilita o ente público a pôr em prática as suas deliberações de forma directa e coactiva, dispensando a prévia intervenção do Poder Judiciário.",
+    "correct": "C",
+    "exp": "CERTO. A autoexecutoriedade permite que a Administração execute materialmente as suas próprias decisões (como interdições e apreensões) sem demandar autorização judicial preliminar."
+  },
+  {
+    "id": 308,
+    "discipline": "administrativo",
+    "banca": "IADES",
+    "exam": "Polícia Civil",
+    "type": "mc",
+    "text": "Quando um servidor público actua estritamente dentro da sua alçada legal, mas orienta a decisão administrativa com a intenção exclusiva de prejudicar desafecto particular, resta configurado:",
+    "options": [
+      "Excesso formal de mandato regulamentar.",
+      "Desvio de finalidade ou de poder.",
+      "Exercício regular da discricionariedade.",
+      "Incompetência material absoluta da matéria.",
+      "Usurpação material de funções executivas."
+    ],
+    "correct": 1,
+    "exp": "O desvio de finalidade (ou de poder) verifica-se quando a autoridade tem competência para o acto, mas afasta-se do interesse público primário visando satisfazer objectivos particulares ou espúrios."
+  },
+  {
+    "id": 309,
+    "discipline": "especiais",
+    "banca": "Cebraspe",
+    "exam": "Polícia Penal",
+    "type": "tf",
+    "text": "Nos termos da Lei de Execução Penal (Lei n.º 7.210/1984), a sanção de isolamento celular em regime disciplinar diferenciado requer despacho fundamentado prévio da autoridade judiciária competente.",
+    "correct": "C",
+    "exp": "CERTO. Artigo 54 da Lei n.º 7.210/1984. A inclusão do apenado em Regime Disciplinar Diferenciado (RDD) exige representação administrativa ou do Ministério Público com decisão privativa do juiz da execução."
+  },
+  {
+    "id": 310,
+    "discipline": "especiais",
+    "banca": "FGV",
+    "exam": "Carreiras Policiais",
+    "type": "mc",
+    "text": "De acordo com a Lei de Abuso de Autoridade (Lei n.º 13.869/2019), a configuração das condutas infracionais requer a comprovação do dolo específico de:",
+    "options": [
+      "Causar dano exclusivamente à integridade física do ofendido.",
+      "Beneficiar a si mesmo ou a terceiro, ou agir por mero capricho ou satisfação pessoal.",
+      "Descumprir os prazos regimentais de instrução preliminar.",
+      "Atuar sob a influência comprovada de coacção resistível.",
+      "Assumir de forma genérica o risco de lesionar direitos individuais."
+    ],
+    "correct": 1,
+    "exp": "Artigo 1º, § 1º, da Lei n.º 13.869/2019. Exige-se elemento subjectivo especial do tipo: finalidade específica de prejudicar outrem, beneficiar-se a si ou a terceiro, ou satisfazer capricho e interesse pessoal."
+  }
+]
