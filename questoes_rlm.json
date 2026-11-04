@@ -1,0 +1,117 @@
+[
+  {
+    "id": 401,
+    "discipline": "rlm",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "A proposição 'Se o suspeito confessou o crime, então ele foi indiciado' é logicamente equivalente a 'Se o suspeito não foi indiciado, então ele não confessou o crime'.",
+    "correct": "C",
+    "exp": "CERTO. Trata-se da regra da contrapositiva do condicional: (P -> Q) equivale logicamente a (~Q -> ~P). Invertem-se os termos e negam-se ambos."
+  },
+  {
+    "id": 402,
+    "discipline": "rlm",
+    "banca": "Cebraspe",
+    "exam": "Polícia Militar",
+    "type": "tf",
+    "text": "A negação da proposição 'Nenhum militar cometeu transgressão' é 'Todos os militares cometeram transgressão'.",
+    "correct": "E",
+    "exp": "ERRADO. A negação lógica de 'Nenhum' (quantificador universal negativo) é feita por um quantificador existencial: 'Pelo menos um / Algum militar cometeu transgressão' (Bizu do PEA: Pelo menos um, Existe, Algum)."
+  },
+  {
+    "id": 403,
+    "discipline": "rlm",
+    "banca": "FGV",
+    "exam": "PM - Soldado Combatente",
+    "type": "mc",
+    "text": "Cinco soldados possuem alturas distintas e devem formar uma fila indiana. Sabendo que o mais alto e o mais baixo não podem ocupar nenhum dos extremos da fila (primeiro e último lugares), o número de maneiras distintas de organizar essa fila é:",
+    "options": [
+      "12",
+      "18",
+      "24",
+      "36",
+      "48"
+    ],
+    "correct": 3,
+    "exp": "Os dois extremos só podem ser preenchidos pelos 3 soldados restantes: 3 x 2 = 6 hipóteses. Os outros 3 soldados (incluindo o mais alto e o mais baixo) permutam nos 3 lugares do meio: 3! = 6 hipóteses. Pelo princípio fundamental da contagem: 6 x 6 = 36 maneiras."
+  },
+  {
+    "id": 404,
+    "discipline": "rlm",
+    "banca": "FGV",
+    "exam": "PM - Soldado Combatente",
+    "type": "mc",
+    "text": "Uma moeda honesta é lançada 3 vezes consecutivas. Em cada resultado 'cara' ganham-se 3 reais e em cada 'coroa' perdem-se 2 reais. A probabilidade de obter um saldo final positivo de exactamente 4 reais é:",
+    "options": [
+      "1/8",
+      "1/4",
+      "1/3",
+      "3/8",
+      "1/2"
+    ],
+    "correct": 3,
+    "exp": "Para obter 4 reais: 2 caras e 1 coroa (2 x 3 - 1 x 2 = 6 - 2 = 4 reais). O espaço amostral total em 3 lançamentos é 2³ = 8. O número de combinações com exactamente 2 caras é C(3,2) = 3 (CCK, CKC, KCC). Logo, a probabilidade é 3/8."
+  },
+  {
+    "id": 405,
+    "discipline": "rlm",
+    "banca": "IADES",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Considere a afirmação: 'O soldado está de serviço no posto ou a viatura está em ronda ostensiva'. Do ponto de vista da lógica sentencial, a negação dessa proposição é:",
+    "options": [
+      "O soldado não está de serviço no posto ou a viatura não está em ronda ostensiva.",
+      "Se o soldado não está de serviço, a viatura está em ronda.",
+      "O soldado não está de serviço no posto e a viatura não está em ronda ostensiva.",
+      "O soldado está de serviço se, e somente se, a viatura estiver em ronda.",
+      "A viatura não está em ronda ostensiva ou o soldado está no posto."
+    ],
+    "correct": 2,
+    "exp": "Pela Lei de De Morgan: ~(P v Q) = ~P ^ ~Q. Nega-se a primeira parte, troca-se a disjunção 'ou' pela conjunção 'e', e nega-se a segunda parte."
+  },
+  {
+    "id": 406,
+    "discipline": "rlm",
+    "banca": "IADES",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Num batalhão com 12 sargentos e 20 cabos, serão sorteados ao acaso 1 sargento e 1 cabo para a guarda de honra. A probabilidade de que sejam escolhidos especificamente o sargento Silva e o cabo Souza é de:",
+    "options": [
+      "1/120",
+      "1/240",
+      "1/60",
+      "1/30",
+      "1/20"
+    ],
+    "correct": 1,
+    "exp": "Eventos independentes: P(Sargento Silva) = 1/12 e P(Cabo Souza) = 1/20. P(Ambos) = (1/12) x (1/20) = 1/240."
+  },
+  {
+    "id": 407,
+    "discipline": "rlm",
+    "banca": "Cebraspe",
+    "exam": "Polícia Civil",
+    "type": "tf",
+    "text": "A proposição 'Hoje o agente cumpre o mandado ou não cumpre o mandado' é classificada na lógica proposicional como uma tautologia.",
+    "correct": "C",
+    "exp": "CERTO. Trata-se da estrutura (P v ~P), que pelo Princípio do Terceiro Excluído assume sempre o valor lógico verdadeiro em qualquer circunstância fáctica, caracterizando uma tautologia."
+  },
+  {
+    "id": 408,
+    "discipline": "rlm",
+    "banca": "FGV",
+    "exam": "Carreiras Policiais",
+    "type": "mc",
+    "text": "Em um pelotão de 150 homens, 70 são especializados em patrulhamento táctico, 40 em choque e 10 possuem ambas as qualificações. O número de homens que não possuem nenhuma dessas especializações é:",
+    "options": [
+      "30",
+      "40",
+      "50",
+      "60",
+      "70"
+    ],
+    "correct": 2,
+    "exp": "Teoria dos conjuntos: P(Táctico ou Choque) = 70 + 40 - 10 = 100 homens especializados. Homens sem especialização = 150 - 100 = 50."
+  }
+]
