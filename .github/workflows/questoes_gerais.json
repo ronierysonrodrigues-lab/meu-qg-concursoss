@@ -1,137 +1,164 @@
-[
-  {
-    "id": 201,
-    "discipline": "portugues",
-    "banca": "Cebraspe",
-    "exam": "Carreiras Policiais",
-    "type": "tf",
-    "text": "O termo 'à mercê de' exige o emprego do sinal indicativo de crase por se tratar de uma locução prepositiva feminina.",
-    "correct": "C",
-    "exp": "CERTO. Locuções prepositivas formadas com substantivo feminino (à mercê de, à procura de, à custa de) recebem obrigatoriamente o acento grave indicativo de crase."
-  },
-  {
-    "id": 202,
-    "discipline": "portugues",
-    "banca": "FGV",
-    "exam": "Polícia Militar",
-    "type": "mc",
-    "text": "Assinale a frase em que o acento indicativo de crase está empregado em conformidade com a norma-padrão:",
-    "options": [
-      "O suspeito foi encaminhado à delegacia após a voz de prisão.",
-      "A viatura dirigiu-se à uma rua sem saída.",
-      "O policial militar começou à redigir o boletim de ocorrência.",
-      "O mandado foi entregue à ele pessoalmente.",
-      "Os agentes estavam dispostos à colaborar com o inquérito."
-    ],
-    "correct": 0,
-    "exp": "Apenas na opção A a crase é devida (regência de 'encaminhar a' + artigo definido feminino 'a delegacia'). Nas demais, é proibida: antes de artigo indefinido (B), antes de verbo (C e E) e antes de pronome pessoal reto (D)."
-  },
-  {
-    "id": 203,
-    "discipline": "rlm",
-    "banca": "Cebraspe",
-    "exam": "Polícia Civil",
-    "type": "tf",
-    "text": "A negação lógica da proposição composta 'O agente efetuou o disparo e o suspeito se rendeu' é 'O agente não efetuou o disparo ou o suspeito não se rendeu'.",
-    "correct": "C",
-    "exp": "CERTO. Pela Primeira Lei de De Morgan: ~(P ^ Q) = ~P v ~Q. Nega-se a primeira, troca-se a conjunção 'e' pela disjunção 'ou' e nega-se a segunda proposição."
-  },
-  {
-    "id": 204,
-    "discipline": "rlm",
-    "banca": "FGV",
-    "exam": "Polícia Militar",
-    "type": "mc",
-    "text": "Se todo soldado da polícia é disciplinado e alguns militares são atletas, pode-se concluir logicamente que:",
-    "options": [
-      "Todo militar disciplinado é soldado.",
-      "Nenhum atleta é soldado disciplinado.",
-      "Pelo menos um militar possui disciplina.",
-      "Todos os atletas são soldados.",
-      "Nenhum militar disciplinado é atleta."
-    ],
-    "correct": 2,
-    "exp": "Como todo soldado é militar e todo soldado é disciplinado, a existência de soldados garante que pelo menos os soldados que são militares possuem disciplina."
-  },
-  {
-    "id": 205,
-    "discipline": "informatica",
-    "banca": "Cebraspe",
-    "exam": "Polícia Federal",
-    "type": "tf",
-    "text": "O protocolo HTTPS utiliza criptografia por meio do protocolo TLS/SSL para proteger a integridade e a confidencialidade das comunicações entre o navegador e o servidor web, operando tipicamente na porta lógica 443.",
-    "correct": "C",
-    "exp": "CERTO. O HTTPS (HyperText Transfer Protocol Secure) adiciona uma camada de encriptação criptográfica (SSL/TLS) sobre o tráfego HTTP comum, utilizando a porta TCP 443 por padrão."
-  },
-  {
-    "id": 206,
-    "discipline": "informatica",
-    "banca": "IADES",
-    "exam": "Polícia Militar",
-    "type": "mc",
-    "text": "Em segurança da informação, o tipo de código malicioso (malware) que criptografa os ficheiros do utilizador e exige o pagamento de um resgate para devolver o acesso aos dados denomina-se:",
-    "options": [
-      "Spyware.",
-      "Ransomware.",
-      "Worm.",
-      "Adware.",
-      "Rootkit."
-    ],
-    "correct": 1,
-    "exp": "O ransomware sequestra os dados do sistema por meio de cifras criptográficas avançadas e apresenta uma mensagem exigindo resgate pecuniário (normalmente em criptomoedas)."
-  },
-  {
-    "id": 207,
-    "discipline": "historia",
-    "banca": "Cebraspe",
-    "exam": "Carreiras Policiais",
-    "type": "tf",
-    "text": "A Revolução de 1930 representou a rutura da hegemonia da política do café com leite e conduziu Getúlio Vargas ao poder, iniciando um período marcado pelo fortalecimento do Estado centralizado e pela legislação trabalhista.",
-    "correct": "C",
-    "exp": "CERTO. A Revolução de 1930 encerrou a Primeira República (República Velha), destituiu Washington Luís e instalou o Governo Provisório de Getúlio Vargas, caracterizado pela centralização burocrática e criação do Ministério do Trabalho."
-  },
-  {
-    "id": 208,
-    "discipline": "historia",
-    "banca": "FGV",
-    "exam": "Polícia Militar",
-    "type": "mc",
-    "text": "Durante o período da Primeira República brasileira (1889-1930), o fenómeno político caracterizado pelo domínio eleitoral dos proprietários rurais sobre os votantes locais através do clientelismo e da intimidação ficou historicamente conhecido como:",
-    "options": [
-      "Messianismo sertanejo.",
-      "Tenentismo armado.",
-      "Coronelismo e voto de cabresto.",
-      "Populismo industrial.",
-      "Trabalhismo autoritário."
-    ],
-    "correct": 2,
-    "exp": "O coronelismo assentava na influência socioeconómica dos líderes agrários locais ('coronéis'), controlando as listas eleitorais e os votos dos dependentes da fazenda através da coação (voto de cabresto)."
-  },
-  {
-    "id": 209,
-    "discipline": "geografia",
-    "banca": "Cebraspe",
-    "exam": "Carreiras Policiais",
-    "type": "tf",
-    "text": "O processo acelerado de urbanização no Brasil a partir da segunda metade do século XX esteve associado à mecanização do campo e ao êxodo rural, resultando num padrão metropolitano muitas vezes desprovido de saneamento e infraestrutura básica adequada.",
-    "correct": "C",
-    "exp": "CERTO. A rápida industrialização aliada à concentração fundiária provocou migrações maciças do campo para as metrópoles, originando periferias extensas com défice de serviços de saneamento, habitação e segurança."
-  },
-  {
-    "id": 210,
-    "discipline": "geografia",
-    "banca": "IADES",
-    "exam": "Polícia Militar",
-    "type": "mc",
-    "text": "A expansão da fronteira agrícola no interior do Brasil a partir da década de 1990 consolidou uma importante região produtora de grãos e comodidades agrícolas no bioma Cerrado, designada pela sigla:",
-    "options": [
-      "MATOPIBA (Maranhão, Tocantins, Piauí e Bahia).",
-      "SUDENE (Superintendência do Nordeste).",
-      "ZFM (Zona Franca de Manaus).",
-      "POLAMAZÔNIA (Pólo Agropecuário Amazónico).",
-      "CALHA NORTE (Fronteira Setentrional)."
-    ],
-    "correct": 0,
-    "exp": "O acrónimo MATOPIBA designa a área de convergência dos estados do Maranhão, Tocantins, Piauí e Bahia, reconhecida como a grande fronteira agroexportadora de soja e milho no Cerrado brasileiro."
-  }
-]
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QG Tático • Hub de Estudos Policiais</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background-color: #0b0f17; color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif; }
+    .card-tactical { background: #111827; border: 1px solid #1f2937; border-radius: 0.75rem; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="border-b border-gray-800 bg-[#0d131f] sticky top-0 z-50 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 text-xl font-black">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold tracking-wider text-white text-lg">QG TÁTICO</span>
+            <span class="text-[10px] bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded font-mono font-bold">PC • PM • PP</span>
+          </div>
+          <p class="text-xs text-gray-400">PLATAFORMA OPERACIONAL DE APROVAÇÃO</p>
+        </div>
+      </div>
+      <nav class="flex items-center gap-2 text-sm">
+        <button onclick="switchTab('questoes')" id="tab-btn-questoes" class="px-3 py-1.5 rounded-md font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/30">
+          Questões (<span id="total-badge">0</span>)
+        </button>
+        <button onclick="switchTab('bizus')" id="tab-btn-bizus" class="px-3 py-1.5 rounded-md font-semibold text-gray-400 hover:text-white">
+          Bizus
+        </button>
+        <button onclick="switchTab('erros')" id="tab-btn-erros" class="px-3 py-1.5 rounded-md font-semibold text-gray-400 hover:text-white">
+          Erros (<span id="erros-badge">0</span>)
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto w-full px-4 py-6 flex-1">
+    <section id="sec-questoes" class="space-y-4">
+      <div class="card-tactical p-4 flex flex-wrap gap-3 items-center justify-between">
+        <div class="flex flex-wrap gap-2">
+          <select id="filtro-disc" onchange="renderQuestions()" class="bg-gray-800 text-sm text-gray-200 border border-gray-700 rounded-lg px-3 py-2">
+            <option value="todas">Todas as Disciplinas</option>
+            <option value="penal">Direito Penal</option>
+            <option value="processopenal">Processo Penal</option>
+            <option value="constitucional">Constitucional</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="portugues">Português</option>
+            <option value="rlm">Raciocínio Lógico / Matemática</option>
+            <option value="informatica">Informática</option>
+            <option value="historia">História</option>
+            <option value="geografia">Geografia</option>
+          </select>
+        </div>
+        <div class="text-xs text-gray-400">Total listado: <span id="count-span" class="font-bold text-white">0</span></div>
+      </div>
+      <div id="container-questoes" class="space-y-4"></div>
+    </section>
+
+    <section id="sec-bizus" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="card-tactical p-5 border-amber-500/30">
+        <span class="text-xs bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded font-mono font-bold">PENAL</span>
+        <h3 class="text-lg font-bold text-white mt-2">L.U.T.A.</h3>
+        <p class="text-sm text-gray-300 mt-1">Lugar = Ubiquidade | Tempo = Atividade (Art. 4º e 6º CP).</p>
+      </div>
+      <div class="card-tactical p-5 border-blue-500/30">
+        <span class="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded font-mono font-bold">ADMINISTRATIVO</span>
+        <h3 class="text-lg font-bold text-white mt-2">L.I.M.P.E.</h3>
+        <p class="text-sm text-gray-300 mt-1">Legalidade, Impessoalidade, Moralidade, Publicidade, Eficiência (Art. 37 CF).</p>
+      </div>
+      <div class="card-tactical p-5 border-emerald-500/30">
+        <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-mono font-bold">CONSTITUCIONAL</span>
+        <h3 class="text-lg font-bold text-white mt-2">SO.CI.DI.VA.PLU</h3>
+        <p class="text-sm text-gray-300 mt-1">Soberania, Cidadania, Dignidade, Valores do trabalho, Pluralismo político.</p>
+      </div>
+    </section>
+
+    <section id="sec-erros" class="hidden space-y-4">
+      <div id="container-erros" class="space-y-4"></div>
+    </section>
+  </main>
+
+  <script>
+    const QUESTOES = [
+      { id: 1, disc: "penal", banca: "Cebraspe", text: "Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado (Teoria da Atividade).", type: "tf", cor: "C", exp: "Art. 4º do CP: Tempo do crime = Teoria da Atividade (Bizu: LUTA)." },
+      { id: 2, disc: "penal", banca: "Cebraspe", text: "Para o lugar do crime, o Código Penal brasileiro adotou a Teoria do Resultado.", type: "tf", cor: "E", exp: "Art. 6º do CP: Lugar do crime = Teoria da Ubiquidade/Mista." },
+      { id: 3, disc: "constitucional", banca: "Cebraspe", text: "A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito, desastre, socorro ou, durante o dia, por determinação judicial.", type: "tf", cor: "C", exp: "Art. 5º, XI, CF/88." },
+      { id: 4, disc: "administrativo", banca: "Cebraspe", text: "Os atributos do poder de polícia incluem a autoexecutoriedade, a imperatividade e a discricionariedade.", type: "tf", cor: "C", exp: "Doutrina pacífica de Direito Administrativo." },
+      { id: 5, disc: "portugues", banca: "Cebraspe", text: "O verbo 'haver', quando empregado com o significado de existir, é impessoal e deve permanecer obrigatoriamente no singular.", type: "tf", cor: "C", exp: "Regra clássica: Havia muitos candidatos no local." },
+      { id: 6, disc: "rlm", banca: "Cebraspe", text: "A negação de 'Todos os policiais são disciplinados' é 'Nenhum policial é disciplinado'.", type: "tf", cor: "E", exp: "A negação de 'Todo' é 'Pelo menos um / Algum não é disciplinado'." },
+      { id: 7, disc: "informatica", banca: "Cebraspe", text: "O protocolo HTTPS utiliza criptografia SSL/TLS e opera por padrão na porta TCP 443.", type: "tf", cor: "C", exp: "Conceito clássico de redes e segurança na web." },
+      { id: 8, disc: "historia", banca: "FGV", text: "A Era Vargas (1930-1945) caracterizou-se pela centralização do Estado e pela criação da legislação trabalhista no Brasil.", type: "tf", cor: "C", exp: "Criação da CLT e do Ministério do Trabalho." },
+      { id: 9, disc: "geografia", banca: "Cebraspe", text: "A região do MATOPIBA compreende áreas do Maranhão, Tocantins, Piauí e Bahia como fronteira agrícola de grãos no Cerrado.", type: "tf", cor: "C", exp: "Conceito consolidado de expansão do agronegócio." }
+    ];
+
+    let cadErros = [];
+
+    function renderQuestions() {
+      const disc = document.getElementById('filtro-disc').value;
+      const list = QUESTOES.filter(q => disc === 'todas' || q.disc === disc);
+      document.getElementById('total-badge').textContent = QUESTOES.length;
+      document.getElementById('count-span').textContent = list.length;
+      const container = document.getElementById('container-questoes');
+      container.innerHTML = '';
+      list.forEach(q => {
+        const d = document.createElement('div');
+        d.className = 'card-tactical p-5 space-y-3';
+        d.innerHTML = `
+          <div class="flex justify-between text-xs text-gray-400">
+            <span class="bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded font-bold uppercase">${q.disc}</span>
+            <span>${q.banca} • ID #${q.id}</span>
+          </div>
+          <p class="text-sm text-gray-200">${q.text}</p>
+          <div class="grid grid-cols-2 gap-3">
+            <button onclick="responder(${q.id}, 'C', this)" class="py-2 bg-gray-800 hover:bg-gray-700 rounded font-bold border border-gray-700">Certo</button>
+            <button onclick="responder(${q.id}, 'E', this)" class="py-2 bg-gray-800 hover:bg-gray-700 rounded font-bold border border-gray-700">Errado</button>
+          </div>
+          <div id="exp-${q.id}" class="hidden p-3 bg-gray-800/80 rounded text-xs text-gray-300">
+            <b class="text-amber-400">Gabarito comentado:</b> ${q.exp}
+          </div>
+        `;
+        container.appendChild(d);
+      });
+    }
+
+    function responder(id, r, btn) {
+      const q = QUESTOES.find(x => x.id === id);
+      const isCor = q.cor === r;
+      Array.from(btn.parentElement.children).forEach(b => b.disabled = true);
+      if (isCor) {
+        btn.className += ' !bg-emerald-600 !text-white';
+      } else {
+        btn.className += ' !bg-red-600 !text-white';
+        if (!cadErros.some(e => e.id === q.id)) cadErros.push(q);
+        document.getElementById('erros-badge').textContent = cadErros.length;
+      }
+      document.getElementById('exp-' + id).classList.remove('hidden');
+    }
+
+    function switchTab(t) {
+      ['questoes', 'bizus', 'erros'].forEach(tab => {
+        document.getElementById('sec-' + tab).classList.add('hidden');
+        document.getElementById('tab-btn-' + tab).className = 'px-3 py-1.5 rounded-md font-semibold text-gray-400 hover:text-white';
+      });
+      document.getElementById('sec-' + t).classList.remove('hidden');
+      document.getElementById('tab-btn-' + t).className = 'px-3 py-1.5 rounded-md font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/30';
+      if (t === 'erros') {
+        const c = document.getElementById('container-erros');
+        c.innerHTML = cadErros.length ? '' : '<div class="card-tactical p-6 text-center text-gray-400">Nenhum erro registado.</div>';
+        cadErros.forEach(e => {
+          c.innerHTML += `<div class="card-tactical p-4 border-red-500/30 space-y-1"><b class="text-red-400">${e.disc.toUpperCase()}</b><p class="text-sm">${e.text}</p><div class="text-xs text-gray-300">${e.exp}</div></div>`;
+        });
+      }
+    }
+
+    renderQuestions();
+  </script>
+</body>
+</html>
