@@ -71,7 +71,6 @@
     .btn-opt.wrong { background: #7f1d1d !important; border-color: #ef4444 !important; color: #ffffff !important; }
     .q-exp { background: #070d19; border: 1px solid #334155; border-radius: 8px; padding: 12px; font-size: 13px; color: #cbd5e1; line-height: 1.5; display: none; }
     .q-exp.show { display: block; }
-    .hidden { display: none !important; }
   </style>
 </head>
 <body>
@@ -87,7 +86,7 @@
     <nav>
       <button onclick="tab('dash')" id="tb-dash" class="nav-btn active">Dashboard</button>
       <button onclick="tab('bizus')" id="tb-bizus" class="nav-btn">Bizus</button>
-      <button onclick="tab('questoes')" id="tb-questoes" class="nav-btn">Questões (<span id="count-nav">0</span>)</button>
+      <button onclick="tab('questoes')" id="tb-questoes" class="nav-btn">Questões (<span id="count-nav">18</span>)</button>
       <button onclick="tab('simulados')" id="tb-simulados" class="nav-btn">Simulados</button>
       <button onclick="tab('erros')" id="tb-erros" class="nav-btn">Caderno de Erros (<span id="err-nav">0</span>)</button>
       <button onclick="tab('taf')" id="tb-taf" class="nav-btn">TAF</button>
@@ -95,7 +94,8 @@
   </header>
 
   <main>
-    <section id="sec-dash" class="card">
+    <!-- DASHBOARD -->
+    <section id="sec-dash" class="card" style="display: block;">
       <div class="banner-header">
         <span class="post-tag">🎯 POSTO DE COMANDO OPERACIONAL</span>
         <span style="font-family: monospace; font-size: 12px; color: #64748b;">04/11/2026</span>
@@ -124,7 +124,7 @@
         </div>
       </div>
 
-      <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+      <div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
         <div class="card" style="background: #070d19;">
           <div class="bizu-badge">DIREITO PENAL</div>
           <div class="bizu-title">L.U.T.A. (Lugar e Tempo do Crime)</div>
@@ -159,71 +159,76 @@
       </div>
     </section>
 
-    <section id="sec-questoes" class="hidden">
-      <div class="card" style="margin-bottom: 16px;">
-        <div class="filter-bar">
-          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <select id="filtro-mat" onchange="renderQ()" class="select-tactical">
-              <option value="todas">Todas as Disciplinas</option>
-              <option value="penal">Direito Penal</option>
-              <option value="processopenal">Processo Penal</option>
-              <option value="constitucional">Constitucional</option>
-              <option value="administrativo">Administrativo</option>
-              <option value="portugues">Português</option>
-              <option value="rlm">RLM / Matemática</option>
-              <option value="informatica">Informática</option>
-              <option value="historia">História</option>
-              <option value="geografia">Geografia</option>
-            </select>
-            <select id="filtro-banca" onchange="renderQ()" class="select-tactical">
-              <option value="todas">Todas as Bancas</option>
-              <option value="Cebraspe">Cebraspe</option>
-              <option value="FGV">FGV</option>
-              <option value="IADES">IADES</option>
-            </select>
-          </div>
-          <span style="font-size: 13px; color: #94a3b8;">Total: <strong id="q-total-count" style="color:#ffffff;">0</strong></span>
+    <!-- QUESTÕES -->
+    <section id="sec-questoes" class="card" style="display: none;">
+      <div class="filter-bar">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <select id="filtro-mat" onchange="renderQ()" class="select-tactical">
+            <option value="todas">Todas as Disciplinas</option>
+            <option value="penal">Direito Penal</option>
+            <option value="processopenal">Processo Penal</option>
+            <option value="constitucional">Constitucional</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="portugues">Português</option>
+            <option value="rlm">RLM / Matemática</option>
+            <option value="informatica">Informática</option>
+            <option value="historia">História</option>
+            <option value="geografia">Geografia</option>
+          </select>
+          <select id="filtro-banca" onchange="renderQ()" class="select-tactical">
+            <option value="todas">Todas as Bancas</option>
+            <option value="Cebraspe">Cebraspe</option>
+            <option value="FGV">FGV</option>
+            <option value="IADES">IADES</option>
+          </select>
         </div>
+        <span style="font-size: 13px; color: #94a3b8;">Total listado: <strong id="q-total-count" style="color:#ffffff;">0</strong></span>
       </div>
       <div id="q-list"></div>
     </section>
 
-    <section id="sec-bizus" class="hidden" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-      <div class="card">
-        <div class="bizu-badge">PENAL</div>
-        <div class="bizu-title">L.U.T.A.</div>
-        <p class="bizu-desc">Lugar = Ubiquidade (Art. 6º) | Tempo = Atividade (Art. 4º).</p>
-      </div>
-      <div class="card">
-        <div class="bizu-badge">ADMINISTRATIVO</div>
-        <div class="bizu-title">L.I.M.P.E.</div>
-        <p class="bizu-desc">Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (Art. 37 CF).</p>
-      </div>
-      <div class="card">
-        <div class="bizu-badge">CONSTITUCIONAL</div>
-        <div class="bizu-title">SO.CI.DI.VA.PLU</div>
-        <p class="bizu-desc">Fundamentos: Soberania, Cidadania, Dignidade, Valores do Trabalho, Pluralismo.</p>
+    <!-- BIZUS -->
+    <section id="sec-bizus" style="display: none;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+        <div class="card">
+          <div class="bizu-badge">PENAL</div>
+          <div class="bizu-title">L.U.T.A.</div>
+          <p class="bizu-desc">Lugar = Ubiquidade (Art. 6º) | Tempo = Atividade (Art. 4º).</p>
+        </div>
+        <div class="card">
+          <div class="bizu-badge">ADMINISTRATIVO</div>
+          <div class="bizu-title">L.I.M.P.E.</div>
+          <p class="bizu-desc">Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (Art. 37 CF).</p>
+        </div>
+        <div class="card">
+          <div class="bizu-badge">CONSTITUCIONAL</div>
+          <div class="bizu-title">SO.CI.DI.VA.PLU</div>
+          <p class="bizu-desc">Fundamentos: Soberania, Cidadania, Dignidade, Valores do Trabalho, Pluralismo.</p>
+        </div>
       </div>
     </section>
 
-    <section id="sec-simulados" class="hidden card" style="text-align: center; padding: 40px 20px;">
+    <!-- SIMULADOS -->
+    <section id="sec-simulados" class="card" style="display: none; text-align: center; padding: 40px 20px;">
       <h2 style="font-size: 22px; font-weight: 900; margin-bottom: 8px;">Simulado Tático Geral</h2>
-      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">Treine com questões sorteadas automaticamente de todas as matérias policiais.</p>
-      <button onclick="startSimulado()" class="btn-gold" style="padding: 12px 30px; font-size: 15px;">Gerar Novo Simulado (10 Questões)</button>
+      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">Treine com 10 questões aleatórias de todas as disciplinas policiais.</p>
+      <button onclick="startSimulado()" class="btn-gold" style="padding: 12px 30px; font-size: 15px;">Gerar Novo Simulado</button>
       <div id="simulado-area" style="margin-top: 24px; text-align: left;"></div>
     </section>
 
-    <section id="sec-erros" class="hidden">
-      <div class="card" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+    <!-- ERROS -->
+    <section id="sec-erros" class="card" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
         <h2 style="font-size: 17px; font-weight: 800;">Caderno de Erros Tático</h2>
         <button onclick="clearErros()" class="btn-dark" style="padding: 6px 12px; font-size: 12px;">Limpar Erros</button>
       </div>
       <div id="erros-list"></div>
     </section>
 
-    <section id="sec-taf" class="hidden card">
+    <!-- TAF -->
+    <section id="sec-taf" class="card" style="display: none;">
       <h2 style="font-size: 18px; font-weight: 900; margin-bottom: 6px;">Metas do TAF (Carreiras Policiais)</h2>
-      <p style="color: #94a3b8; font-size: 13px; margin-bottom: 16px;">Acompanhamento dos índices mínimos para não reprovar na prova física.</p>
+      <p style="color: #94a3b8; font-size: 13px; margin-bottom: 16px;">Índices mínimos exigidos nos certames policiais.</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
         <div class="stat-box"><span class="stat-label">CORRIDA 12 MIN</span><span class="stat-val val-white">2.400 m</span></div>
         <div class="stat-box"><span class="stat-label">BARRA FIXA</span><span class="stat-val val-gold">6 rep</span></div>
@@ -235,13 +240,180 @@
 
   <script>
     const BANCO = [
-      { id: 1, disc: "penal", banca: "Cebraspe", text: "Pedro residia na cidade X e esfaqueou Maria, que foi atendida e faleceu na cidade Y. Considera-se lugar do crime apenas a cidade X.", type: "tf", cor: "E", exp: "ERRADO. Art. 6º do CP adota a Teoria da Ubiquidade: tanto a cidade da conduta quanto a do resultado são lugares do crime." },
-      { id: 2, disc: "penal", banca: "Cebraspe", text: "Joana contratou Antônia para cuidar de sua mãe idosa. Enquanto Antônia dormia, a idosa caiu e fraturou o fêmur. A omissão de Antônia é penalmente irrelevante.", type: "tf", cor: "E", exp: "ERRADO. Art. 13, § 2º, 'a', CP: Antônia tinha o dever de garantidora." },
-      { id: 3, disc: "penal", banca: "Cebraspe", text: "Classifica-se como crime culposo quando o agente quer o resultado ou assume o risco de produzi-lo.", type: "tf", cor: "E", exp: "ERRADO. Art. 18, I, CP: Querer ou assumir o risco caracteriza crime DOLOSO." },
-      { id: 4, disc: "penal", banca: "Cebraspe", text: "Viatura com preso colide e entra em chamas. Com risco de explosão iminente, policial sai pela janela e preso morre. O policial pode alegar estado de necessidade.", type: "tf", cor: "C", exp: "CERTO. Art. 24 CP: Ninguém é obrigado a sacrificar a própria vida perante risco atual e insuperável." },
-      { id: 5, disc: "processopenal", banca: "Cebraspe", text: "Homicídio comum tipificado como crime militar deve ser investigado privativamente por autoridade policial judiciária civil.", type: "tf", cor: "E", exp: "ERRADO. Crimes militares são investigados privativamente por Inquérito Policial Militar (IPM)." },
-      { id: 6, disc: "processopenal", banca: "Cebraspe", text: "O inquérito policial destina-se a colher informações sobre a autoria e a materialidade da infração penal.", type: "tf", cor: "C", exp: "CERTO. Art. 4º do CPP: Investigação preliminar preparatória para a ação penal." },
-      { id: 7, disc: "constitucional", banca: "Cebraspe", text: "O direito de greve é garantido a todos os trabalhadores, alcançando indistintamente os servidores militares.", type: "tf", cor: "E", exp: "ERRADO. Art. 142, § 3º, IV da CF/88: A greve e a sindicalização são expressamente proibidas aos militares." },
-      { id: 8, disc: "constitucional", banca: "Cebraspe", text: "Os Corpos de Bombeiros Militares integram formalmente o rol constitucional dos órgãos de segurança pública.", type: "tf", cor: "C", exp: "CERTO. Art. 144, inciso V, da CF/88." },
-      { id: 9, disc: "administrativo", banca: "Cebraspe", text: "Tanto pessoas jurídicas de direito público quanto as de direito privado prestadoras de serviço público respondem objetivamente pelos danos causados por seus agentes.", type: "tf", cor: "C", exp: "CERTO. Art. 37, § 6º da CF/88." },
-      { id: 10, disc: "administrativo", banca: "Cebraspe", text: "Os atributos do poder de polícia incluem a discricionariedade, a autoexecutoriedade e a imperatividade.", type: "tf", cor: "C", exp: "CERTO. At
+      { id: 1, disc: "penal", banca: "Cebraspe", text: "Pedro residia na cidade X e esfaqueou Maria, que foi atendida e faleceu na cidade Y. Considera-se lugar do crime apenas a cidade X.", cor: "E", exp: "ERRADO. Art. 6º do CP adota a Teoria da Ubiquidade: tanto a cidade da conduta quanto a do resultado são lugares do crime." },
+      { id: 2, disc: "penal", banca: "Cebraspe", text: "Joana contratou Antônia para cuidar de sua mãe idosa. Enquanto Antônia dormia, a idosa caiu e fraturou o fêmur. A omissão de Antônia é penalmente irrelevante.", cor: "E", exp: "ERRADO. Art. 13, § 2º, 'a', CP: Antônia tinha o dever de garantidora." },
+      { id: 3, disc: "penal", banca: "Cebraspe", text: "Classifica-se como crime culposo quando o agente quer o resultado ou assume o risco de produzi-lo.", cor: "E", exp: "ERRADO. Art. 18, I, CP: Querer ou assumir o risco caracteriza crime DOLOSO." },
+      { id: 4, disc: "penal", banca: "Cebraspe", text: "Viatura com preso colide e entra em chamas. Com risco de explosão iminente, policial sai pela janela e preso morre. O policial pode alegar estado de necessidade.", cor: "C", exp: "CERTO. Art. 24 CP: Ninguém é obrigado a sacrificar a própria vida perante risco atual e insuperável." },
+      { id: 5, disc: "processopenal", banca: "Cebraspe", text: "Homicídio comum tipificado como crime militar deve ser investigado privativamente por autoridade policial judiciária civil.", cor: "E", exp: "ERRADO. Crimes militares são investigados privativamente por Inquérito Policial Militar (IPM)." },
+      { id: 6, disc: "processopenal", banca: "Cebraspe", text: "O inquérito policial destina-se a colher informações sobre a autoria e a materialidade da infração penal.", cor: "C", exp: "CERTO. Art. 4º do CPP: Investigação preliminar preparatória para a ação penal." },
+      { id: 7, disc: "constitucional", banca: "Cebraspe", text: "O direito de greve é garantido a todos os trabalhadores, alcançando indistintamente os servidores militares.", cor: "E", exp: "ERRADO. Art. 142, § 3º, IV da CF/88: A greve e a sindicalização são expressamente proibidas aos militares." },
+      { id: 8, disc: "constitucional", banca: "Cebraspe", text: "Os Corpos de Bombeiros Militares integram formalmente o rol constitucional dos órgãos de segurança pública.", cor: "C", exp: "CERTO. Art. 144, inciso V, da CF/88." },
+      { id: 9, disc: "administrativo", banca: "Cebraspe", text: "Tanto pessoas jurídicas de direito público quanto as de direito privado prestadoras de serviço público respondem objetivamente pelos danos causados por seus agentes.", cor: "C", exp: "CERTO. Art. 37, § 6º da CF/88." },
+      { id: 10, disc: "administrativo", banca: "Cebraspe", text: "Os atributos do poder de polícia incluem a discricionariedade, a autoexecutoriedade e a imperatividade.", cor: "C", exp: "CERTO. Atributos clássicos do poder de polícia na doutrina administrativa." },
+      { id: 11, disc: "portugues", banca: "Cebraspe", text: "O verbo 'haver', quando empregado no sentido de existir ou ocorrer, é impessoal e deve ficar na 3ª pessoa do singular.", cor: "C", exp: "CERTO. Regra gramatical: Havia dez viaturas no local (e nunca 'haviam')." },
+      { id: 12, disc: "portugues", banca: "FGV", text: "A expressão 'não obstante' possui valor concessivo e equivale a 'a despeito de' ou 'apesar de'.", cor: "C", exp: "CERTO. Expressão conectiva concessiva clássica em provas da FGV." },
+      { id: 13, disc: "rlm", banca: "Cebraspe", text: "A negação lógica de 'Todos os policiais são disciplinados' é 'Nenhum policial é disciplinado'.", cor: "E", exp: "ERRADO. Nega-se 'Todo' com 'Pelo menos um / Algum não é disciplinado'." },
+      { id: 14, disc: "rlm", banca: "Cebraspe", text: "A proposição 'Hoje chove ou não chove' é uma tautologia segundo a lógica proposicional.", cor: "C", exp: "CERTO. Princípio do terceiro excluído (P ou ~P) é sempre verdadeiro." },
+      { id: 15, disc: "informatica", banca: "Cebraspe", text: "No sistema operacional Linux, o superusuário root detém privilégios irrestritos de administração do sistema.", cor: "C", exp: "CERTO. O root é a conta administradora suprema no Linux." },
+      { id: 16, disc: "informatica", banca: "Cebraspe", text: "O protocolo HTTPS utiliza criptografia SSL/TLS e opera por padrão na porta 443.", cor: "C", exp: "CERTO. Padrão internacional de segurança na web." },
+      { id: 17, disc: "historia", banca: "FGV", text: "A Revolução de 1930 encerrou a política do café com leite e inaugurou a Era Vargas com centralização estatal.", cor: "C", exp: "CERTO. Fim da Primeira República e início do governo de Getúlio Vargas." },
+      { id: 18, disc: "geografia", banca: "Cebraspe", text: "A região do MATOPIBA compreende áreas do Maranhão, Tocantins, Piauí e Bahia como fronteira agrícola de grãos no Cerrado.", cor: "C", exp: "CERTO. Polo de agronegócio de soja e milho no Centro-Norte brasileiro." }
+    ];
+
+    let stats = { feitas: 0, acertos: 0, erros: 0 };
+    let cadErros = [];
+
+    function updateUI() {
+      document.getElementById('st-feitas').textContent = stats.feitas;
+      document.getElementById('st-acertos').textContent = stats.acertos;
+      document.getElementById('st-erros').textContent = stats.erros;
+      document.getElementById('err-nav').textContent = cadErros.length;
+      document.getElementById('count-nav').textContent = BANCO.length;
+      const pct = stats.feitas > 0 ? Math.round((stats.acertos / stats.feitas) * 100) : 0;
+      document.getElementById('st-aprov').textContent = pct + '%';
+    }
+
+    function tab(name) {
+      const secoes = ['dash', 'bizus', 'questoes', 'simulados', 'erros', 'taf'];
+      secoes.forEach(t => {
+        const el = document.getElementById('sec-' + t);
+        const b = document.getElementById('tb-' + t);
+        if (el) el.style.display = 'none';
+        if (b) b.classList.remove('active');
+      });
+
+      const alvo = document.getElementById('sec-' + name);
+      const botao = document.getElementById('tb-' + name);
+      if (alvo) alvo.style.display = 'block';
+      if (botao) botao.classList.add('active');
+
+      if (name === 'questoes') renderQ();
+      if (name === 'erros') renderErros();
+    }
+
+    function renderQ() {
+      const mat = document.getElementById('filtro-mat').value;
+      const banca = document.getElementById('filtro-banca').value;
+      const list = BANCO.filter(q => (mat === 'todas' || q.disc === mat) && (banca === 'todas' || q.banca === banca));
+      document.getElementById('q-total-count').textContent = list.length;
+      const c = document.getElementById('q-list');
+      c.innerHTML = '';
+      list.forEach(q => {
+        const d = document.createElement('div');
+        d.className = 'question-card';
+        d.innerHTML = `
+          <div class="q-meta">
+            <span class="q-disc">${q.disc}</span>
+            <span class="q-banca">${q.banca} • ID #${q.id}</span>
+          </div>
+          <div class="q-text">${q.text}</div>
+          <div class="q-actions">
+            <button onclick="resp(${q.id}, 'C', this)" class="btn-opt">Certo</button>
+            <button onclick="resp(${q.id}, 'E', this)" class="btn-opt">Errado</button>
+          </div>
+          <div id="exp-${q.id}" class="q-exp">
+            <strong style="color:#f59e0b; display:block; margin-bottom:4px;">GABARITO COMENTADO:</strong>
+            ${q.exp}
+          </div>
+        `;
+        c.appendChild(d);
+      });
+    }
+
+    function resp(id, answer, btn) {
+      const q = BANCO.find(x => x.id === id);
+      const isCor = q.cor === answer;
+      Array.from(btn.parentElement.children).forEach(b => b.disabled = true);
+      if (isCor) {
+        btn.classList.add('correct');
+        stats.acertos++;
+      } else {
+        btn.classList.add('wrong');
+        stats.erros++;
+        if (!cadErros.some(e => e.id === q.id)) cadErros.push(q);
+      }
+      stats.feitas++;
+      document.getElementById('exp-' + id).classList.add('show');
+      updateUI();
+    }
+
+    function renderErros() {
+      const c = document.getElementById('erros-list');
+      if (cadErros.length === 0) {
+        c.innerHTML = '<div class="card" style="text-align:center; color:#94a3b8;">Nenhum erro registado até ao momento.</div>';
+        return;
+      }
+      c.innerHTML = '';
+      cadErros.forEach(q => {
+        c.innerHTML += `
+          <div class="question-card" style="border-color: rgba(239, 68, 68, 0.4);">
+            <div class="q-meta"><span class="q-disc" style="color:#ef4444;">${q.disc}</span><span>ID #${q.id}</span></div>
+            <div class="q-text">${q.text}</div>
+            <div class="q-exp show"><strong style="color:#f59e0b;">Correção:</strong> ${q.exp}</div>
+          </div>
+        `;
+      });
+    }
+
+    function clearErros() {
+      cadErros = [];
+      updateUI();
+      renderErros();
+    }
+
+    function startSimulado() {
+      const area = document.getElementById('simulado-area');
+      area.innerHTML = '<h3 style="font-size:16px; font-weight:800; margin-bottom:12px; color:#f59e0b;">Simulado Ativo (10 Questões):</h3>';
+      const shuffled = [...BANCO].sort(() => 0.5 - Math.random()).slice(0, 10);
+      shuffled.forEach((q, i) => {
+        area.innerHTML += `
+          <div class="question-card">
+            <div class="q-meta"><span class="q-disc">${q.disc}</span><span>Questão ${i+1}/10</span></div>
+            <div class="q-text">${q.text}</div>
+            <div class="q-actions">
+              <button onclick="resp(${q.id}, 'C', this)" class="btn-opt">Certo</button>
+              <button onclick="resp(${q.id}, 'E', this)" class="btn-opt">Errado</button>
+            </div>
+            <div id="exp-${q.id}" class="q-exp">
+              <strong style="color:#f59e0b;">GABARITO:</strong> ${q.exp}
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    let pomoTime = 1500;
+    let pomoTimer = null;
+    function pomoToggle() {
+      const btn = document.getElementById('pomo-btn');
+      if (pomoTimer) {
+        clearInterval(pomoTimer);
+        pomoTimer = null;
+        btn.textContent = 'Iniciar';
+      } else {
+        btn.textContent = 'Pausar';
+        pomoTimer = setInterval(() => {
+          if (pomoTime > 0) {
+            pomoTime--;
+            const m = String(Math.floor(pomoTime / 60)).padStart(2, '0');
+            const s = String(pomoTime % 60).padStart(2, '0');
+            document.getElementById('pomo-clock').textContent = m + ':' + s;
+          } else {
+            clearInterval(pomoTimer);
+            alert('Tempo esgotado! Missão cumprida.');
+          }
+        }, 1000);
+      }
+    }
+    function pomoReset() {
+      clearInterval(pomoTimer);
+      pomoTimer = null;
+      pomoTime = 1500;
+      document.getElementById('pomo-clock').textContent = '25:00';
+      document.getElementById('pomo-btn').textContent = 'Iniciar';
+    }
+
+    updateUI();
+  </script>
+</body>
+</html>
