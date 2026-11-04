@@ -1,0 +1,137 @@
+[
+  {
+    "id": 201,
+    "discipline": "portugues",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "O termo 'à mercê de' exige o emprego do sinal indicativo de crase por se tratar de uma locução prepositiva feminina.",
+    "correct": "C",
+    "exp": "CERTO. Locuções prepositivas formadas com substantivo feminino (à mercê de, à procura de, à custa de) recebem obrigatoriamente o acento grave indicativo de crase."
+  },
+  {
+    "id": 202,
+    "discipline": "portugues",
+    "banca": "FGV",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Assinale a frase em que o acento indicativo de crase está empregado em conformidade com a norma-padrão:",
+    "options": [
+      "O suspeito foi encaminhado à delegacia após a voz de prisão.",
+      "A viatura dirigiu-se à uma rua sem saída.",
+      "O policial militar começou à redigir o boletim de ocorrência.",
+      "O mandado foi entregue à ele pessoalmente.",
+      "Os agentes estavam dispostos à colaborar com o inquérito."
+    ],
+    "correct": 0,
+    "exp": "Apenas na opção A a crase é devida (regência de 'encaminhar a' + artigo definido feminino 'a delegacia'). Nas demais, é proibida: antes de artigo indefinido (B), antes de verbo (C e E) e antes de pronome pessoal reto (D)."
+  },
+  {
+    "id": 203,
+    "discipline": "rlm",
+    "banca": "Cebraspe",
+    "exam": "Polícia Civil",
+    "type": "tf",
+    "text": "A negação lógica da proposição composta 'O agente efetuou o disparo e o suspeito se rendeu' é 'O agente não efetuou o disparo ou o suspeito não se rendeu'.",
+    "correct": "C",
+    "exp": "CERTO. Pela Primeira Lei de De Morgan: ~(P ^ Q) = ~P v ~Q. Nega-se a primeira, troca-se a conjunção 'e' pela disjunção 'ou' e nega-se a segunda proposição."
+  },
+  {
+    "id": 204,
+    "discipline": "rlm",
+    "banca": "FGV",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Se todo soldado da polícia é disciplinado e alguns militares são atletas, pode-se concluir logicamente que:",
+    "options": [
+      "Todo militar disciplinado é soldado.",
+      "Nenhum atleta é soldado disciplinado.",
+      "Pelo menos um militar possui disciplina.",
+      "Todos os atletas são soldados.",
+      "Nenhum militar disciplinado é atleta."
+    ],
+    "correct": 2,
+    "exp": "Como todo soldado é militar e todo soldado é disciplinado, a existência de soldados garante que pelo menos os soldados que são militares possuem disciplina."
+  },
+  {
+    "id": 205,
+    "discipline": "informatica",
+    "banca": "Cebraspe",
+    "exam": "Polícia Federal",
+    "type": "tf",
+    "text": "O protocolo HTTPS utiliza criptografia por meio do protocolo TLS/SSL para proteger a integridade e a confidencialidade das comunicações entre o navegador e o servidor web, operando tipicamente na porta lógica 443.",
+    "correct": "C",
+    "exp": "CERTO. O HTTPS (HyperText Transfer Protocol Secure) adiciona uma camada de encriptação criptográfica (SSL/TLS) sobre o tráfego HTTP comum, utilizando a porta TCP 443 por padrão."
+  },
+  {
+    "id": 206,
+    "discipline": "informatica",
+    "banca": "IADES",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Em segurança da informação, o tipo de código malicioso (malware) que criptografa os ficheiros do utilizador e exige o pagamento de um resgate para devolver o acesso aos dados denomina-se:",
+    "options": [
+      "Spyware.",
+      "Ransomware.",
+      "Worm.",
+      "Adware.",
+      "Rootkit."
+    ],
+    "correct": 1,
+    "exp": "O ransomware sequestra os dados do sistema por meio de cifras criptográficas avançadas e apresenta uma mensagem exigindo resgate pecuniário (normalmente em criptomoedas)."
+  },
+  {
+    "id": 207,
+    "discipline": "historia",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "A Revolução de 1930 representou a rutura da hegemonia da política do café com leite e conduziu Getúlio Vargas ao poder, iniciando um período marcado pelo fortalecimento do Estado centralizado e pela legislação trabalhista.",
+    "correct": "C",
+    "exp": "CERTO. A Revolução de 1930 encerrou a Primeira República (República Velha), destituiu Washington Luís e instalou o Governo Provisório de Getúlio Vargas, caracterizado pela centralização burocrática e criação do Ministério do Trabalho."
+  },
+  {
+    "id": 208,
+    "discipline": "historia",
+    "banca": "FGV",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "Durante o período da Primeira República brasileira (1889-1930), o fenómeno político caracterizado pelo domínio eleitoral dos proprietários rurais sobre os votantes locais através do clientelismo e da intimidação ficou historicamente conhecido como:",
+    "options": [
+      "Messianismo sertanejo.",
+      "Tenentismo armado.",
+      "Coronelismo e voto de cabresto.",
+      "Populismo industrial.",
+      "Trabalhismo autoritário."
+    ],
+    "correct": 2,
+    "exp": "O coronelismo assentava na influência socioeconómica dos líderes agrários locais ('coronéis'), controlando as listas eleitorais e os votos dos dependentes da fazenda através da coação (voto de cabresto)."
+  },
+  {
+    "id": 209,
+    "discipline": "geografia",
+    "banca": "Cebraspe",
+    "exam": "Carreiras Policiais",
+    "type": "tf",
+    "text": "O processo acelerado de urbanização no Brasil a partir da segunda metade do século XX esteve associado à mecanização do campo e ao êxodo rural, resultando num padrão metropolitano muitas vezes desprovido de saneamento e infraestrutura básica adequada.",
+    "correct": "C",
+    "exp": "CERTO. A rápida industrialização aliada à concentração fundiária provocou migrações maciças do campo para as metrópoles, originando periferias extensas com défice de serviços de saneamento, habitação e segurança."
+  },
+  {
+    "id": 210,
+    "discipline": "geografia",
+    "banca": "IADES",
+    "exam": "Polícia Militar",
+    "type": "mc",
+    "text": "A expansão da fronteira agrícola no interior do Brasil a partir da década de 1990 consolidou uma importante região produtora de grãos e comodidades agrícolas no bioma Cerrado, designada pela sigla:",
+    "options": [
+      "MATOPIBA (Maranhão, Tocantins, Piauí e Bahia).",
+      "SUDENE (Superintendência do Nordeste).",
+      "ZFM (Zona Franca de Manaus).",
+      "POLAMAZÔNIA (Pólo Agropecuário Amazónico).",
+      "CALHA NORTE (Fronteira Setentrional)."
+    ],
+    "correct": 0,
+    "exp": "O acrónimo MATOPIBA designa a área de convergência dos estados do Maranhão, Tocantins, Piauí e Bahia, reconhecida como a grande fronteira agroexportadora de soja e milho no Cerrado brasileiro."
+  }
+]
