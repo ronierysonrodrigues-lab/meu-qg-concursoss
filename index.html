@@ -4,143 +4,244 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QG Tático • Hub de Estudos Policiais</title>
-  <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            tactical: {
-              950: '#070a0f',
-              900: '#0b0f17',
-              800: '#111827',
-              700: '#1f2937',
-              600: '#374151',
-              gold: '#f59e0b',
-              amber: '#d97706',
-              accent: '#3b82f6',
-              green: '#10b981',
-              red: '#ef4444'
-            }
-          }
-        }
-      }
-    }
-  </script>
   <style>
-    body { background-color: #070a0f; color: #f3f4f6; font-family: system-ui, -apple-system, sans-serif; }
-    .card-tactical { background: #0f172a; border: 1px solid #1e293b; border-radius: 0.75rem; }
-    .gold-glow { text-shadow: 0 0 12px rgba(245, 158, 11, 0.4); }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: #080c14; color: #f1f5f9; min-height: 100vh; display: flex; flex-direction: column; }
+    
+    header { background-color: #0d1424; border-bottom: 1px solid #1e293b; padding: 12px 20px; position: sticky; top: 0; z-index: 50; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .shield-icon { width: 38px; height: 38px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .brand-title { font-weight: 900; letter-spacing: 1px; color: #ffffff; font-size: 17px; display: flex; align-items: center; gap: 8px; }
+    .badge-tag { font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+    .brand-sub { font-size: 11px; color: #64748b; font-weight: 500; }
+    
+    nav { display: flex; gap: 6px; overflow-x: auto; padding: 4px 0; }
+    .nav-btn { background: transparent; border: 1px solid transparent; color: #94a3b8; font-size: 13px; font-weight: 700; padding: 7px 14px; border-radius: 6px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .nav-btn:hover { color: #ffffff; }
+    .nav-btn.active { background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #f59e0b; }
+    
+    main { max-width: 1050px; width: 100%; margin: 0 auto; padding: 24px 16px; flex: 1; display: flex; flex-direction: column; gap: 20px; }
+    .card { background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; }
+    
+    .banner-title { font-size: 26px; font-weight: 900; color: #ffffff; margin-top: 6px; margin-bottom: 8px; }
+    .banner-sub { font-size: 13px; color: #94a3b8; line-height: 1.5; max-width: 650px; }
+    .banner-header { display: flex; justify-content: space-between; align-items: flex-start; }
+    .post-tag { font-size: 11px; font-weight: 800; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
+    @media(max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-box { background: #070d19; border: 1px solid #1e293b; border-radius: 8px; padding: 14px; text-align: center; }
+    .stat-label { font-size: 10px; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-val { font-size: 26px; font-weight: 900; margin-top: 4px; display: block; }
+    .val-white { color: #ffffff; }
+    .val-green { color: #10b981; }
+    .val-gold { color: #f59e0b; }
+    .val-red { color: #ef4444; }
+    
+    .bizu-badge { font-size: 10px; background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); padding: 2px 6px; border-radius: 4px; font-weight: 700; width: fit-content; margin-bottom: 8px; }
+    .bizu-title { font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 10px; }
+    .bizu-mnemonic { background: #070d19; border: 1px solid #1e293b; border-radius: 6px; padding: 10px 14px; font-family: monospace; font-size: 14px; font-weight: 800; color: #f59e0b; margin-bottom: 8px; }
+    .bizu-desc { font-size: 13px; color: #94a3b8; }
+    
+    .pomo-card { text-align: center; max-width: 420px; margin: 0 auto; width: 100%; display: flex; flex-direction: column; align-items: center; }
+    .pomo-circle { width: 180px; height: 180px; border-radius: 50%; border: 6px solid #f59e0b; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px auto; background: #070d19; }
+    .pomo-time { font-size: 38px; font-weight: 900; font-family: monospace; color: #ffffff; }
+    .pomo-status { font-size: 10px; font-weight: 800; color: #f59e0b; text-transform: uppercase; margin-top: 4px; }
+    .pomo-btns { display: flex; gap: 10px; justify-content: center; width: 100%; }
+    .btn-gold { background: #f59e0b; color: #080c14; font-weight: 800; border: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: 0.2s; }
+    .btn-gold:hover { background: #d97706; }
+    .btn-dark { background: #1e293b; color: #f1f5f9; font-weight: 700; border: 1px solid #334155; padding: 10px 18px; border-radius: 8px; font-size: 14px; cursor: pointer; }
+    
+    .ciclo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin-top: 12px; }
+    .ciclo-item { background: #070d19; border: 1px solid #1e293b; border-radius: 6px; padding: 10px; }
+    .ciclo-dia { font-size: 11px; font-weight: 800; color: #f59e0b; text-transform: uppercase; }
+    .ciclo-mat { font-size: 12px; color: #cbd5e1; margin-top: 4px; font-weight: 600; }
+    
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .select-tactical { background: #070d19; border: 1px solid #1e293b; color: #f1f5f9; padding: 8px 12px; border-radius: 6px; font-size: 13px; outline: none; }
+    .question-card { background: #0f172a; border: 1px solid #1e293b; border-radius: 10px; padding: 18px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 12px; }
+    .q-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; border-bottom: 1px solid #1e293b; padding-bottom: 8px; }
+    .q-disc { font-weight: 800; text-transform: uppercase; color: #f59e0b; font-size: 11px; }
+    .q-banca { color: #64748b; font-family: monospace; }
+    .q-text { font-size: 14px; line-height: 1.6; color: #e2e8f0; }
+    .q-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .btn-opt { background: #070d19; border: 1px solid #1e293b; color: #f1f5f9; padding: 10px; border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer; transition: 0.2s; text-align: left; }
+    .btn-opt:hover { border-color: #f59e0b; }
+    .btn-opt.correct { background: #064e3b !important; border-color: #10b981 !important; color: #ffffff !important; }
+    .btn-opt.wrong { background: #7f1d1d !important; border-color: #ef4444 !important; color: #ffffff !important; }
+    .q-exp { background: #070d19; border: 1px solid #334155; border-radius: 8px; padding: 12px; font-size: 13px; color: #cbd5e1; line-height: 1.5; display: none; }
+    .q-exp.show { display: block; }
+    .hidden { display: none !important; }
   </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body>
 
-  <!-- CABEÇALHO OPERACIONAL -->
-  <header class="border-b border-slate-800 bg-[#0b0f17]/90 backdrop-blur sticky top-0 z-50 px-4 py-3">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-500 text-xl font-black">
-          <i class="fa-solid fa-shield-halved"></i>
-        </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <span class="font-black tracking-wider text-white text-lg">QG TÁTICO</span>
-            <span class="text-[10px] bg-amber-500/20 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded font-mono font-bold">PC • PM • PP</span>
-          </div>
-          <p class="text-[11px] text-gray-400">PLATAFORMA OPERACIONAL DE APROVAÇÃO</p>
-        </div>
-      </div>
-
-      <!-- NAVEGAÇÃO SUPERIOR -->
-      <nav class="flex items-center gap-1 sm:gap-2 overflow-x-auto text-xs font-semibold">
-        <button onclick="switchTab('dashboard')" id="tab-btn-dashboard" class="px-3 py-1.5 rounded-lg text-amber-400 bg-amber-500/10 border border-amber-500/30">
-          Dashboard
-        </button>
-        <button onclick="switchTab('bizus')" id="tab-btn-bizus" class="px-3 py-1.5 rounded-lg text-gray-400 hover:text-white">
-          Bizus
-        </button>
-        <button onclick="switchTab('questoes')" id="tab-btn-questoes" class="px-3 py-1.5 rounded-lg text-gray-400 hover:text-white">
-          Questões (<span id="total-questoes-nav">54</span>)
-        </button>
-        <button onclick="switchTab('simulados')" id="tab-btn-simulados" class="px-3 py-1.5 rounded-lg text-gray-400 hover:text-white">
-          Simulados
-        </button>
-        <button onclick="switchTab('erros')" id="tab-btn-erros" class="px-3 py-1.5 rounded-lg text-gray-400 hover:text-white">
-          Caderno de Erros (<span id="erros-nav-badge">0</span>)
-        </button>
-        <button onclick="switchTab('taf')" id="tab-btn-taf" class="px-3 py-1.5 rounded-lg text-gray-400 hover:text-white">
-          TAF
-        </button>
-      </nav>
-
-      <!-- BOTÕES DE BACKUP / IMPORTAÇÃO -->
-      <div class="flex items-center gap-2">
-        <button onclick="abrirModalImport()" title="Importar Questões" class="px-2.5 py-1.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 border border-amber-500/40 rounded-lg text-xs font-bold flex items-center gap-1.5">
-          <i class="fa-solid fa-file-import"></i> Importar
-        </button>
-        <button onclick="exportData()" title="Descarregar Cópia de Segurança" class="p-2 bg-slate-800 hover:bg-slate-700 text-gray-300 rounded-lg text-xs border border-slate-700">
-          <i class="fa-solid fa-download"></i>
-        </button>
+  <header>
+    <div class="brand">
+      <div class="shield-icon">🛡️</div>
+      <div>
+        <div class="brand-title">QG TÁTICO <span class="badge-tag">PC • PM • PP</span></div>
+        <div class="brand-sub">PLATAFORMA OPERACIONAL DE APROVAÇÃO</div>
       </div>
     </div>
+    <nav>
+      <button onclick="tab('dash')" id="tb-dash" class="nav-btn active">Dashboard</button>
+      <button onclick="tab('bizus')" id="tb-bizus" class="nav-btn">Bizus</button>
+      <button onclick="tab('questoes')" id="tb-questoes" class="nav-btn">Questões (<span id="count-nav">0</span>)</button>
+      <button onclick="tab('simulados')" id="tb-simulados" class="nav-btn">Simulados</button>
+      <button onclick="tab('erros')" id="tb-erros" class="nav-btn">Caderno de Erros (<span id="err-nav">0</span>)</button>
+      <button onclick="tab('taf')" id="tb-taf" class="nav-btn">TAF</button>
+    </nav>
   </header>
 
-  <main class="max-w-7xl mx-auto w-full px-4 py-6 flex-1 space-y-6">
+  <main>
+    <section id="sec-dash" class="card">
+      <div class="banner-header">
+        <span class="post-tag">🎯 POSTO DE COMANDO OPERACIONAL</span>
+        <span style="font-family: monospace; font-size: 12px; color: #64748b;">04/11/2026</span>
+      </div>
+      <h1 class="banner-title">"No longo prazo, eu não perco."</h1>
+      <p class="banner-sub">
+        Sistema de alta retenção tática para Polícia Civil, Polícia Militar e Polícia Penal. O segredo da aprovação é dominar a intersecção de Direito, RLM, Português e não falhar no TAF.
+      </p>
 
-    <!-- ABA DASHBOARD -->
-    <section id="sec-dashboard" class="space-y-6">
-      <div class="card-tactical p-6 bg-gradient-to-r from-slate-900 via-slate-900 to-amber-950/20 border-amber-500/20">
-        <div class="flex flex-wrap justify-between items-center gap-4">
-          <div>
-            <span class="text-xs font-mono font-bold text-amber-500 flex items-center gap-1.5">
-              <i class="fa-solid fa-crosshairs"></i> POSTO DE COMANDO OPERACIONAL
-            </span>
-            <h1 class="text-2xl sm:text-3xl font-black text-white mt-1">"No longo prazo, eu não perco."</h1>
-            <p class="text-xs text-gray-400 mt-1 max-w-2xl">
-              Sistema de alta retenção tática para Polícia Civil, Polícia Militar e Polícia Penal. O segredo da aprovação é dominar a intersecção de Direito, RLM, Português e não falhar no TAF.
-            </p>
-          </div>
-          <div class="text-right font-mono text-xs text-gray-400">
-            04/11/2026
-          </div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-label">QUESTÕES FEITAS</span>
+          <span id="st-feitas" class="stat-val val-white">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">APROVEITAMENTO</span>
+          <span id="st-aprov" class="stat-val val-green">0%</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">ACERTOS</span>
+          <span id="st-acertos" class="stat-val val-gold">0</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">ERROS PARA SANAR</span>
+          <span id="st-erros" class="stat-val val-red">0</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+        <div class="card" style="background: #070d19;">
+          <div class="bizu-badge">DIREITO PENAL</div>
+          <div class="bizu-title">L.U.T.A. (Lugar e Tempo do Crime)</div>
+          <div class="bizu-mnemonic">L - U - T - A</div>
+          <p class="bizu-desc"><strong>L</strong>ugar: <strong>U</strong>biquidade (Art. 6º CP) | <strong>T</strong>empo: <strong>A</strong>tividade (Art. 4º CP).</p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6">
-          <div class="bg-slate-950/60 p-3 rounded-lg border border-slate-800 text-center">
-            <span class="text-[10px] font-bold text-gray-400 block">QUESTÕES FEITAS</span>
-            <span id="stat-feitas" class="text-2xl font-black text-white mt-0.5 block">0</span>
+        <div class="card pomo-card" style="background: #070d19;">
+          <span class="post-tag">⏱️ CRONÔMETRO POMODORO TÁTICO</span>
+          <div class="pomo-circle">
+            <span id="pomo-clock" class="pomo-time">25:00</span>
+            <span class="pomo-status">PRONTO PARA A MISSÃO</span>
           </div>
-          <div class="bg-slate-950/60 p-3 rounded-lg border border-slate-800 text-center">
-            <span class="text-[10px] font-bold text-gray-400 block">APROVEITAMENTO</span>
-            <span id="stat-aproveitamento" class="text-2xl font-black text-emerald-400 mt-0.5 block">0%</span>
-          </div>
-          <div class="bg-slate-950/60 p-3 rounded-lg border border-slate-800 text-center">
-            <span class="text-[10px] font-bold text-gray-400 block">ACERTOS</span>
-            <span id="stat-acertos" class="text-2xl font-black text-amber-400 mt-0.5 block">0</span>
-          </div>
-          <div class="bg-slate-950/60 p-3 rounded-lg border border-slate-800 text-center">
-            <span class="text-[10px] font-bold text-gray-400 block">ERROS PARA SANAR</span>
-            <span id="stat-erros" class="text-2xl font-black text-red-400 mt-0.5 block">0</span>
+          <div class="pomo-btns">
+            <button onclick="pomoToggle()" id="pomo-btn" class="btn-gold">Iniciar</button>
+            <button onclick="pomoReset()" class="btn-dark">Reset</button>
           </div>
         </div>
       </div>
 
-      <!-- BIZU RELÂMPAGO DO DIA -->
-      <div class="card-tactical p-5 border-amber-500/30">
-        <div class="flex items-center justify-between">
-          <span class="text-xs font-bold text-amber-400 flex items-center gap-1.5">
-            <i class="fa-solid fa-bolt"></i> BIZU RELÂMPAGO DO DIA
-          </span>
-          <span class="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono font-bold">ALTÍSSIMA INCIDÊNCIA</span>
+      <div style="margin-top: 24px;">
+        <span class="post-tag">📅 CICLO SEMANAL INTEGRADO (PC • PM • PP)</span>
+        <div class="ciclo-grid">
+          <div class="ciclo-item"><span class="ciclo-dia">SEGUNDA</span><div class="ciclo-mat">Português + Dir. Penal</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">TERÇA</span><div class="ciclo-mat">RLM + Dir. Constitucional</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">QUARTA</span><div class="ciclo-mat">Informática + Dir. Adm.</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">QUINTA</span><div class="ciclo-mat">Processo Penal + LEP</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">SEXTA</span><div class="ciclo-mat">Geografia + História</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">SÁBADO</span><div class="ciclo-mat">Simulado Geral + TAF</div></div>
+          <div class="ciclo-item"><span class="ciclo-dia">DOMINGO</span><div class="ciclo-mat">Revisão de Erros</div></div>
         </div>
-        <h3 class="text-lg font-bold text-white mt-2">L.U.T.A. (Lugar e Tempo do Crime)</h3>
-        <p class="text-sm text-gray-300 mt-1">
-          <strong>L</strong>ugar do Crime = <strong>U</strong>biquidade (Art. 6º CP)<br>
-          <strong>T</strong>empo do Crime = <strong>A</strong>tividade (Art. 4º CP)
-        </p>
       </div>
+    </section>
 
-      <!-- CRONÔMETRO POMODORO -->
-      <div class="card-tactical p-6 text-center max-w-md mx-auto">
-        <span class="text-xs font-bold text-amber-400 flex items-center justify-center gap-1.
+    <section id="sec-questoes" class="hidden">
+      <div class="card" style="margin-bottom: 16px;">
+        <div class="filter-bar">
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <select id="filtro-mat" onchange="renderQ()" class="select-tactical">
+              <option value="todas">Todas as Disciplinas</option>
+              <option value="penal">Direito Penal</option>
+              <option value="processopenal">Processo Penal</option>
+              <option value="constitucional">Constitucional</option>
+              <option value="administrativo">Administrativo</option>
+              <option value="portugues">Português</option>
+              <option value="rlm">RLM / Matemática</option>
+              <option value="informatica">Informática</option>
+              <option value="historia">História</option>
+              <option value="geografia">Geografia</option>
+            </select>
+            <select id="filtro-banca" onchange="renderQ()" class="select-tactical">
+              <option value="todas">Todas as Bancas</option>
+              <option value="Cebraspe">Cebraspe</option>
+              <option value="FGV">FGV</option>
+              <option value="IADES">IADES</option>
+            </select>
+          </div>
+          <span style="font-size: 13px; color: #94a3b8;">Total: <strong id="q-total-count" style="color:#ffffff;">0</strong></span>
+        </div>
+      </div>
+      <div id="q-list"></div>
+    </section>
+
+    <section id="sec-bizus" class="hidden" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+      <div class="card">
+        <div class="bizu-badge">PENAL</div>
+        <div class="bizu-title">L.U.T.A.</div>
+        <p class="bizu-desc">Lugar = Ubiquidade (Art. 6º) | Tempo = Atividade (Art. 4º).</p>
+      </div>
+      <div class="card">
+        <div class="bizu-badge">ADMINISTRATIVO</div>
+        <div class="bizu-title">L.I.M.P.E.</div>
+        <p class="bizu-desc">Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (Art. 37 CF).</p>
+      </div>
+      <div class="card">
+        <div class="bizu-badge">CONSTITUCIONAL</div>
+        <div class="bizu-title">SO.CI.DI.VA.PLU</div>
+        <p class="bizu-desc">Fundamentos: Soberania, Cidadania, Dignidade, Valores do Trabalho, Pluralismo.</p>
+      </div>
+    </section>
+
+    <section id="sec-simulados" class="hidden card" style="text-align: center; padding: 40px 20px;">
+      <h2 style="font-size: 22px; font-weight: 900; margin-bottom: 8px;">Simulado Tático Geral</h2>
+      <p style="color: #94a3b8; font-size: 14px; margin-bottom: 20px;">Treine com questões sorteadas automaticamente de todas as matérias policiais.</p>
+      <button onclick="startSimulado()" class="btn-gold" style="padding: 12px 30px; font-size: 15px;">Gerar Novo Simulado (10 Questões)</button>
+      <div id="simulado-area" style="margin-top: 24px; text-align: left;"></div>
+    </section>
+
+    <section id="sec-erros" class="hidden">
+      <div class="card" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <h2 style="font-size: 17px; font-weight: 800;">Caderno de Erros Tático</h2>
+        <button onclick="clearErros()" class="btn-dark" style="padding: 6px 12px; font-size: 12px;">Limpar Erros</button>
+      </div>
+      <div id="erros-list"></div>
+    </section>
+
+    <section id="sec-taf" class="hidden card">
+      <h2 style="font-size: 18px; font-weight: 900; margin-bottom: 6px;">Metas do TAF (Carreiras Policiais)</h2>
+      <p style="color: #94a3b8; font-size: 13px; margin-bottom: 16px;">Acompanhamento dos índices mínimos para não reprovar na prova física.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+        <div class="stat-box"><span class="stat-label">CORRIDA 12 MIN</span><span class="stat-val val-white">2.400 m</span></div>
+        <div class="stat-box"><span class="stat-label">BARRA FIXA</span><span class="stat-val val-gold">6 rep</span></div>
+        <div class="stat-box"><span class="stat-label">FLEXÃO SOLO</span><span class="stat-val val-green">32 rep</span></div>
+        <div class="stat-box"><span class="stat-label">ABDOMINAL 1 MIN</span><span class="stat-val val-white">38 rep</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const BANCO = [
+      { id: 1, disc: "penal", banca: "Cebraspe", text: "Pedro residia na cidade X e esfaqueou Maria, que foi atendida e faleceu na cidade Y. Considera-se lugar do crime apenas a cidade X.", type: "tf", cor: "E", exp: "ERRADO. Art. 6º do CP adota a Teoria da Ubiquidade: tanto a cidade da conduta quanto a do resultado são lugares do crime." },
+      { id: 2, disc: "penal", banca: "Cebraspe", text: "Joana contratou Antônia para cuidar de sua mãe idosa. Enquanto Antônia dormia, a idosa caiu e fraturou o fêmur. A omissão de Antônia é penalmente irrelevante.", type: "tf", cor: "E", exp: "ERRADO. Art. 13, § 2º, 'a', CP: Antônia tinha o dever de garantidora." },
+      { id: 3, disc: "penal", banca: "Cebraspe", text: "Classifica-se como crime culposo quando o agente quer o resultado ou assume o risco de produzi-lo.", type: "tf", cor: "E", exp: "ERRADO. Art. 18, I, CP: Querer ou assumir o risco caracteriza crime DOLOSO." },
+      { id: 4, disc: "penal", banca: "Cebraspe", text: "Viatura com preso colide e entra em chamas. Com risco de explosão iminente, policial sai pela janela e preso morre. O policial pode alegar estado de necessidade.", type: "tf", cor: "C", exp: "CERTO. Art. 24 CP: Ninguém é obrigado a sacrificar a própria vida perante risco atual e insuperável." },
+      { id: 5, disc: "processopenal", banca: "Cebraspe", text: "Homicídio comum tipificado como crime militar deve ser investigado privativamente por autoridade policial judiciária civil.", type: "tf", cor: "E", exp: "ERRADO. Crimes militares são investigados privativamente por Inquérito Policial Militar (IPM)." },
+      { id: 6, disc: "processopenal", banca: "Cebraspe", text: "O inquérito policial destina-se a colher informações sobre a autoria e a materialidade da infração penal.", type: "tf", cor: "C", exp: "CERTO. Art. 4º do CPP: Investigação preliminar preparatória para a ação penal." },
+      { id: 7, disc: "constitucional", banca: "Cebraspe", text: "O direito de greve é garantido a todos os trabalhadores, alcançando indistintamente os servidores militares.", type: "tf", cor: "E", exp: "ERRADO. Art. 142, § 3º, IV da CF/88: A greve e a sindicalização são expressamente proibidas aos militares." },
+      { id: 8, disc: "constitucional", banca: "Cebraspe", text: "Os Corpos de Bombeiros Militares integram formalmente o rol constitucional dos órgãos de segurança pública.", type: "tf", cor: "C", exp: "CERTO. Art. 144, inciso V, da CF/88." },
+      { id: 9, disc: "administrativo", banca: "Cebraspe", text: "Tanto pessoas jurídicas de direito público quanto as de direito privado prestadoras de serviço público respondem objetivamente pelos danos causados por seus agentes.", type: "tf", cor: "C", exp: "CERTO. Art. 37, § 6º da CF/88." },
+      { id: 10, disc: "administrativo", banca: "Cebraspe", text: "Os atributos do poder de polícia incluem a discricionariedade, a autoexecutoriedade e a imperatividade.", type: "tf", cor: "C", exp: "CERTO. At
